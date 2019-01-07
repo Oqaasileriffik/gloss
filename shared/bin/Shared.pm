@@ -5,6 +5,7 @@ require Exporter;
 @EXPORT = qw( explode_utf8 implode_utf8 find_newest_bin find_newest_etc find_newest_lex first_file sqlite_reader sqlite_write_hash sqlite_read_hash );
 
 use warnings;
+use warnings 'untie';
 use utf8;
 use strict;
 
@@ -46,7 +47,8 @@ sub return_newest {
 
    foreach my $f (@$files) {
       foreach my $p (@$paths) {
-         my $nf = "$p/$f";
+         my $np = $p;
+         my $nf = "$np/$f";
          if (-s $nf) {
             if (!$file || -M $nf < $mtime) {
                if (defined $ENV{DEBUG_NEWEST}) {
@@ -56,9 +58,9 @@ sub return_newest {
                $mtime = -M $nf;
             }
          }
-         while ($p =~ m@/\.\./\.\./@) {
-            $p =~ s@/\.\./\.\./@/../@;
-            my $nf = "$p/$f";
+         while ($np =~ m@/\.\./\.\./@) {
+            $np =~ s@/\.\./\.\./@/../@;
+            my $nf = "$np/$f";
             if (-s $nf) {
                if (!$file || -M $nf < $mtime) {
                   if (defined $ENV{DEBUG_NEWEST}) {
