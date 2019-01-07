@@ -1,0 +1,37 @@
+#!/usr/bin/env perl
+use warnings;
+use utf8;
+
+$| =1;
+
+### Colour codes:
+# 1=bold, 2=gray, 4=underline, 7=black block, 9=through strike
+# 31=red, 32=green, 33=yellow, 34=blue, 35=violet, 36=turquois, 37=light gray
+# 41-47 as 31-37, but as block colours
+# 91-97 as 31-37
+
+# use: hilite 31 '@[^ ]+' to colour e.g. syntactic tags
+
+$ARG0 = $ARGV[0];
+$ARG1 = $ARGV[1];
+$colorcode = "$ARG0";
+$pattern = "$ARG1";
+
+#print "--$ARG0 -- $ARGV[0] -- $ARG1 -- $ARGV[1]\n";
+
+$start = "\e[" . $colorcode . "m";
+$slut = "\e[0m";
+
+while(<STDIN>) {
+  s/($pattern)/$start$1$slut/g;
+  print $_;
+}
+
+### test run for different colours
+
+for ($i=1; $i<100; $i++) {
+  $start = "\e[" . $i . "m";
+#  print "--$i: $start\COLOR$slut\n";
+}
+
+

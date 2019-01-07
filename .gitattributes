@@ -1,0 +1,7 @@
+* text eol=lf
+*.bin binary
+*.gpg binary
+*.sqlite binary
+expected-*.txt linguist-generated
+/regtest/** linguist-vendored
+**/lex/** linguist-detectable
