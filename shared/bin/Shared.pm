@@ -72,6 +72,9 @@ sub return_newest {
       }
    }
 
+   if (!$file) {
+      die "Could not find @$files in @$paths!\n";
+   }
    $file = realpath($file);
 
    if (defined $ENV{DEBUG_NEWEST}) {
@@ -83,6 +86,8 @@ sub return_newest {
 sub find_newest_bin {
    my @files = @_;
    use FindBin qw($Bin);
+   use File::HomeDir;
+   my $home = File::HomeDir->my_home;
 
    return return_newest(\@files, \@paths);
 }
