@@ -2,7 +2,7 @@
 package Shared;
 require Exporter;
 @ISA = qw(Exporter);
-@EXPORT = qw( explode_utf8 implode_utf8 find_newest_bin find_newest_etc find_newest_lex first_file sqlite_reader sqlite_write_hash sqlite_read_hash );
+@EXPORT = qw( explode_utf8 implode_utf8 find_newest_bin find_newest_etc find_newest_lex first_file sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
 
 use warnings;
 use warnings 'untie';
@@ -112,6 +112,17 @@ sub find_newest_lex {
    return return_newest(\@files, \@paths);
 }
 
+sub _find_newest_cb {
+   my ($dir, $file) = @_;
+   if ($dir eq 'BIN') {
+      return find_newest_bin($file);
+   }
+   elsif ($dir eq 'ETC') {
+      return find_newest_etc($file);
+   }
+   return find_newest_lex($file);
+}
+
 sub first_file {
    foreach my $f (@_) {
       if (-e $f && -s $f) {
@@ -164,6 +175,78 @@ sub sqlite_read_hash {
    use Tie::Hash::DBD;
    tie my %hash, 'Tie::Hash::DBD', sqlite_reader($_[0]), { 'tbl' => 'data' };
    return \%hash;
+}
+
+sub handle_cmdline_opts {
+   my ($fname) = @_;
+
+   use YAML::XS qw(LoadFile);
+   my $cmds = LoadFile($fname);
+
+   use Getopt::Long;
+   Getopt::Long::Configure('bundling');
+   Getopt::Long::Configure('no_ignore_case');
+   my %opts = ();
+   my @popts = ('help|h|?', 'trace|t', 'regtest', 'cmd', 'raw', 'xSEPx');
+   my $n = 0;
+   my $last_opt = '';
+   foreach my $cmd (@$cmds) {
+      $last_opt = $cmd->{'_opt'} = 'auto-'.(++$n);
+      if ($cmd->{'opt'}) {
+         ($last_opt) = ($cmd->{'_opt'}) = ($cmd->{'opt'} =~ m/^([^|]+)/);
+         push(@popts, $cmd->{'opt'});
+      }
+      if (! defined $cmd->{'test'}) {
+         $cmd->{'test'} = '--trace | REGTEST_CG';
+      }
+   }
+   GetOptions(\%opts, @popts);
+   $opts{$last_opt} = 1;
+
+   if (defined $opts{'help'}) {
+      print "Possible options are:\n";
+      foreach my $po (@popts) {
+         if ($po eq 'xSEPx') {
+            print "Pipe breakpoints:\n";
+            next;
+         }
+         $po =~ s/[|]/ /g;
+         $po =~ s/ (\S)/ -$1/g;
+         $po =~ s/ -(\S\S)/ --$1/g;
+         $po =~ s/ /, /g;
+         print "\t--$po\n";
+      }
+      exit(0);
+   }
+
+   if (defined $opts{'regtest'}) {
+      %opts = ( regtest => 1, 'raw' => defined $opts{'raw'}, $last_opt => 1, );
+   }
+
+   my @cmdline = ();
+   foreach my $cmd (@$cmds) {
+      push (@cmdline, $cmd->{'cmd'});
+      if (defined $opts{'regtest'}) {
+         $cmdline[-1] .= ' '.$cmd->{'test'}.' '.$cmd->{'_opt'};
+      }
+      if (defined $opts{$cmd->{'_opt'}}) {
+         if (defined $opts{'trace'} && $cmd->{'trace'}) {
+            $cmdline[-1] .= ' '.$cmd->{'trace'};
+         }
+         last;
+      }
+   }
+
+   my $cmdline = join(' | ', @cmdline);
+   if (!$opts{'raw'}) {
+      $cmdline =~ s@(BIN|ETC|LEX)/(\S+)@_find_newest_cb("$1", "$2")@eg;
+   }
+   if (defined $opts{'regtest'} || defined $opts{'cmd'} || defined $opts{'raw'}) {
+      print $cmdline."\n";
+      exit(0);
+   }
+
+   return (\%opts, $cmdline);
 }
 
 1;

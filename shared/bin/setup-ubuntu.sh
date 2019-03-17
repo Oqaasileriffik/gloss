@@ -9,7 +9,7 @@ if [[ `cat /etc/issue 2>/dev/null` != *'Ubuntu'* ]]; then
 fi
 
 apt-get update
-apt-get install --no-install-recommends libdbi-perl libdbd-sqlite3-perl libfile-homedir-perl libipc-run-perl cpanminus
+apt-get install --no-install-recommends libdbi-perl libdbd-sqlite3-perl libfile-homedir-perl libipc-run-perl cpanminus libplack-perl libyaml-libyaml-perl libjson-perl libjson-xs-perl
 
 echo "Installing Perl module Tie::Hash::DBD from CPAN"
 cpanm --without-recommend --without-suggests Tie::Hash::DBD

@@ -16,7 +16,7 @@ echo "Removing unused ports"
 port uninstall --follow-dependencies leaves
 echo ""
 echo "Installing required ports"
-port install subversion perl5 p5-dbi p5-dbd-sqlite p5-file-homedir p5-ipc-run
+port install subversion perl5 p5-dbi p5-dbd-sqlite p5-file-homedir p5-ipc-run p5-app-cpanminus p5-plack p5-yaml-libyaml p5-json p5-json-xs timeout
 
 echo ""
 echo "Installing Perl modules from CPAN"
