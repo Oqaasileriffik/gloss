@@ -2,7 +2,7 @@
 package Shared;
 require Exporter;
 @ISA = qw(Exporter);
-@EXPORT = qw( explode_utf8 implode_utf8 find_newest_bin find_newest_etc find_newest_lex first_file sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
+@EXPORT = qw( explode_utf8 implode_utf8 find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
 
 use warnings;
 use warnings 'untie';
@@ -132,6 +132,34 @@ sub first_file {
    die("No such file!\n");
 }
 
+sub random_bytes {
+   no utf8;
+   use bytes;
+
+   my ($n) = @_;
+   open FILE, '<:raw :bytes', '/dev/urandom' or die "Could not open /dev/urandom: $!\n";
+   my $data = '';
+   read(FILE, $data, $n);
+   close FILE;
+   return $data;
+}
+
+sub random_name {
+   no utf8;
+   use bytes;
+
+   my ($s) = @_;
+   if (!$s) {
+      $s = '';
+   }
+   $s .= random_bytes(16);
+
+   use Digest::SHA qw(sha1_base64);
+   my $hash = sha1_base64($s);
+   $hash =~ s/[^a-zA-Z0-9]/x/g;
+   return $hash;
+}
+
 sub sqlite_writer {
    use DBI;
    my ($f) = @_;
@@ -153,11 +181,12 @@ sub sqlite_reader {
 
 sub sqlite_write_hash {
    my ($file, $data) = @_;
-   if (-s $file) {
-      unlink($file);
-   }
 
-   my $dbh = sqlite_writer($file);
+   use File::Basename;
+   my $dir = dirname($file);
+   my $tmpnam = 'tmp-'.random_name($file).'.sqlite';
+
+   my $dbh = sqlite_writer("${dir}/${tmpnam}");
    $dbh->begin_work();
    $dbh->do('CREATE TABLE data (h_key TEXT NOT NULL, h_value TEXT);');
    my $sth = $dbh->prepare('INSERT INTO data (h_key,h_value) VALUES (?, ?);');
@@ -169,6 +198,11 @@ sub sqlite_write_hash {
    $dbh->do('CREATE UNIQUE INDEX data_key_unique ON data (h_key);');
    $dbh->commit();
    $dbh->disconnect();
+
+   if (-e $file) {
+      unlink($file);
+   }
+   rename("${dir}/${tmpnam}", $file);
 }
 
 sub sqlite_read_hash {
