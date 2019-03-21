@@ -51,7 +51,7 @@ sub return_newest {
          my $nf = "$np/$f";
          if (-s $nf) {
             if (!$file || -M $nf < $mtime) {
-               if (defined $ENV{DEBUG_NEWEST}) {
+               if (defined $ENV{DEBUG_NEWER}) {
                   print STDERR "NEWER: $nf\n";
                }
                $file = $nf;
@@ -63,7 +63,7 @@ sub return_newest {
             my $nf = "$np/$f";
             if (-s $nf) {
                if (!$file || -M $nf < $mtime) {
-                  if (defined $ENV{DEBUG_NEWEST}) {
+                  if (defined $ENV{DEBUG_NEWER}) {
                      print STDERR "NEWER: $nf\n";
                   }
                   $file = $nf;
