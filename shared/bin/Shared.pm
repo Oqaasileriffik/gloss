@@ -2,7 +2,7 @@
 package Shared;
 require Exporter;
 @ISA = qw(Exporter);
-@EXPORT = qw( explode_utf8 implode_utf8 find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
+@EXPORT = qw( explode_utf8 implode_utf8 file_put_contents find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
 
 use warnings;
 use warnings 'untie';
@@ -36,6 +36,13 @@ sub implode_utf8 {
       $line =~ s/\\u\{$code\}/$chr/g;
    }
    return $line;
+}
+
+sub file_put_contents {
+   my ($fname,$data) = @_;
+   open FILE, '>:encoding(UTF-8)', $fname or die "Could not open ${fname}: $!\n";
+   print FILE $data;
+   close FILE;
 }
 
 sub return_newest {
