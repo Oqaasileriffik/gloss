@@ -2,7 +2,7 @@
 package Shared;
 require Exporter;
 @ISA = qw(Exporter);
-@EXPORT = qw( explode_utf8 implode_utf8 file_put_contents find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
+@EXPORT = qw( trim explode_utf8 implode_utf8 file_get_contents file_put_contents find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_writer sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
 
 use warnings;
 use warnings 'untie';
@@ -16,6 +16,13 @@ BEGIN {
 }
 use open qw( :encoding(UTF-8) :std );
 use feature 'unicode_strings';
+
+sub trim {
+   my ($s) = @_;
+   $s =~ s/^\s+//g;
+   $s =~ s/\s+$//g;
+   return $s;
+}
 
 sub explode_utf8 {
    my ($line) = @_;
@@ -36,6 +43,15 @@ sub implode_utf8 {
       $line =~ s/\\u\{$code\}/$chr/g;
    }
    return $line;
+}
+
+sub file_get_contents {
+   my ($fname) = @_;
+   local $/ = undef;
+   open FILE, '<:encoding(UTF-8)', $fname or die "Could not open ${fname}: $!\n";
+   my $data = <FILE>;
+   close FILE;
+   return $data;
 }
 
 sub file_put_contents {
