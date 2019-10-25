@@ -2,7 +2,7 @@
 package Shared;
 require Exporter;
 @ISA = qw(Exporter);
-@EXPORT = qw( trim explode_utf8 implode_utf8 file_get_contents file_put_contents find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_writer sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts );
+@EXPORT = qw( trim explode_utf8 implode_utf8 file_get_contents file_put_contents find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_writer sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts pipe_ignore );
 
 use warnings;
 use warnings 'untie';
@@ -304,6 +304,25 @@ sub handle_cmdline_opts {
    }
 
    return (\%opts, $cmdline);
+}
+
+sub pipe_ignore {
+   my ($cmdline) = @_;
+
+   use File::Spec;
+   use Digest::SHA qw(sha1_base64);
+   my $cmd = $cmdline;
+   utf8::encode($cmd);
+   my $hash = sha1_base64($cmd);
+   $hash =~ s/[^a-zA-Z0-9]/x/g;
+   my $sh = File::Spec->tmpdir()."/cmd-$hash";
+   if (! -s $sh) {
+      file_put_contents($sh, $cmdline);
+      chmod(0755, $sh);
+   }
+
+   open my $pipe, "bash -c '$sh 2> >(egrep --line-buffered -v \"cleanup.*Tie.*Hash.*DBD.*during global destruction\")'|" or die $!;
+   return $pipe;
 }
 
 1;
