@@ -321,7 +321,7 @@ sub pipe_ignore {
       chmod(0755, $sh);
    }
 
-   open my $pipe, "bash -c '$sh 2> >(egrep --line-buffered -v \"cleanup.*Tie.*Hash.*DBD.*during global destruction\")'|" or die $!;
+   open my $pipe, "bash -c '$sh 2> >(egrep --line-buffered -v \"cleanup.*Tie.*Hash.*DBD.*during global destruction\" >&2)'|" or die $!;
    return $pipe;
 }
 
