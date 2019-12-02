@@ -244,7 +244,7 @@ sub handle_cmdline_opts {
    Getopt::Long::Configure('bundling');
    Getopt::Long::Configure('no_ignore_case');
    my %opts = ();
-   my @popts = ('help|h|?', 'trace|t', 'regtest', 'cmd', 'raw', 'xSEPx');
+   my @popts = ('help|h|?', 'trace|t', 'from|f=s', 'regtest', 'cmd', 'raw', 'xSEPx');
    my $n = 0;
    my $last_opt = '';
    foreach my $cmd (@$cmds) {
@@ -268,9 +268,10 @@ sub handle_cmdline_opts {
             next;
          }
          $po =~ s/[|]/ /g;
-         $po =~ s/ (\S)/ -$1/g;
-         $po =~ s/ -(\S\S)/ --$1/g;
+         $po =~ s/ (\w)/ -$1/g;
+         $po =~ s/ -(\w\w)/ --$1/g;
          $po =~ s/ /, /g;
+         $po =~ s/=s/ [breakpoint]/g;
          print "\t--$po\n";
       }
       exit(0);
@@ -280,8 +281,28 @@ sub handle_cmdline_opts {
       %opts = ( regtest => 1, 'raw' => defined $opts{'raw'}, $last_opt => 1, );
    }
 
+   if (defined $opts{'from'}) {
+      my $good = 0;
+      for my $cmd (@$cmds) {
+         if ("|$cmd->{'opt'}|" =~ m@\|$opts{'from'}\|@) {
+            $opts{'from'} = $cmd->{'_opt'};
+            $good = 1;
+            last;
+         }
+      }
+      if (!$good) {
+         die($opts{'from'}." is not a valid breakpoint to start from!\n");
+      }
+   }
+
    my @cmdline = ();
    foreach my $cmd (@$cmds) {
+      if (defined $opts{'from'}) {
+         if ($opts{'from'} ne $cmd->{'_opt'}) {
+            next;
+         }
+         delete $opts{'from'};
+      }
       push (@cmdline, $cmd->{'cmd'});
       if (defined $opts{'regtest'}) {
          $cmdline[-1] .= ' '.$cmd->{'test'}.' '.$cmd->{'_opt'};
