@@ -301,6 +301,7 @@ sub handle_cmdline_opts {
          if ($opts{'from'} ne $cmd->{'_opt'}) {
             next;
          }
+         $opts{'_from'} = $opts{'from'};
          delete $opts{'from'};
       }
       push (@cmdline, $cmd->{'cmd'});
@@ -313,6 +314,11 @@ sub handle_cmdline_opts {
          }
          last;
       }
+   }
+
+   if (defined $opts{'_from'}) {
+      $opts{'from'} = $opts{'_from'};
+      delete $opts{'_from'};
    }
 
    my $cmdline = join(' | ', @cmdline);
