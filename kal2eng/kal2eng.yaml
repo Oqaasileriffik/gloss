@@ -1,0 +1,9 @@
+- cmd: BIN/kal-analyse --syn
+  opt: kal
+  trace: -t | BIN/hilite 34 '(MAP|ADD)[^ ]+' | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+- cmd: cg3-autobin.pl -g ETC/dep_KalEng.cg3
+  opt: dep
+  trace: --trace | BIN/hilite 34 'SETPARENT[^ ]+' | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+- cmd: BIN/post-dep.pl
+  opt: post
+  test: '| REGTEST_CG'

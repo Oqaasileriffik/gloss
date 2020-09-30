@@ -113,6 +113,12 @@ sub find_newest_bin {
    use FindBin qw($Bin);
    use File::HomeDir;
    my $home = File::HomeDir->my_home;
+   my @paths = ('', $Bin, "$Bin/bin", "$Bin/../bin",
+      "$Bin/../../shared/bin",
+      "$Bin/../../kal2dan/bin",
+      "$Bin/../../kal2eng/bin",
+      "$home/langtech/kal/tools/shellscripts",
+      '/usr/bin', '/usr/local/bin');
 
    return return_newest(\@files, \@paths);
 }
@@ -122,6 +128,12 @@ sub find_newest_etc {
    use FindBin qw($Bin);
    use File::HomeDir;
    my $home = File::HomeDir->my_home;
+   my @paths = ('', $Bin, "$Bin/etc", "$Bin/../etc",
+      "$Bin/../../shared/etc",
+      "$Bin/../../kal2dan/etc",
+      "$Bin/../../kal2eng/etc",
+      "$home/langtech/kal/src/cg3",
+      "$home/kal/src/cg3", '/usr/share/giella/kal');
 
    return return_newest(\@files, \@paths);
 }
@@ -131,6 +143,14 @@ sub find_newest_lex {
    use FindBin qw($Bin);
    use File::HomeDir;
    my $home = File::HomeDir->my_home;
+   my @paths = ('', $Bin, "$Bin/lex", "$Bin/../lex",
+      "$Bin/../../shared/lex",
+      "$Bin/../../kal2dan/lex",
+      "$Bin/../../kal2eng/lex",
+      "$home/langtech/kal/src",
+      "$home/langtech/kal/tools/tokenisers",
+      "$home/langtech/kal/tools/spellcheckers/3",
+      '/usr/share/giella/kal', '/usr/share/voikko/3');
 
    return return_newest(\@files, \@paths);
 }
