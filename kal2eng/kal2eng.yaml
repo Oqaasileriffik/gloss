@@ -4,6 +4,9 @@
 - cmd: cg3-autobin.pl -g ETC/dep_KalEng.cg3
   opt: dep
   trace: --trace | BIN/hilite 34 'SETPARENT[^ ]+' | BIN/hilite 31 'SUBSTITUTE[^ ]+'
-- cmd: BIN/post-dep.pl
+- cmd: curl -s -X POST --data-binary @- 'https://oqaasileriffik.gl/gloss/?raw=1'
+  opt: gloss
+  test: '| REGTEST_AUTO'
+- cmd: BIN/post-gloss.pl
   opt: post
   test: '| REGTEST_CG'
