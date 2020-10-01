@@ -6,7 +6,9 @@ use warnings;
 use strict;
 
 while (<STDIN>) {
-   s~^\t(.+?)(<tr:[^>]+>.+?<tr-end>)~\t$2$1~g; # Swap inline translation+tags and current baseform+tags
+   s~^\t(.+?) <tr-prefix> (<tr:[^>]+>.+?<tr-end>)~\t$2 $1~g; # Swap inline translation+tags and current baseform+tags
    s~<tr:([^>]+)>.+?<tr-end>~"$1"~g; # Turn inline translation into a baseform
+
+   s~  +~ ~g; # Clean up spaces
    print;
 }
