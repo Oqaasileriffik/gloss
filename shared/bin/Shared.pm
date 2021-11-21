@@ -73,6 +73,11 @@ sub return_newest {
          my $np = $p;
          my $nf = "$np/$f";
          if (-s $nf) {
+            if (defined $ENV{OVERRIDE_PATH} && $nf !~ m@\.\./@ && $nf =~ m@^\Q$ENV{OVERRIDE_PATH}\E@) {
+               $file = $nf;
+               $mtime = -M $nf;
+               last;
+            }
             if (!$file || -M $nf < $mtime) {
                if (defined $ENV{DEBUG_NEWER}) {
                   print STDERR "NEWER: $nf\n";
@@ -85,6 +90,11 @@ sub return_newest {
             $np =~ s@/\.\./\.\./@/../@;
             my $nf = "$np/$f";
             if (-s $nf) {
+               if (defined $ENV{OVERRIDE_PATH} && $nf !~ m@\.\./@ && $nf =~ m@^\Q$ENV{OVERRIDE_PATH}\E@) {
+                  $file = $nf;
+                  $mtime = -M $nf;
+                  last;
+               }
                if (!$file || -M $nf < $mtime) {
                   if (defined $ENV{DEBUG_NEWER}) {
                      print STDERR "NEWER: $nf\n";
