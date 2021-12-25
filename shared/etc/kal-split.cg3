@@ -1,0 +1,53 @@
+DELIMITERS = "<$.>" "<.>" "<$!>" "<!>" "<$?>" "<?>" "<$\;>" "<;>" "<$...>" "<...>" "<$¶>" "<¶>" "<${>" "<{>" "<$}>" "<}>" ("<:>" CLB) ;
+MAPPING-PREFIX = ~ ;
+
+# Ensure all added cohorts are somehow part of the dependency tree
+OPTIONS += addcohort-attach ;
+
+BEFORE-SECTIONS
+# Attach all un-attached cohorts to nearest neighbour
+SETPARENT (*) (NOT p (*)) TO (-1 (*)) ;
+SETPARENT (*) (NOT p (*)) TO (1 (*)) ;
+
+# Mark all cohorts with what @PRED parent they belong to, if there are multiple @PRED
+ADD (VSTR:<§$1>) (*) (*p (@PRED "<(.+)>"r) LINK 1* (@PRED)) ;
+ADD (VSTR:<§$1>) (*) (*p (@PRED "<(.+)>"r) LINK -1* (@PRED)) ;
+ADD (VSTR:<§$1>) (@PRED "<(.+)>"r) (-1* (@PRED)) ;
+ADD (VSTR:<§$1>) (@PRED "<(.+)>"r) (1* (@PRED)) ;
+# Undo if nearest neighbour @PRED isn't ours
+SUBSTITUTE REPEAT (<§.+>r) (*) (<§\(.+\)>r) - (@PRED) (0* (@PRED) LINK NOT 0 (<§$1>v)) ;
+# Insert a full stop between differing captures
+ADDCOHORT ("<.>" "." CLB §inserted) AFTER (<§\(.+\)>r) (1 (<§.+>r) LINK NOT 0 (<§$1>v)) ;
+# However, if it was inserted near the edges of the tree, it was probably not two distinct trees, so undo
+REMCOHORT (§inserted) (-1 (>>>)) ;
+REMCOHORT (§inserted) (-2 (>>>)) ;
+REMCOHORT (§inserted) (1 (<<<)) ;
+REMCOHORT (§inserted) (2 (<<<)) ;
+DELIMIT (§inserted) ;
+
+# Insert a full stop between two distinct @PRED trees
+ADDCOHORT ("<.>" "." CLB §inserted) BEFORE WITHCHILD (*) (@PRED) (-1* (@PRED)) ;
+# However, if it was inserted near the edges of the tree, it was probably not two distinct trees, so undo
+REMCOHORT (§inserted) (-1 (>>>)) ;
+REMCOHORT (§inserted) (-2 (>>>)) ;
+REMCOHORT (§inserted) (1 (<<<)) ;
+REMCOHORT (§inserted) (2 (<<<)) ;
+DELIMIT (§inserted) ;
+
+
+SECTION
+# Insert a full stop after initial interjections
+ADDCOHORT ("<.>" "." CLB §inserted) AFTER (Interj) (-1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§inserted) OR (<<<)) ;
+ADDCOHORT ("<.>" "." CLB §inserted) AFTER (Interj) (-1 (PUNCT) OR (DIRSTALESTART) LINK -1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§inserted) OR (<<<)) ;
+DELIMIT (§inserted) ;
+
+# Insert a full stop before trailing interjections
+ADDCOHORT ("<.>" "." CLB §inserted) BEFORE (Interj) (1 (<<<)) (NOT -1 (§inserted) OR (>>>) OR (PUNCT) OR (DIRTALESTART)) ;
+ADDCOHORT ("<.>" "." CLB §inserted) BEFORE (Interj) (0 (<<<)) (NOT -1 (§inserted) OR (>>>) OR (PUNCT) OR (DIRTALESTART)) ;
+DELIMIT (§inserted) ;
+
+
+AFTER-SECTIONS
+# Remove all the temporary tags used above
+SUBSTITUTE (§inserted) (*) (§inserted) ;
+SUBSTITUTE REPEAT (<§.+>r) (*) (<§.+>r) ;
