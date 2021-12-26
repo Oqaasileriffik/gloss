@@ -17,22 +17,22 @@ ADD (VSTR:<§$1>) (@PRED "<(.+)>"r) (1* (@PRED)) ;
 # Undo if nearest neighbour @PRED isn't ours
 SUBSTITUTE REPEAT (<§.+>r) (*) (<§\(.+\)>r) - (@PRED) (0* (@PRED) LINK NOT 0 (<§$1>v)) ;
 # Insert a full stop between differing captures
-ADDCOHORT ("<.>" "." CLB §inserted) AFTER (<§\(.+\)>r) (1 (<§.+>r) LINK NOT 0 (<§$1>v)) ;
+#ADDCOHORT ("<.>" "." CLB §inserted) AFTER (<§\(.+\)>r) (1 (<§.+>r) LINK NOT 0 (<§$1>v)) ;
 # However, if it was inserted near the edges of the tree, it was probably not two distinct trees, so undo
 REMCOHORT (§inserted) (-1 (>>>)) ;
 REMCOHORT (§inserted) (-2 (>>>)) ;
 REMCOHORT (§inserted) (1 (<<<)) ;
 REMCOHORT (§inserted) (2 (<<<)) ;
-DELIMIT (§inserted) ;
+#DELIMIT (§inserted) ;
 
 # Insert a full stop between two distinct @PRED trees
-ADDCOHORT ("<.>" "." CLB §inserted) BEFORE WITHCHILD (*) (@PRED) (-1* (@PRED)) ;
+#ADDCOHORT ("<.>" "." CLB §inserted) BEFORE WITHCHILD (*) (@PRED) (-1* (@PRED)) ;
 # However, if it was inserted near the edges of the tree, it was probably not two distinct trees, so undo
 REMCOHORT (§inserted) (-1 (>>>)) ;
 REMCOHORT (§inserted) (-2 (>>>)) ;
 REMCOHORT (§inserted) (1 (<<<)) ;
 REMCOHORT (§inserted) (2 (<<<)) ;
-DELIMIT (§inserted) ;
+#DELIMIT (§inserted) ;
 
 
 SECTION
