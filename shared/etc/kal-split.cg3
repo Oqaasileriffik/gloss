@@ -1,4 +1,5 @@
-DELIMITERS = "<$.>" "<.>" "<$!>" "<!>" "<$?>" "<?>" "<$\;>" "<;>" "<$...>" "<...>" "<$¶>" "<¶>" "<${>" "<{>" "<$}>" "<}>" ("<:>" CLB) ;
+INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
+
 MAPPING-PREFIX = ~ ;
 
 # Ensure all added cohorts are somehow part of the dependency tree
