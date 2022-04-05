@@ -18,35 +18,35 @@ ADD (VSTR:<§$1>) (@PRED "<(.+)>"r) (1* (@PRED)) ;
 # Undo if nearest neighbour @PRED isn't ours
 SUBSTITUTE REPEAT (<§.+>r) (*) (<§\(.+\)>r) - (@PRED) (0* (@PRED) LINK NOT 0 (<§$1>v)) ;
 # Insert a full stop between differing captures
-#ADDCOHORT ("<.>" "." CLB §inserted) AFTER (<§\(.+\)>r) (1 (<§.+>r) LINK NOT 0 (<§$1>v)) ;
+ADDCOHORT ("<.>" "." CLB §inserted) AFTER (<§\(.+\)>r) (1 (<§.+>r) LINK NOT 0 (<§$1>v)) ;
 # However, if it was inserted near the edges of the tree, it was probably not two distinct trees, so undo
 REMCOHORT (§inserted) (-1 (>>>)) ;
 REMCOHORT (§inserted) (-2 (>>>)) ;
 REMCOHORT (§inserted) (1 (<<<)) ;
 REMCOHORT (§inserted) (2 (<<<)) ;
-#DELIMIT (§inserted) ;
+DELIMIT (§inserted) ;
 
 # Insert a full stop between two distinct @PRED trees
-#ADDCOHORT ("<.>" "." CLB §inserted) BEFORE WITHCHILD (*) (@PRED) (-1* (@PRED)) ;
+ADDCOHORT ("<.>" "." CLB §inserted) BEFORE WITHCHILD (*) (@PRED) (-1* (@PRED)) ;
 # However, if it was inserted near the edges of the tree, it was probably not two distinct trees, so undo
 REMCOHORT (§inserted) (-1 (>>>)) ;
 REMCOHORT (§inserted) (-2 (>>>)) ;
 REMCOHORT (§inserted) (1 (<<<)) ;
 REMCOHORT (§inserted) (2 (<<<)) ;
-#DELIMIT (§inserted) ;
+DELIMIT (§inserted) ;
 
 
 SECTION
 # Insert a full stop after initial interjections
 ADDCOHORT ("<.>" "." CLB §inserted) AFTER (Interj) (-1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§inserted) OR (<<<)) ;
-ADDCOHORT ("<.>" "." CLB §inserted) AFTER (Interj) (-1 (PUNCT) OR (DIRSTALESTART) LINK -1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§inserted) OR (<<<)) 
+ADDCOHORT ("<.>" "." CLB §inserted) AFTER (Interj) (-1 (PUNCT) OR (DIRSTALESTART) LINK -1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§inserted) OR (<<<))
 (NEGATE 0 ("qujanaq") LINK *1 Trm BARRIER V)
 (NEGATE 0 ("qujanaq") LINK *1 Cau BARRIER V - CONT)
 ;
 DELIMIT (§inserted) ;
 
 # Insert a full stop before trailing interjections
-ADDCOHORT ("<.>" "." CLB §inserted) BEFORE (Interj) (1 (<<<)) (NOT -1 (§inserted) OR (>>>) OR (PUNCT) OR (DIRTALESTART)) 
+ADDCOHORT ("<.>" "." CLB §inserted) BEFORE (Interj) (1 (<<<)) (NOT -1 (§inserted) OR (>>>) OR (PUNCT) OR (DIRTALESTART))
 (NEGATE 0 (NNGUARSI) LINK -*1 ("qangali") BARRIER V)
 ;
 ADDCOHORT ("<.>" "." CLB §inserted) BEFORE (Interj) (0 (<<<)) (NOT -1 (§inserted) OR (>>>) OR (PUNCT) OR (DIRTALESTART)) ;
