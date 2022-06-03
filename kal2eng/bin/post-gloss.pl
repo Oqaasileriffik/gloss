@@ -6,6 +6,11 @@ use warnings;
 use strict;
 
 while (<STDIN>) {
+   if (!/^\t"/) {
+      print;
+      next;
+   }
+
 	s~^\t(.+? NIQ Der/vn) (U Der/nv)~\t$2 $1~g; # U ved NIQ må flyttes før øvrige
 #	s~^3Sg U Der/nv~3Sg "be"~g ;
 
