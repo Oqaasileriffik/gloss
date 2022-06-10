@@ -12,7 +12,7 @@ use Databases;
 use Shared;
 
 print "Downloading latest\n";
-`curl -s https://tech.oqaasileriffik.gl/katersat/export-long2sem.php | egrep -v ' (Abs|Ind|Ins)\\t' | sort | uniq > $Bin/../lex/long2sem.tsv`;
+`curl -s https://tech.oqaasileriffik.gl/katersat/export-long2sem.php | egrep -v ' (Abs|Ind|Ins)\t' | LC_ALL=C sort | uniq > $Bin/../lex/long2sem.tsv`;
 
 if (-s "$Bin/../lex/long2sem.tsv" < 1000000) {
    print "$Bin/../lex/long2sem.tsv too small - bailing out!\n";
