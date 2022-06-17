@@ -2,7 +2,6 @@
 "20" Num	ac-sign
 "A" N	sem-r
 "A" N	unit
-"Å" N	unit
 "A-vitamin" N	food-c
 "AC-fuldmægtig" N	Hprof
 "AEPS" N	sem-c
@@ -11,7 +10,7 @@
 "ATV" N	Vground
 "Aalborg" Sem/Geo iProp MIU Der/nn N	Hnat
 "Aappilattoq" Sem/Mask Sem/Hum Prop	L
-"Åbenrå" Sem/Geo iProp MIU Der/nn N	Hnat
+"Aasarpalaaq" Sem/sem Sem/Hum Prop	sem-l
 "Afghanistan" Sem/Geo iProp MIU Der/nn N	Hnat
 "Afrika" Sem/Geo iProp MIU Der/nn N	Hnat
 "Afrika" Sem/Geo iProp MIU Der/nn PAK Der/nn LUP Der/nv Gram/IV TUQ Der/vn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	activity
@@ -30,7 +29,6 @@
 "Agenda 21" Sem/Hum Prop	sem-r
 "Aguna" Sem/Fem Sem/Hum Prop	Hmyth
 "Agut" Sem/Fem Sem/Hum Prop	Hmyth
-"Ægypten" Sem/Geo iProp MIU Der/nn N	Hnat
 "Air Greenland" Sem/Hum Prop	inst
 "Ajuna" Sem/Fem Sem/Hum Prop	Hmyth
 "Ajut" Sem/Fem Sem/Hum Prop	Hmyth
@@ -39,7 +37,6 @@
 "Akilineq" Sem/Geo iProp MIU Der/nn N	Hnat
 "Akuliaruseq" Sem/Geo Prop	L
 "Akunnaaq" Sem/Geo Prop	L
-"Åland" Sem/Geo iProp MIU Der/nn N	Hnat
 "Alaska" Sem/Geo Prop	L
 "Albanien" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Albanien" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
@@ -60,10 +57,9 @@
 "Arctic Umiaq Line" Sem/Hum Prop	Vwater
 "Argentina" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Argentina" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
-"Århus" Sem/Geo iProp MIU Der/nn N	f Hnat
-"Århus" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Armenien" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Armenien" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"Arnanut" Sem/sem Sem/Hum Prop	sem-r
 "Arsuk" Sem/Geo Prop	L
 "Arsuk" Sem/Mask Sem/Hum Prop	L
 "Asia" Sem/Geo iProp MIU Der/nn N	Hnat
@@ -105,6 +101,7 @@
 "Colombia" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Colombia" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Covid-19" N	sick
+"Crimson & Clover" Sem/sem Sem/Hum Prop	sem-l
 "Cuba" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Cuba" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "D-vitamin" N	cm-h
@@ -125,6 +122,7 @@
 "Etiopien" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Europa" Sem/Geo iProp MIU Der/nn N	Hnat
 "FAS" N	sick-m
+"Fiasko" Sem/sem Sem/Hum Prop	sem-l
 "Finland" Sem/Geo iProp MIU Der/nn N	Hnat
 "Flandern" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Flandern" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
@@ -133,6 +131,7 @@
 "GIF" N	sem-w
 "GM" N	ac
 "Ghana" Sem/Geo iProp MIU Der/nn N	f Hnat
+"Greenland and Barents Sea" Sem/sem Sem/Hum Prop	sem-l
 "Guuti" Sem/Hum Prop	Hmyth
 "Holland" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Holland" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
@@ -257,6 +256,7 @@
 "IP" Gram/IV TUQ Der/vn U Der/nv Gram/IV TUAR Der/vv IT Der/vv Gram/IV V	be_attribute
 "IP" Gram/IV TUUR Der/vv Gram/IV TUQ Der/vn N	f-psych
 "IP" Gram/IV TUUR Der/vv Gram/IV V	emote_obj
+"IP" Gram/IV TUUR Der/vv NAR Der/vv Gram/IV TUQ Der/vn N	ac
 "IP" Gram/IV TUUR Der/vv NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "IP" Gram/IV UMI Der/vv Gram/IV V	emote
 "IP" Gram/IV UMI Der/vv Gram/IV V	moveS_fluidic
@@ -264,6 +264,7 @@
 "IP" Gram/IV VIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn N	L
 "ISIIN" N	inst
 "IT" iN QAR Der/nv Gram/IV VIK Der/vn N	inst
+"Idealisten" Sem/sem Sem/Hum Prop	sem-w
 "Ikamiut" Sem/Geo Prop	L
 "Ilimanaq" Sem/Geo Prop	L
 "Ilimmaasaq" Sem/Geo Prop	Ltop
@@ -286,6 +287,7 @@
 "Israel" Sem/Geo iProp MIU Der/nn N	Hnat
 "Israeli" Sem/Geo iProp MIU Der/nn N	Hnat
 "Issittoq" Sem/Geo Prop	L
+"Issittup qullii" Sem/sem Sem/Hum Prop	sem-w
 "Ittaajimmiit" Sem/Geo Prop	L
 "Ittoqqortoormiit" Sem/Geo Prop	L
 "Jamaica" Sem/Geo iProp MIU Der/nn N	Hnat
@@ -308,6 +310,7 @@
 "Kalaallit Nunaat" Sem/Geo Prop	L
 "Kangaamiut" Sem/Geo Prop	L
 "Kangerluarsoruseq" Sem/Geo Prop	Ltown
+"Katersat" Sem/sem Sem/Hum Prop	sem-r
 "Kerteminde" Sem/Geo iProp MIU Der/nn N	Hnat
 "Killavaat Alannguat" Sem/Geo Prop	Ltop
 "Kina" Sem/Geo Prop	Lciv
@@ -343,6 +346,7 @@
 "Libanon" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Litauen" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Litauen" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"Lovtidende" Sem/sem Sem/Hum Prop	sem-r
 "Luxembourg" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Luxembourg" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Mac" Sem/Mask Sem/Hum Prop	tool
@@ -350,6 +354,7 @@
 "Makedonia" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Makedonien" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Makedonien" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"Malersortinneq" Sem/sem Prop	sem-r
 "Maliina" Sem/Fem Sem/Hum Prop	Hmyth
 "Maniitsoq" Sem/Geo Prop	Lciv
 "Marokko" Sem/Geo Prop	Lcountry
@@ -396,8 +401,7 @@
 "Oqaaserpassualeriffik" Sem/Hum Prop	inst
 "Oqaasileriffik" Sem/inst Sem/Hum Prop	inst
 "Oqaasiliortut" Sem/inst Sem/Hum Prop	inst
-"Østrig" Sem/Geo iProp MIU Der/nn N	f Hnat
-"Østrig" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"Oqaluttuat Ilumoortut" Sem/sem Prop	sem-r
 "Paa" Sem/Geo Prop	L
 "Paamiut" Sem/Geo Prop	L
 "Pakistan" Sem/Geo iProp MIU Der/nn N	f Hnat
@@ -407,11 +411,13 @@
 "Palæstina" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Persien" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Persien" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"Pilluarneq Ersigiunnaarpara" Sem/sem Sem/Hum Prop	sem-w
 "Pilutaq" Sem/Fem Sem/Hum Prop	Lh
 "Pilutaq" Sem/Mask Sem/Hum Prop	Lh
 "Pinngortitaleriffik" Sem/Hum Prop	inst
 "Pisiffik" Sem/inst Sem/Hum Prop	inst
 "Pituffik" Sem/Geo Prop	Lh
+"Qaamarnup Uummataa" Sem/sem Prop	sem-w
 "Qaanaaq" Sem/Geo Prop	Lciv
 "Qalasersuaq" Sem/Geo Prop	Ltop
 "Qalasersuaq" Sem/Mask Sem/Hum Prop	Ltop
@@ -437,6 +443,8 @@
 "Schweiz" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Serbien" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Serbien" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"Sermitsiaq" Sem/Geo Prop	Ltop
+"Sermitsiaq" Sem/Geo Prop	sem-r
 "Sermitsiaq" Sem/sem Sem/Hum Prop	Ltop
 "Sermitsiaq" Sem/sem Sem/Hum Prop	sem-r
 "Sikuiuitsoq" Sem/Geo Prop	Lwater
@@ -469,6 +477,8 @@
 "TAC" N	part
 "Thailand" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Thailand" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"The Fast Runner" Sem/Hum Prop	sem-w
+"The Green Land" Sem/sem Sem/Hum Prop	sem-w
 "Tibet" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Tibet" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "Tiilerilaaq" Sem/Geo Prop	L
@@ -494,15 +504,13 @@
 "VVM" N	act sem-r
 "Vietnam" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Vietnam" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"WWF" Sem/Hum Prop	HH
 "Wales" Sem/Geo iProp MIU Der/nn N	f Hnat
 "Wales" Sem/Geo iProp MIU Der/nn N	f ling
 "Wales" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
 "a" N	ac-sign
-"å" N	ac-sign
-"æ" N	ac-sign
 "a" N	sem-r
 "a" N	unit
-"å" N	unit
 "a'a" Interj	act-s
 "a'ar" Gram/IV V	excrete
 "a-jusaq" N	ac-sign
@@ -634,6 +642,7 @@
 "aa" Gram/TV INNAR Der/vv NIQ Der/vn N	activity
 "aa" Gram/TV INNAR Der/vv V	excrete
 "aa" Gram/TV INNAR Der/vv V	surrender
+"aa" Gram/TV INNAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn U Der/nv Gram/IV TUQ Der/vn N	f-surf
 "aa" Gram/TV KULAAR Der/vv V	changeS
 "aa" Gram/TV LIR Der/vv Gram/IV TUQ Der/vn N	state
 "aa" Gram/TV LIR Der/vv Gram/IV TUQ Der/vn UTE Der/nn SSAQ Der/nn N	cm-liq
@@ -972,8 +981,8 @@
 "aalaakker" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	f-phys
 "aalaakker" Gram/TV HTR Der/vv Gram/IV V	hurt
 "aalaakker" Gram/TV V	hinder
+"aalaakker" Gram/TV VIP Der/vv Gram/IV V	hurt
 "aalaakker" Gram/TV VIP Der/vv Gram/TV V	hinder
-"aalaakker" Gram/TV VIP Der/vv V	hurt
 "aalaakkip" Gram/IV V	endure
 "aalaakkip" Gram/IV VIP Der/vv Gram/IV V	hurt
 "aalaarsar" Gram/TV V	substance_emission
@@ -1091,8 +1100,8 @@
 "aalajanger" Gram/TV UTE Der/vv Gram/TV V	declare
 "aalajanger" Gram/TV V	decide
 "aalajanger" Gram/TV V	fasten
+"aalajanger" Gram/TV VIP Der/vv Gram/IV NIQ Der/vn N	act
 "aalajanger" Gram/TV VIP Der/vv Gram/TV NIQ Der/vn N	act
-"aalajanger" Gram/TV VIP Der/vv NIQ Der/vn N	act
 "aalajanger" HTR VIK Der/vn GE Der/nv Gram/TV TAQ Der/vn SSAQ Der/nn GE Der/nv Gram/TV V	decide
 "aalajanger" HTR VIK Der/vn GE Der/nv Gram/TV TAQ Der/vn SSAQ Der/nn QAR Der/nv Gram/IV TUQ Der/vn N	Hprof
 "aalajangeriataallaqqissuseq" N	f-psych
@@ -1356,6 +1365,7 @@
 "aaliut" LIR Der/nv Gram/IV VIK Der/vn N	part-tool
 "aaliut" LIR Der/nv Gram/TV Gram/IV VIK Der/vn N	part-tool
 "aaliut" N	part-tool
+"aallaa" Gram/IV GALUAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	act
 "aallaa" Gram/IV NIAQ Der/vn N	Hprof
 "aallaa" Gram/IV NIAR Der/vv Gram/IV NIQ Der/vn N	act
 "aallaa" Gram/IV NIAR Der/vv Gram/IV TUQ Der/vn N	Hprof
@@ -1371,6 +1381,7 @@
 "aallaa" Gram/IV V	throw
 "aallaa" Gram/TV GALUAR Der/vv Gram/TV V	hurt
 "aallaa" Gram/TV GALUAR Der/vv HTR Der/vv Gram/IV NIQ Der/vn N	act
+"aallaa" Gram/TV Gram/IV GALUAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	act
 "aallaa" Gram/TV Gram/IV NIAQ Der/vn N	Hprof
 "aallaa" Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV TUQ Der/vn N	H
 "aallaa" Gram/TV Gram/IV V	throw
@@ -1426,8 +1437,8 @@
 "aallar" Gram/IV KAA Der/vv TIP Der/vv Gram/TV TAQ Der/vn SSAQ Der/nn LIAQ Der/nn N	sem-w
 "aallar" Gram/IV KAA Der/vv TIP Der/vv Gram/TV TAQ Der/vn SSAQ Der/nn LIUR Der/nv Gram/IV GIARTUR Der/vv Gram/IV NIQ Der/vn N	act
 "aallar" Gram/IV KAA Der/vv TIP Der/vv Gram/TV TAQ Der/vn SSAQ Der/nn LIUR Der/nv Gram/IV TUQ Der/vn N	Hprof
+"aallar" Gram/IV KAA Der/vv TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "aallar" Gram/IV KAA Der/vv TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"aallar" Gram/IV KAA Der/vv TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	act
 "aallar" Gram/IV LIR Der/vv Gram/IV V	leave
 "aallar" Gram/IV NIAQ Der/vn LIR Der/nv Gram/IV NIQ Der/vn N	am
 "aallar" Gram/IV NIAQ Der/vn LIR Der/nv Gram/TV Gram/IV NIQ Der/vn N	am
@@ -1478,8 +1489,8 @@
 "aallar" Gram/IV TIP Der/vv Gram/TV HTR Der/vv VIK Der/vn GE Der/nv Gram/TV V	send have
 "aallar" Gram/IV TIP Der/vv Gram/TV INNAR Der/vv Gram/TV V	try_to
 "aallar" Gram/IV TIP Der/vv Gram/TV NIQ Der/vn N	temp
+"aallar" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/IV V	continue
 "aallar" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/TV V	start
-"aallar" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv V	continue
 "aallar" Gram/IV TIP Der/vv Gram/TV TAQ Der/vn N	HH
 "aallar" Gram/IV TIP Der/vv Gram/TV TAQ Der/vn N	Hprof
 "aallar" Gram/IV TIP Der/vv Gram/TV TAQ Der/vn QAR Der/nv Gram/IV VIK Der/vn N	inst
@@ -1896,6 +1907,7 @@
 "aap" Gram/TV INNAR Der/vv NIQ Der/vn N	activity
 "aap" Gram/TV INNAR Der/vv V	excrete
 "aap" Gram/TV INNAR Der/vv V	surrender
+"aap" Gram/TV INNAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn U Der/nv Gram/IV TUQ Der/vn N	f-surf
 "aap" Gram/TV KULAAR Der/vv V	changeS
 "aap" Gram/TV LIR Der/vv Gram/IV TUQ Der/vn N	state
 "aap" Gram/TV LIR Der/vv Gram/IV TUQ Der/vn UTE Der/nn SSAQ Der/nn N	cm-liq
@@ -1988,12 +2000,28 @@
 "aap" Gram/TV PALUP Der/vv TUQ Der/vn SUAQ Der/nn N	B
 "aap" Gram/TV PALUP Der/vv V	be_attribute
 "aap" Gram/TV QE Der/vv Gram/IV V	change_process
+"aap" Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV TUQ Der/vn N	state
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV NIQ Der/vn N	ac
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV NIQ Der/vn N	act
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV NIQ Der/vn N	activity
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV NIQ Der/vn N	occ
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV NIRLIUR Der/vv Gram/IV NIQ Der/vn N	act
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	ac
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn SSAQ Der/nn N	ac
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV QATIGIIP Der/vv Gram/IV NIQ Der/vn N	ac
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV QATIGIIP Der/vv Gram/IV NIQ Der/vn SSAQ Der/nn N	ac
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV QQIP Der/vv Gram/IV NIQ Der/vn N	act
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV QQIP Der/vv Gram/IV V	improve
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV SIMA Der/vv Gram/IV NIQ Der/vn N	system
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV TUQ Der/vn N	HHorg
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV TUQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	Hprof
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV V	establish
+"aap" Gram/TV QQIP Der/vv Gram/IV TUQ Der/vn iN iAeq iPl i3SgPoss UR Gram/IV QATE Der/vn GIIT Der/nn N	HH
+"aap" Gram/TV QQIP Der/vv Gram/IV V	improve
 "aap" Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV TUQ Der/vn N	state
 "aap" Gram/TV QQIP Der/vv Gram/TV TAQ Der/vn N	ac
 "aap" Gram/TV QQIP Der/vv Gram/TV V	adjust
-"aap" Gram/TV QQIP Der/vv NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV TUQ Der/vn N	state
 "aap" Gram/TV QQIP Der/vv NIQAR Der/vv Gram/IV SINNAA Der/vv Gram/IV TUQ Der/vn N	state
-"aap" Gram/TV QQIP Der/vv V	improve
 "aap" Gram/TV SIMA Der/vv Gram/IV SSUSIQ Der/vn N	f-phys
 "aap" Gram/TV TAQ Der/vn ARAQ Der/nn N	Aich
 "aap" Gram/TV TAQ Der/vn LISAR Der/nv Gram/IV V	be_like
@@ -2112,6 +2140,7 @@
 "aappila" Gram/IV RUJUP Der/vv Gram/IV TUQ Der/vn N	col
 "aappila" Gram/IV RULUP Der/vv Gram/IV TUQ Der/vn N	col
 "aappila" Gram/IV V	colouring
+"aappilarujup" Gram/IV TUQ Der/vn N	col
 "aappilattoq" N	B
 "aappilattoq" NNGUAQ Der/nn N	B
 "aappillap" Gram/IV V	be_attribute
@@ -2278,6 +2307,7 @@
 "aar" Gram/TV INNAR Der/vv NIQ Der/vn N	activity
 "aar" Gram/TV INNAR Der/vv V	excrete
 "aar" Gram/TV INNAR Der/vv V	surrender
+"aar" Gram/TV INNAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn U Der/nv Gram/IV TUQ Der/vn N	f-surf
 "aar" Gram/TV KULAAR Der/vv V	changeS
 "aar" Gram/TV LIR Der/vv Gram/IV TUQ Der/vn N	state
 "aar" Gram/TV LIR Der/vv Gram/IV TUQ Der/vn UTE Der/nn SSAQ Der/nn N	cm-liq
@@ -2620,8 +2650,6 @@
 "aavoor" Gram/IV NIAR Der/vv Gram/IV V	hunt
 "aavoorniar" Gram/IV V	hunt
 "abbed" N	Hideo
-"æblejuice" N	drink-h
-"æbleskive" N	food-c-h
 "aborre" N	Aich
 "abrikos" N	fruit-c
 "accelerator" N	cc-h
@@ -2634,8 +2662,6 @@
 "advent" SIUR Der/nv Gram/IV TUQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	ism
 "adventist" N	Hideo
 "advokat" N	Hprof
-"afersaneq-marluk" Num	ac
-"afersaneq-pingasut" Num	ac
 "affakoq" NNAAQ Der/nn N	amount
 "affakoq" TAQ Der/nn N	amount
 "affaku" N	amount
@@ -2664,7 +2690,6 @@
 "agat" N	cc-stone
 "aggaatsoq" N	H
 "aggaatsoq" N	food-m-h
-"æggehvidestof" Err/Sub N	cm
 "agger" A Der/vv Gram/IV TUQ Der/vn N	H
 "agger" A Der/vv Gram/IV TUUR Der/vv Gram/IV NIQ Der/vn N	wea-wind
 "agger" Gram/IV GALLAR Der/vv NNGIT Der/vv Gram/IV V	disappear
@@ -2716,7 +2741,6 @@
 "agger" SAR Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "agger" SAR Der/vv Gram/TV V	summon
 "aggerumajuinaar" Gram/IV V	marvel
-"æggesnaps" N	drink-h
 "aggiasoor" Gram/IV NIQ Der/vn N	wea-wind
 "aggiasoor" Gram/IV V	weather
 "aggiut" N	ac
@@ -2986,8 +3010,8 @@
 "ajap" Gram/TV NIQ Der/vn N	cc-h
 "ajap" Gram/TV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV V	can
 "ajap" Gram/TV NIQAR Der/vv Gram/IV SINNAA Der/vv Gram/IV V	can
-"ajap" Gram/TV QQIP Der/vv V	bump
-"ajap" Gram/TV QQIP Der/vv VIK Der/vn GE Der/nv Gram/TV V	bump
+"ajap" Gram/TV QQIP Der/vv Gram/IV V	bump
+"ajap" Gram/TV QQIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	bump
 "ajap" Gram/TV SSA Der/vv Gram/IV USIQ Der/vn RSUR Der/nv Gram/IV V	use
 "ajap" Gram/TV TAQ Der/vn SSAQ Der/nn U Der/nv Gram/IV NNGIT Der/vv Gram/IV V	be_place
 "ajap" Gram/TV TAR Der/vv Gram/TV V	push
@@ -3299,6 +3323,10 @@
 "ajor" Gram/IV NAR Der/vv SAAR Der/vv Gram/IV V	be_attribute
 "ajor" Gram/IV NAR Der/vv SI Der/vv Gram/IV V	become_be
 "ajor" Gram/IV NAR Der/vv SI Der/vv TIP Der/vv Gram/TV V	hinder
+"ajor" Gram/IV NAR Der/vv TUUR Der/vv Gram/IV NIQ Der/vn N	sit
+"ajor" Gram/IV NAR Der/vv TUUR Der/vv Gram/IV TUQ Der/vn N	f
+"ajor" Gram/IV NAR Der/vv TUUR Der/vv Gram/IV V	suffer
+"ajor" Gram/IV NAR Der/vv TUUR Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	event
 "ajor" Gram/IV NAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	f-psych
 "ajor" Gram/IV NASUGE Der/vv Gram/TV V	regard_as assume
 "ajor" Gram/IV NAVIAR Der/vv NNGIT Der/vv Gram/IV V	be_attribute
@@ -3703,7 +3731,7 @@
 "ajor" Gram/TV NNGIT Der/vv NIRU Der/vv LIR Der/vv NIQ Der/vn N	f-phys-h
 "ajor" Gram/TV NNGIT Der/vv NNGUATSIAR Der/vv V	be_attribute
 "ajor" Gram/TV NNGIT Der/vv QE Der/vv Gram/IV V	be_attribute
-"ajor" Gram/TV NNGIT Der/vv VIP Der/vv V	be_attribute
+"ajor" Gram/TV NNGIT Der/vv VIP Der/vv Gram/IV V	be_attribute
 "ajor" Gram/TV PAJAAR Der/vv V	be_attribute
 "ajor" Gram/TV PALLAK Der/vn U Der/nv Gram/IV NNGIT Der/vv GALUAR Der/vv Gram/IV V	be_attribute
 "ajor" Gram/TV PALLAK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV TUQ Der/vn N	f
@@ -3870,7 +3898,7 @@
 "ajor" Gram/TV VALLAAR Der/vv NNGIT Der/vv Gram/IV TUQ Der/vn N	f
 "ajor" Gram/TV VALLAAR Der/vv NNGIT Der/vv Gram/IV V	be_attribute
 "ajor" Gram/TV VALLAAR Der/vv SSA Der/vv NNGIT Der/vv Gram/IV V	be_attribute
-"ajor" Gram/TV VIP Der/vv V	be_attribute
+"ajor" Gram/TV VIP Der/vv Gram/IV V	be_attribute
 "ajor" Gram/TV VISSUR Der/vv V	be_attribute
 "ajor" SI Der/vv Gram/IV GALUTTUAR Der/vv INNAR Der/vv Gram/IV V	become_be
 "ajor" SI Der/vv Gram/IV GIARTUR Der/vv Gram/IV V	become_be
@@ -4339,7 +4367,7 @@
 "ajup" Gram/TV NNGIT Der/vv NIRU Der/vv LIR Der/vv NIQ Der/vn N	f-phys-h
 "ajup" Gram/TV NNGIT Der/vv NNGUATSIAR Der/vv V	be_attribute
 "ajup" Gram/TV NNGIT Der/vv QE Der/vv Gram/IV V	be_attribute
-"ajup" Gram/TV NNGIT Der/vv VIP Der/vv V	be_attribute
+"ajup" Gram/TV NNGIT Der/vv VIP Der/vv Gram/IV V	be_attribute
 "ajup" Gram/TV PAJAAR Der/vv V	be_attribute
 "ajup" Gram/TV PILUP Der/vv Gram/TV TUQ Der/vn N	f-psych
 "ajup" Gram/TV PILUP Der/vv TUQ Der/vn N	f-psych
@@ -4355,7 +4383,7 @@
 "ajup" Gram/TV UTIGE Der/vv LIR Der/vv Gram/TV V	like
 "ajup" Gram/TV V	increase
 "ajup" Gram/TV V	shape
-"ajup" Gram/TV VIP Der/vv V	be_attribute
+"ajup" Gram/TV VIP Der/vv Gram/IV V	be_attribute
 "ajup" Gram/TV VISSUR Der/vv V	be_attribute
 "ajupap" Gram/IV JAAR Der/vv Gram/IV V	be_attribute
 "ajupap" Gram/IV LIR Der/vv Gram/IV TUQ Der/vn N	f
@@ -4589,8 +4617,8 @@
 "aki" Gram/IV SAR Der/vv Gram/TV V	answer
 "aki" Gram/IV TAR Der/vv Gram/IV V	answer
 "aki" Gram/IV TIGE Der/vv Gram/TV V	have use
+"aki" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	act-s
 "aki" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	act-s
-"aki" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv NIQ Der/vn N	act-s
 "aki" Gram/IV TUQ Der/vn SSAQ Der/nn U Der/nv Gram/IV GUNNAIR Der/vv TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "aki" Gram/IV TUQ Der/vn SSAQ Der/nn U Der/nv Gram/IV NIQ Der/vn N	ac
 "aki" Gram/IV TUQ Der/vn SSAQ Der/nn U Der/nv Gram/IV QATE Der/vn U Der/nv Gram/IV NIQ Der/vn N	f-psych
@@ -4702,9 +4730,9 @@
 "aki" Gram/TV NIUTE Der/vv Gram/TV NIQ Der/vn N	act
 "aki" Gram/TV NIUTE Der/vv Gram/TV V	punish
 "aki" Gram/TV NIUTE Der/vv NIQ Der/vn N	act
+"aki" Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	act-s
 "aki" Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	act-s
 "aki" Gram/TV QQIP Der/vv Gram/TV V	answer
-"aki" Gram/TV QQIP Der/vv NIQ Der/vn N	act-s
 "aki" Gram/TV QQIP Der/vv TAR Der/vv V	answer
 "aki" Gram/TV RAR Der/vv Gram/TV TUQ Der/vn UTE Der/nn N	ac-cat
 "aki" Gram/TV RAR Der/vv TUQ Der/vn UTE Der/nn N	ac-cat
@@ -4717,8 +4745,8 @@
 "aki" Gram/TV TAQ Der/vn TUR Der/nv Gram/IV TUQ Der/vn N	H
 "aki" Gram/TV TAQ Der/vn USAQ Der/nn N	cc-h
 "aki" Gram/TV TAR Der/vv V	answer
+"aki" Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act-s
 "aki" Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act-s
-"aki" Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	act-s
 "aki" Gram/TV TUSSAA Der/vv Gram/IV NIQ Der/vn N	ac
 "aki" Gram/TV TUSSAA Der/vv Gram/IV QATE Der/vn U Der/nv Gram/IV NIQ Der/vn N	f-psych
 "aki" Gram/TV TUSSAA Der/vv Gram/IV SSUSIQ Der/vn N	ax
@@ -5410,9 +5438,9 @@
 "akip" Gram/TV LIR Der/vv Gram/TV V	supply
 "akip" Gram/TV LIR Der/vv SINNAA Der/vv NNGIT Der/vv Gram/IV V	fail
 "akip" Gram/TV LIR Der/vv TIP Der/vv Gram/TV V	give
+"akip" Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	act-s
 "akip" Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	act-s
 "akip" Gram/TV QQIP Der/vv Gram/TV V	answer
-"akip" Gram/TV QQIP Der/vv NIQ Der/vn N	act-s
 "akip" Gram/TV QQIP Der/vv TAR Der/vv V	answer
 "akip" Gram/TV RAR Der/vv Gram/TV TUQ Der/vn UTE Der/nn N	ac-cat
 "akip" Gram/TV RAR Der/vv HTR Der/vv Gram/IV LLUAR Der/vv INNAR Der/vv Gram/IV TUQ Der/vn N	Hattr
@@ -5531,8 +5559,8 @@
 "akisuttaat" N	cc-h
 "akit" GE Der/nv Gram/TV V	have use
 "akit" LIR Der/nv Gram/IV QQIP Der/vv Gram/IV NIQ Der/vn N	act-s
+"akit" LIR Der/nv Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	act-s
 "akit" LIR Der/nv Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	act-s
-"akit" LIR Der/nv Gram/TV QQIP Der/vv NIQ Der/vn N	act-s
 "akit" N	cc-h
 "akitser" Gram/IV V	prepare
 "akitsi" Gram/IV TIP Der/vv Gram/TV TAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	act
@@ -5622,8 +5650,10 @@
 "akoq" LIK Der/nn KIP Der/nv Gram/IV V	occur
 "akoq" LIK Der/nn U Der/nv Gram/IV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "akoq" LIK Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
+"akoq" LIK Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "akoq" LIK Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV V	involve
 "akoq" LIK Der/nn U Der/nv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	add
+"akoq" LIR Der/nv Gram/TV UTE Der/vv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "akoq" LIR Der/nv Gram/TV UTE Der/vv Gram/TV NIQ Der/vn N	activity
 "akoq" LIR Der/nv Gram/TV UTE Der/vv Gram/TV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "akoq" LIR Der/nv Gram/TV UTE Der/vv Gram/TV TAQ Der/vn N	part
@@ -5633,6 +5663,7 @@
 "akoq" LIR Der/nv Gram/TV UTE Der/vv Gram/TV VIK Der/vn GE Der/nv Gram/TV V	add
 "akoq" LIR Der/nv Gram/TV V	add
 "akoq" LIRSUR Der/nv Gram/TV V	add
+"akoq" LIUTE Der/nv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "akoq" LIUTE Der/nv Gram/TV NIQ Der/vn N	activity
 "akoq" LIUTE Der/nv Gram/TV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "akoq" LIUTE Der/nv Gram/TV TAQ Der/vn N	part
@@ -5667,7 +5698,7 @@
 "akor" Gram/TV TE Der/vn N	per
 "akor" Gram/TV TIR Der/vv V	work
 "akor" Gram/TV V	grasp
-"akor" Gram/TV VIP Der/vv SSUSIQ Der/vn N	am
+"akor" Gram/TV VIP Der/vv Gram/IV SSUSIQ Der/vn N	am
 "akorlorup" Gram/TV V	make
 "akorloruup" Gram/TV V	make
 "akorngut" LIR Der/nv Gram/TV V	affect_exp
@@ -5719,7 +5750,7 @@
 "aku" Gram/TV TAQ Der/vn N	ac-cat
 "aku" Gram/TV TAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	ac
 "aku" Gram/TV V	add
-"aku" Gram/TV VIP Der/vv SSUSIQ Der/vn N	am
+"aku" Gram/TV VIP Der/vv Gram/IV SSUSIQ Der/vn N	am
 "aku" IAR Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "aku" IAR Der/nv Gram/TV HTR Der/vv Gram/IV TUQ Der/vn N	Hprof
 "aku" IAR Der/nv Gram/TV V	clean
@@ -5735,8 +5766,10 @@
 "aku" LIK Der/nn KIP Der/nv Gram/IV V	occur
 "aku" LIK Der/nn U Der/nv Gram/IV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "aku" LIK Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
+"aku" LIK Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "aku" LIK Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV V	involve
 "aku" LIK Der/nn U Der/nv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	add
+"aku" LIR Der/nv Gram/TV UTE Der/vv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "aku" LIR Der/nv Gram/TV UTE Der/vv Gram/TV NIQ Der/vn N	activity
 "aku" LIR Der/nv Gram/TV UTE Der/vv Gram/TV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "aku" LIR Der/nv Gram/TV UTE Der/vv Gram/TV TAQ Der/vn N	part
@@ -5746,6 +5779,7 @@
 "aku" LIR Der/nv Gram/TV UTE Der/vv Gram/TV VIK Der/vn GE Der/nv Gram/TV V	add
 "aku" LIR Der/nv Gram/TV V	add
 "aku" LIRSUR Der/nv Gram/TV V	add
+"aku" LIUTE Der/nv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "aku" LIUTE Der/nv Gram/TV NIQ Der/vn N	activity
 "aku" LIUTE Der/nv Gram/TV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "aku" LIUTE Der/nv Gram/TV TAQ Der/vn N	part
@@ -5841,6 +5875,7 @@
 "akuleq" N	f
 "akuleq" U Der/nv Gram/IV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "akuleq" U Der/nv Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
+"akuleq" U Der/nv Gram/IV TIP Der/vv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "akuleq" U Der/nv Gram/IV TIP Der/vv Gram/TV V	involve
 "akuleq" U Der/nv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	add
 "akuleriip" Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
@@ -5853,10 +5888,12 @@
 "akuliup" Gram/IV NIQ Der/vn N	activity
 "akuliup" Gram/IV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "akuliup" Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
+"akuliup" Gram/IV TIP Der/vv Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "akuliup" Gram/IV TIP Der/vv Gram/TV TIP Der/vv Gram/TV V	involve
 "akuliup" Gram/IV TIP Der/vv Gram/TV V	involve
 "akuliup" Gram/IV V	socialize
 "akuliup" Gram/IV VIK Der/vn GE Der/nv Gram/TV V	add
+"akuliup" Gram/TV LAAR Der/vv VIP Der/vv Gram/IV TUQ Der/vn N	piece
 "akuliup" Gram/TV NIQ Der/vn N	activity
 "akuliup" Gram/TV SIMA Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV NIQ Der/vn N	am
 "akuliup" Gram/TV TAQ Der/vn N	part
@@ -6002,7 +6039,7 @@
 "alapernaarsor" Gram/TV HTR Der/vv Gram/IV V	watch
 "alapernaarsor" Gram/TV HTR Der/vv Gram/IV VIK Der/vn N	Lh
 "alapernaarsor" Gram/TV V	watch
-"alapernaarsor" Gram/TV VIP Der/vv VIK Der/vn N	Lh
+"alapernaarsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	Lh
 "alapernaarsuut" N	Vwater
 "alapernaaser" Gram/IV VIK Der/vn GE Der/nv Gram/TV V	investigate
 "alapernaaser" Gram/TV Gram/IV VIK Der/vn GE Der/nv Gram/TV V	investigate
@@ -7155,9 +7192,9 @@
 "allattor" Gram/TV SIMA Der/vv Gram/IV VIK Der/vn N	sem-r
 "allattor" Gram/TV TAQ Der/vn N	sem-r
 "allattor" Gram/TV V	note
-"allattor" Gram/TV VIP Der/vv VIK Der/vn N	sem-r
-"allattor" Gram/TV VIP Der/vv VIK Der/vn SIAQ Der/nn N	cc-h
-"allattor" Gram/TV VIP Der/vv VIK Der/vn SSAQ Der/nn N	sem-r
+"allattor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	sem-r
+"allattor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn SIAQ Der/nn N	cc-h
+"allattor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn SSAQ Der/nn N	sem-r
 "allattugaq" N	sem-r
 "allattuiffissiaq" N	cc-h
 "alle" LIR Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	event
@@ -8277,8 +8314,8 @@
 "anger" Gram/TV NNGIT Der/vv Gram/IV V	be_attribute
 "anger" Gram/TV QATIGIIP Der/vv TIP Der/vv HTR Der/vv Gram/IV NIQ Der/vn N	act
 "anger" Gram/TV QE Der/vv Gram/IV V	emphasize
+"anger" Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	occ
 "anger" Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	occ
-"anger" Gram/TV QQIP Der/vv NIQ Der/vn N	occ
 "anger" Gram/TV V	agree
 "anger" Gram/TV VIP Der/vv SIMA Der/vv Gram/IV V	bodystate
 "anger" UTE Der/vn GE Der/nv Gram/TV V	confirm
@@ -8539,8 +8576,8 @@
 "anigor" Gram/TV NIQAR Der/vv Gram/IV SINNAA Der/vv NNGIT Der/vv Gram/IV TUQ Der/vn N	state
 "anigor" Gram/TV V	avoid
 "anigor" Gram/TV V	solve
-"anigor" Gram/TV VIP Der/vv VIK Der/vn N	sem-c
-"anigor" Gram/TV VIP Der/vv VIK Der/vn SSAQ Der/nn N	sem-c
+"anigor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	sem-c
+"anigor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn SSAQ Der/nn N	sem-c
 "anillagiaq" N	Lh
 "anillap" Gram/IV NGA Der/vv Gram/IV NIQ Der/vn N	Ltip
 "anillap" Gram/IV TIP Der/vv Gram/TV TAQ Der/vn N	sem-r
@@ -8563,7 +8600,7 @@
 "aningaasaq" LIRSUR Der/nv Gram/IV VIP Der/vv Gram/IV QATE Der/vn U Der/nv Gram/IV NIQ Der/vn N	mon-c
 "aningaasaq" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "aningaasaq" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV QATE Der/vn U Der/nv Gram/IV NIQ Der/vn N	mon-c
-"aningaasaq" LIRSUR Der/nv Gram/TV VIP Der/vv QATE Der/vn U Der/nv Gram/IV NIQ Der/vn N	mon-c
+"aningaasaq" LIRSUR Der/nv Gram/TV VIP Der/vv Gram/IV QATE Der/vn U Der/nv Gram/IV NIQ Der/vn N	mon-c
 "aningaasaq" N	B
 "aningaasaq" N	mon-c
 "aningaasaq" N	mon-m
@@ -8580,12 +8617,14 @@
 "aningaasaq" SIAQ Der/nn QAR Der/nv Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	mon-c
 "aningaasaq" SIAQ Der/nn QAR Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	mon-c
 "aningaasaq" SIUR Der/nv Gram/IV NIQ Der/vn N	domain
+"aningaasaq" UTE Der/nn IRUTE Der/nv Gram/IV TIP Der/vv Gram/TV VIP Der/vv Gram/IV NIQ Der/vn N	event
+"aningaasaq" UTE Der/nn IRUTE Der/nv Gram/IV TIP Der/vv Gram/TV VIP Der/vv Gram/IV TUQ Der/vn N	H
 "aningaasaq" UTE Der/nn IRUTE Der/nv Gram/IV TIP Der/vv Gram/TV VIP Der/vv Gram/TV NIQ Der/vn N	event
-"aningaasaq" UTE Der/nn IRUTE Der/nv Gram/IV TIP Der/vv Gram/TV VIP Der/vv NIQ Der/vn N	event
 "aningaasaq" UTE Der/nn IRUTE Der/nv Gram/IV VIP Der/vv Gram/IV NIQ Der/vn N	event
 "aningaasaq" UTE Der/nn IRUTE Der/nv Gram/IV VIP Der/vv Gram/IV TUQ Der/vn N	H
+"aningaasaq" UTE Der/nn IRUTE Der/nv Gram/TV VIP Der/vv Gram/IV NIQ Der/vn N	event
+"aningaasaq" UTE Der/nn IRUTE Der/nv Gram/TV VIP Der/vv Gram/IV TUQ Der/vn N	H
 "aningaasaq" UTE Der/nn IRUTE Der/nv Gram/TV VIP Der/vv Gram/TV NIQ Der/vn N	event
-"aningaasaq" UTE Der/nn IRUTE Der/nv Gram/TV VIP Der/vv NIQ Der/vn N	event
 "aningaasaq" UTE Der/nn QAR Der/nv Gram/IV LLUAR Der/vv Gram/IV V	be_attribute
 "aningaasaq" UTE Der/nn QAR Der/nv Gram/IV VIK Der/vn N	mon
 "aningaasaq" iN iTrm iPl UR Der/nv Gram/IV NIQ Der/vn N	game
@@ -9087,10 +9126,10 @@
 "aqup" Gram/TV V	handle
 "aqup" Gram/TV V	run_obj
 "aqup" Gram/TV V	steer
+"aqup" Gram/TV VIP Der/vv Gram/IV V	change_bodystate
+"aqup" Gram/TV VIP Der/vv Gram/IV V	excrete
+"aqup" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	Lsurf
 "aqup" Gram/TV VIP Der/vv TAR Der/vv VIK Der/vn N	Lh
-"aqup" Gram/TV VIP Der/vv V	change_bodystate
-"aqup" Gram/TV VIP Der/vv V	excrete
-"aqup" Gram/TV VIP Der/vv VIK Der/vn N	Lsurf
 "aqupi" Gram/IV V	be_place
 "aqussip" Gram/IV V	change_body_pos A
 "aquttoruseq" N	Hprof
@@ -9130,7 +9169,6 @@
 "arfinillit" iNum SSAQ Der/nn N	unit
 "arfior" Gram/IV VIK Der/vn N	Lh
 "aritmetik" Err/Sub N	domain
-"ærkebiskop" N	Hideo
 "arkitekt" N	Hprof
 "arkiv" N	Lh
 "arlaaq" N	ac
@@ -10021,7 +10059,6 @@
 "ater" Gram/IV USIQ Der/vn N	ac
 "ater" Gram/IV V	move_dir
 "ater" Gram/IV VIK Der/vn GE Der/nv Gram/TV V	run_obj
-"æter" N	cm-liq-h
 "ateraasaq" N	cloH-shoe
 "ateraasior" Gram/IV TUQ Der/vn N	Hprof
 "ateraq" USAQ Der/nn N	cloH-shoe
@@ -10152,8 +10189,8 @@
 "ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	act
 "ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn SSAQ Der/nn SIUR Der/nv Gram/IV NIQ Der/vn N	activity
 "ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn U Der/nv Gram/IV QQIP Der/vv Gram/IV NIQ Der/vn N	act
+"ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	act
 "ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQU Der/vv HTR Der/vv Gram/IV GUNNAIR Der/vv Gram/IV NIQ Der/vn N	am
 "ator" Gram/IV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV V	employ
 "ator" Gram/IV VIK Der/vn QAR Der/nv Gram/IV V	role_as
@@ -10309,8 +10346,8 @@
 "ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	act
 "ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn SSAQ Der/nn SIUR Der/nv Gram/IV NIQ Der/vn N	activity
 "ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn U Der/nv Gram/IV QQIP Der/vv Gram/IV NIQ Der/vn N	act
+"ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	act
 "ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQU Der/vv HTR Der/vv Gram/IV GUNNAIR Der/vv Gram/IV NIQ Der/vn N	am
 "ator" Gram/TV VIK Der/vn NIP Der/nv Gram/IV TIP Der/vv Gram/TV V	employ
 "ator" Gram/TV VIK Der/vn QAR Der/nv Gram/IV V	role_as
@@ -10801,8 +10838,6 @@
 "ballet" Err/Sub N	sport
 "bamse" N	cc-h
 "banan" N	fruit-c
-"bånd" N	cc-h
-"båndoptager" N	cc-h
 "bank" N	inst
 "bankbog" N	cc-h
 "banko" N	game
@@ -10856,11 +10891,11 @@
 "biolog" N	Hprof
 "biskop" Err/Sub QAR Der/nv Gram/IV VIK Der/vn N	inst
 "biskop" N	Hprof
-"blæk" Err/Sub N	cm-liq-h
-"blæk" Err/Sub USAQ Der/nn N	B
 "blanket" Err/Sub N	sem-r
 "blanket" N	sem-r
 "blokfløjte" N	tool-mus
+"blæk" Err/Sub N	cm-liq-h
+"blæk" Err/Sub USAQ Der/nn N	B
 "bo" Err/Sub N	cc-h
 "boks" N	con
 "bolle" LIAQ Der/nn N	food-c-h
@@ -10870,19 +10905,17 @@
 "borgmester" N	Hprof
 "borgmester" U Der/nv Gram/IV NIQ Der/vn N	Hprof
 "borgmester" U Der/nv Gram/IV SIMA Der/vv Gram/IV TUQ Der/vn N	Hprof
-"børnehave" N	inst
-"børste" LIUR Der/nv Gram/IV TUQ Der/vn N	Hprof
 "botanik" Err/Sub N	domain
 "bowling" R Der/nv Gram/IV NIQ Der/vn N	sport
 "brainstorming" N	activity
 "bredbånd" N	tool
 "brint" N	cm-gas
-"brøk" N	ac-cat
 "bronkitis" N	sick-m
 "bronze" NNAP Der/nv Gram/IV NIUTE Der/vv Gram/IV NIQ Der/vn N	occ
 "bronze" NNAP Der/nv Gram/IV V	get
 "brugs" N	inst
 "brugsen" N	inst
+"brøk" N	ac-cat
 "bulimi" N	sick
 "bulldozer" N	Vground
 "bungalow" N	build
@@ -10904,6 +10937,10 @@
 "bussi" UTE Der/nn LIR Der/nv Gram/IV QATIGIIP Der/vv Gram/IV VIK Der/vn N	HHorg
 "bussi" UTE Der/nn LIR Der/nv Gram/TV Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HHorg
 "bussi" UTE Der/nn LIR Der/nv Gram/TV QATIGIIP Der/vv Gram/TV VIK Der/vn N	HHorg
+"bånd" N	cc-h
+"båndoptager" N	cc-h
+"børnehave" N	inst
+"børste" LIUR Der/nv Gram/IV TUQ Der/vn N	Hprof
 "c" N	cm
 "cadmium" N	cm-chem
 "camp" QAR Der/nv Gram/IV VIK Der/vn N	Lh
@@ -11222,6 +11259,7 @@
 "eqqaq" U Der/nv Gram/IV SSUSIQ Der/vn N	f-phys
 "eqqaq" U Der/nv Gram/IV UTE Der/vn SSAQ Der/nn LIAQ Der/nn N	cc-h
 "eqqaq" U Der/nv Gram/IV UTE Der/vn SSAQ Der/nn N	cc-h
+"eqqar" Gram/IV GASUAR Der/vv Gram/IV TAR Der/vv Gram/IV UTE Der/vn N	tool-shoot
 "eqqar" Gram/IV NAAR Der/vv Gram/TV TUR Der/vv V	speak_mnr
 "eqqar" Gram/IV TUQ Der/vn U Der/nv Gram/IV TIP Der/vv Gram/TV VIK Der/vn SSAQ Der/nn N	temp
 "eqqar" Gram/IV TUQ Der/vn U Der/nv Gram/IV UTE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	ac
@@ -11267,6 +11305,7 @@
 "eqqar" Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV UTE Der/vn LIRI Der/nv Gram/IV TUQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	activity
 "eqqar" Gram/IV TUQ Der/vn UTE Der/nn SI Der/nv Gram/IV UTE Der/vn LIRI Der/nv Gram/IV TUQ Der/vn QAR Der/nv Gram/IV VIK Der/vn N	HH
 "eqqar" Gram/IV V	throw
+"eqqar" Gram/TV GASUAR Der/vv TAR Der/vv Gram/TV UTE Der/vn N	tool-shoot
 "eqqar" Gram/TV HTR Der/vv Gram/IV NAR Der/vv Gram/IV V	be_like
 "eqqar" Gram/TV HTR Der/vv Gram/IV NIAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	occ
 "eqqar" Gram/TV HTR Der/vv Gram/IV NIAR Der/vv Gram/IV NIQ Der/vn N	act
@@ -11338,6 +11377,7 @@
 "eqqar" Gram/TV TUU Der/vv Gram/IV UTE Der/vn GE Der/nv Gram/TV V	judge
 "eqqar" Gram/TV TUU Der/vv Gram/IV UTE Der/vn N	ac
 "eqqar" Gram/TV V	throw
+"eqqarasuartaat" N	tool-shoot
 "eqqarleq" GE Der/nv Gram/TV TAQ Der/vn N	HH
 "eqqarleq" GIIP Der/nv Gram/IV SSUSIQ Der/vn N	HH
 "eqqarleq" GIIT Der/nn N	Hfam
@@ -11617,8 +11657,6 @@
 "erfalasoq" LIR Der/nv Gram/TV Gram/IV VIK Der/vn N	cc-h
 "erfalasoq" LISAR Der/nv Gram/IV TUQ Der/vn N	H
 "erfalasoq" N	cc-rag
-"erfalasuler" Gram/IV V	gesture
-"erfalasuler" Gram/IV VIK Der/vn N	cc-h
 "erfalasulisar" Gram/IV TUQ Der/vn N	H
 "eriage" Gram/TV NAR Der/vv Gram/IV NIQ Der/vn U Der/nv Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	act
 "eriage" Gram/TV NAR Der/vv Gram/IV NIRU Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	act
@@ -11666,7 +11704,7 @@
 "erip" Gram/IV NIAQ Der/vn SUAQ Der/nn N	sem-l
 "erip" Gram/IV VIP Der/vv Gram/IV V	be_attribute
 "erip" Gram/TV NIAQ Der/vn SUAQ Der/nn N	sem-l
-"erip" Gram/TV VIP Der/vv V	be_attribute
+"erip" Gram/TV VIP Der/vv Gram/IV V	be_attribute
 "erisaaq" N	cc-h
 "erisaaq" N	mat-h
 "erisar" Gram/IV NIQ Der/vn N	act
@@ -12026,13 +12064,13 @@
 "gonorré" N	sick
 "grad" N	ac
 "grad" Sem/Unit N	ac
-"grågås" N	Aorn
-"græker" N	Hnat
 "gram" N	unit
 "gram" Sem/Unit N	unit
 "grammatik" N	domain
 "greve" PALAAR Der/nv Gram/IV TUQ Der/vn N	Hattr
 "greve" R Der/nv Gram/IV PALAAR Der/vv Gram/IV TUQ Der/vn N	Hattr
+"grågås" N	Aorn
+"græker" N	Hnat
 "grøntsag" N	fruit-c
 "guitar" N	tool-mus
 "guitar" R Der/nv Gram/IV TAR Der/vv Gram/IV TUQ Der/vn N	Hprof
@@ -12045,7 +12083,6 @@
 "guuti" U Der/nv Gram/IV SSUSIQ Der/vn N	Hmyth
 "guutiitsoq" N	Hideo
 "haa" Interj	f-phys-h
-"hækkeløb" N	occ
 "halogen" N	cm-chem
 "hangar" N	build
 "hash" N	cm-rem
@@ -12064,10 +12101,11 @@
 "hiister" Gram/IV TUQ Der/vn N	Hprof
 "hiister" Gram/IV V	steer
 "hjerter" N	ac-cat
-"højtaler" N	cc-h
 "hormon" N	cm-rem
 "horsegøg" N	Aorn
 "hotel" N	inst
+"hækkeløb" N	occ
+"højtaler" N	cc-h
 "høvding" N	Hprof
 "i" N	HH
 "iaaminar" Gram/IV V	be_attribute
@@ -12666,8 +12704,8 @@
 "ilanngup" Gram/IV LLUINNAR Der/vv Gram/IV NIQ Der/vn N	act
 "ilanngup" Gram/IV NIQ Der/vn N	act
 "ilanngup" Gram/IV TIP Der/vv Gram/TV NNGIT Der/vv INNAR Der/vv Gram/TV V	exclude
+"ilanngup" Gram/IV TIP Der/vv Gram/TV VIP Der/vv Gram/IV NIQ Der/vn N	ax
 "ilanngup" Gram/IV TIP Der/vv Gram/TV VIP Der/vv Gram/TV NIQ Der/vn N	ax
-"ilanngup" Gram/IV TIP Der/vv Gram/TV VIP Der/vv NIQ Der/vn N	ax
 "ilanngup" Gram/IV V	become_part
 "ilanngup" Gram/IV VIP Der/vv Gram/IV NIQ Der/vn N	ax
 "ilanngup" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
@@ -12682,8 +12720,8 @@
 "ilanngup" Gram/TV V	become_part
 "ilanngup" Gram/TV V	include
 "ilanngup" Gram/TV V	involve
+"ilanngup" Gram/TV VIP Der/vv Gram/IV NIQ Der/vn N	ax
 "ilanngup" Gram/TV VIP Der/vv Gram/TV NIQ Der/vn N	ax
-"ilanngup" Gram/TV VIP Der/vv NIQ Der/vn N	ax
 "ilanngutaq" N	cc-h
 "ilanngutaq" SSAQ Der/nn LIUR Der/nv Gram/IV TUQ Der/vn N	Hprof
 "ilanngutassior" Gram/IV TUQ Der/vn N	Hprof
@@ -13455,8 +13493,8 @@
 "ilisima" Gram/TV GUNNAIR Der/vv TIP Der/vv HTR Der/vv Gram/IV NIQ Der/vn N	cm-h
 "ilisima" Gram/TV GUNNAIR Der/vv TIP Der/vv HTR Der/vv Gram/IV TAR Der/vv Gram/IV TUQ Der/vn N	Hprof
 "ilisima" Gram/TV GUNNAIR Der/vv TIP Der/vv HTR Der/vv Gram/IV UTE Der/vn N	cc-h
+"ilisima" Gram/TV GUNNAIR Der/vv VIP Der/vv Gram/IV NIQ Der/vn N	sick
 "ilisima" Gram/TV GUNNAIR Der/vv VIP Der/vv Gram/TV NIQ Der/vn N	sick
-"ilisima" Gram/TV GUNNAIR Der/vv VIP Der/vv NIQ Der/vn N	sick
 "ilisima" Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV LLUAR Der/vv Gram/IV V	be_attribute
 "ilisima" Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NNGIT Der/vv Gram/IV TUQ Der/vn N	Hmyth
 "ilisima" Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NNGIT Der/vv Gram/IV TUQ Der/vn N	f
@@ -13727,6 +13765,7 @@
 "illu" SSAQ Der/nn U Der/nv Gram/IV LIR Der/vv QE Der/vv Gram/IV NIQ Der/vn N	am
 "illu" SUAQ Der/nn N	build
 "illu" TAAQ Der/nn N	Hfam
+"illu" TAAR Der/nv Gram/IV V	get
 "illu" UTE Der/nn N	cc-h
 "illua-tungeq" GIIT Der/nn N	ac-cat
 "illuaami" Gram/TV TSIAR Der/vv Gram/TV V	come_off
@@ -14506,6 +14545,8 @@
 "iner" Gram/IV GIARTUR Der/vv Gram/IV VIK Der/vn U Der/nv Gram/IV SINNAA Der/vv Gram/IV TUQ Der/vn N	ac
 "iner" Gram/IV GIARTUR Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "iner" Gram/IV GIARTUR Der/vv TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	activity
+"iner" Gram/IV GIARTUR Der/vv TIP Der/vv Gram/TV HTR Der/vv Gram/IV TAR Der/vv Gram/IV TUQ Der/vn N	HH
+"iner" Gram/IV GIARTUR Der/vv TIP Der/vv Gram/TV HTR Der/vv Gram/IV TUQ Der/vn N	Hprof
 "iner" Gram/IV GIARTUR Der/vv TIP Der/vv Gram/TV QQIP Der/vv Gram/TV V	improve
 "iner" Gram/IV NIQ Der/vn LIR Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	sem-c
 "iner" Gram/IV NIQ Der/vn LIR Der/nv Gram/TV V	deduce
@@ -14528,9 +14569,11 @@
 "iner" Gram/IV V	end
 "iner" Gram/TV GIARTUR Der/vv Gram/TV NIQ Der/vn N	process
 "iner" Gram/TV GIARTUR Der/vv NIQ Der/vn N	process
+"iner" Gram/TV GIARTUR Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "iner" Gram/TV GIARTUR Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"iner" Gram/TV GIARTUR Der/vv QQIP Der/vv NIQ Der/vn N	act
 "iner" Gram/TV GIARTUR Der/vv TIP Der/vv HTR Der/vv Gram/IV NIQ Der/vn N	activity
+"iner" Gram/TV GIARTUR Der/vv TIP Der/vv HTR Der/vv Gram/IV TAR Der/vv Gram/IV TUQ Der/vn N	HH
+"iner" Gram/TV GIARTUR Der/vv TIP Der/vv HTR Der/vv Gram/IV TUQ Der/vn N	Hprof
 "iner" Gram/TV GIARTUR Der/vv TIP Der/vv QQIP Der/vv Gram/TV V	improve
 "iner" Gram/TV GIARTUR Der/vv V	grow
 "iner" Gram/TV GIARTUR Der/vv V	occur_dynamic
@@ -14702,8 +14745,8 @@
 "ingerlap" Gram/TV TAQ Der/vn N	act
 "ingerlap" Gram/TV TAQ Der/vn QAR Der/nv Gram/IV TUQ Der/vn N	H
 "ingerlap" Gram/TV TAQ Der/vn QAR Der/nv Gram/IV VIK Der/vn N	inst
+"ingerlap" Gram/TV TIP Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	act
 "ingerlap" Gram/TV TIP Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	act
-"ingerlap" Gram/TV TIP Der/vv LIR Der/vv NIQ Der/vn N	act
 "ingerlap" Gram/TV TIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
 "ingerlap" Gram/TV TIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn SUAQ Der/nn N	inst
 "ingerlap" Gram/TV TIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn UTE Der/nn GE Der/nv Gram/TV TAQ Der/vn N	HH
@@ -14774,7 +14817,6 @@
 "ini" KILLI Der/nv Gram/IV TIP Der/vv Gram/TV V	shape
 "ini" KIP Der/nv Gram/IV LLIUR Der/vv Gram/IV V	lack
 "ini" LIK Der/nn N	H
-"ini" N	La
 "ini" N	Lh
 "ini" QAR Der/nv Gram/IV V	lodge
 "ini" QAR Der/nv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	lodge
@@ -16074,6 +16116,7 @@
 "issi" SIUT Der/nn N	cc-h
 "issi" SUAQ Der/nn N	wea-m
 "issi" VIK Der/nn N	con
+"issia" A"R" Der/vv Gram/IV V	bodystate
 "issia" Gram/IV V	bodystate
 "issia" Gram/IV VIK Der/vn GE Der/nv Gram/TV V	be_place
 "issia" Gram/IV VIK Der/vn N	furn
@@ -16142,6 +16185,9 @@
 "issuagassaq" N	ac
 "issuaq" N	B
 "issuaq" TSIAQ Der/nn N	B
+"issuaq" U Der/nv Gram/IV GUMA Der/vv Gram/IV TUUQ Der/vn N	H
+"issuaq" U Der/nv Gram/IV INNAR Der/vv Gram/IV NIQ Der/vn N	cc-h
+"issuaq" U Der/nv Gram/IV NIQ Der/vn N	sem
 "issuar" Gram/IV V	show_emot
 "issuar" Gram/TV HTR Der/vv Gram/IV GUMA Der/vv Gram/IV TUUQ Der/vn N	H
 "issuar" Gram/TV HTR Der/vv Gram/IV INNAR Der/vv Gram/IV NIQ Der/vn N	cc-h
@@ -16686,8 +16732,8 @@
 "iver" Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "iver" Gram/IV TIP Der/vv Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
 "iver" Gram/IV TIP Der/vv Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	act
+"iver" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
 "iver" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
-"iver" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
 "iver" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv NIQAR Der/vv Gram/IV NIQ Der/vn N	act
 "iver" Gram/IV TIP Der/vv Gram/TV V	confirm
 "iver" Gram/IV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
@@ -16714,8 +16760,8 @@
 "ivertip" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "ivertip" Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
 "ivertip" Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	act
+"ivertip" Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
 "ivertip" Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
-"ivertip" Gram/TV QQIP Der/vv NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
 "ivertip" Gram/TV QQIP Der/vv NIQAR Der/vv Gram/IV NIQ Der/vn N	act
 "ivertip" Gram/TV V	confirm
 "ivertitsineq" N	act
@@ -16744,8 +16790,6 @@
 "jazz" LIRI Der/nv Gram/IV TUUQ Der/vn N	Hprof
 "jazz" N	sem-l
 "jod" N	cm-liq-h
-"jøde" Err/Sub N	Hnat
-"jøde" Err/Sub U Der/nv Gram/IV SSUSIQ Der/vn N	ism
 "jogurti" N	food-h
 "joorlisior" Gram/IV V	do_leisure
 "jordbær" N	fruit-c
@@ -16773,6 +16817,8 @@
 "juullisiut" N	sem-l
 "juumooq" N	Hprof
 "juuni" N	month
+"jøde" Err/Sub N	Hnat
+"jøde" Err/Sub U Der/nv Gram/IV SSUSIQ Der/vn N	ism
 "kaa" Gram/IV IT Der/vv Gram/IV NIQ Der/vn N	act
 "kaa" Gram/IV IT Der/vv Gram/IV V	meander
 "kaa" Gram/IV IT Der/vv Gram/IV V	moveS_local
@@ -16809,15 +16855,14 @@
 "kaa" Gram/TV TAR Der/vv VIK Der/vn SIUR Der/nv Gram/IV V	rummage
 "kaa" Gram/TV TAR Der/vv VIK Der/vn SSAQ Der/nn LIUR Der/nv Gram/IV V	rummage
 "kaa" Gram/TV TARIAQ Der/vn N	cloH
+"kaa" Gram/TV VIP Der/vv Gram/IV NIQ Der/vn N	act
+"kaa" Gram/TV VIP Der/vv Gram/IV TUQ Der/vn LIUR Der/nv Gram/IV NIQ Der/vn N	wea-wind
+"kaa" Gram/TV VIP Der/vv Gram/IV TUQ Der/vn N	f-phys
+"kaa" Gram/TV VIP Der/vv Gram/IV V	meander
+"kaa" Gram/TV VIP Der/vv Gram/IV V	moveS_local
 "kaa" Gram/TV VIP Der/vv Gram/TV NIQ Der/vn N	act
 "kaa" Gram/TV VIP Der/vv Gram/TV TUQ Der/vn LIUR Der/nv Gram/IV NIQ Der/vn N	wea-wind
 "kaa" Gram/TV VIP Der/vv Gram/TV TUQ Der/vn N	f-phys
-"kaa" Gram/TV VIP Der/vv INNAQ Der/vn N	dance
-"kaa" Gram/TV VIP Der/vv NIQ Der/vn N	act
-"kaa" Gram/TV VIP Der/vv TUQ Der/vn LIUR Der/nv Gram/IV NIQ Der/vn N	wea-wind
-"kaa" Gram/TV VIP Der/vv TUQ Der/vn N	f-phys
-"kaa" Gram/TV VIP Der/vv V	meander
-"kaa" Gram/TV VIP Der/vv V	moveS_local
 "kaaffik" N	cc-h
 "kaagi" ARAQ Der/nn LIAQ Der/nn N	food-h
 "kaagi" ARAQ Der/nn N	food-c-h
@@ -16925,15 +16970,14 @@
 "kaap" Gram/TV V	hit
 "kaap" Gram/TV V	pain
 "kaap" Gram/TV VIK Der/vn N	cc-h
+"kaap" Gram/TV VIP Der/vv Gram/IV NIQ Der/vn N	act
+"kaap" Gram/TV VIP Der/vv Gram/IV TUQ Der/vn LIUR Der/nv Gram/IV NIQ Der/vn N	wea-wind
+"kaap" Gram/TV VIP Der/vv Gram/IV TUQ Der/vn N	f-phys
+"kaap" Gram/TV VIP Der/vv Gram/IV V	meander
+"kaap" Gram/TV VIP Der/vv Gram/IV V	moveS_local
 "kaap" Gram/TV VIP Der/vv Gram/TV NIQ Der/vn N	act
 "kaap" Gram/TV VIP Der/vv Gram/TV TUQ Der/vn LIUR Der/nv Gram/IV NIQ Der/vn N	wea-wind
 "kaap" Gram/TV VIP Der/vv Gram/TV TUQ Der/vn N	f-phys
-"kaap" Gram/TV VIP Der/vv INNAQ Der/vn N	dance
-"kaap" Gram/TV VIP Der/vv NIQ Der/vn N	act
-"kaap" Gram/TV VIP Der/vv TUQ Der/vn LIUR Der/nv Gram/IV NIQ Der/vn N	wea-wind
-"kaap" Gram/TV VIP Der/vv TUQ Der/vn N	f-phys
-"kaap" Gram/TV VIP Der/vv V	meander
-"kaap" Gram/TV VIP Der/vv V	moveS_local
 "kaaperaar" Gram/IV V	pain
 "kaasar" Gram/IV VIK Der/vn MIUQ Der/nn GE Der/nv Gram/TV TAR Der/vv TAR Der/vv Gram/TV TAQ Der/vn N	cc-h
 "kaasar" Gram/IV VIK Der/vn N	f-phys
@@ -17304,8 +17348,8 @@
 "kamaap" Gram/TV LIR Der/vv Gram/IV NIQ Der/vn N	activity
 "kamaap" Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	activity
 "kamaap" Gram/TV NIQ Der/vn N	activity
+"kamaap" Gram/TV TIP Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	activity
 "kamaap" Gram/TV TIP Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	activity
-"kamaap" Gram/TV TIP Der/vv LIR Der/vv NIQ Der/vn N	activity
 "kamaap" Gram/TV V	emote_obj
 "kamaap" Gram/TV V	fight
 "kamage" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	am
@@ -17363,7 +17407,6 @@
 "kamap" Gram/IV TUUR Der/vv Gram/IV NIQ Der/vn N	act
 "kamap" Gram/IV UMMIR Der/vv Gram/IV NIQ Der/vn N	f-psych
 "kamap" Gram/IV UMMIR Der/vv Gram/IV V	affect_exp
-"kamap" Gram/IV USIQ Der/vn N	cloH
 "kamap" Gram/IV V	emote
 "kamap" UTE Der/vn GE Der/nv Gram/TV V	emote_obj
 "kamassaar" Gram/TV V	affect_exp
@@ -17414,7 +17457,6 @@
 "kammalaat" RSUR Der/nv Gram/IV NIQ Der/vn N	activity
 "kammartooq" N	f-psych
 "kammatige" Gram/TV V	emote_obj
-"kæmner" QAR Der/nv Gram/IV VIK Der/vn N	Lh
 "kan" iAdv iLok IP Gram/IV TUQ Der/vn N	pos
 "kanaaq" N	anost
 "kanaaq" TAQ Der/nn N	cc-h
@@ -17614,7 +17656,6 @@
 "karater" Gram/IV NIQ Der/vn N	sport
 "kardus" Err/Sub N	mat-h
 "kardus" N	mat-h
-"kærnemælk" N	drink-h
 "karrertaq" IAR Der/nv Gram/TV HTR Der/vv Gram/IV VIK Der/vn LIAQ Der/nn N	cc-h
 "karrertaq" IAR Der/nv Gram/TV V	beat
 "karrertaq" N	B
@@ -17716,7 +17757,7 @@
 "katersor" Gram/TV TAQ Der/vn UTE Der/nn LIVIK Der/nn SUAQ Der/nn N	inst
 "katersor" Gram/TV TAQ Der/vn UTE Der/nn N	Lh
 "katersor" Gram/TV TAQ Der/vn UTE Der/nn QAR Der/nv Gram/IV VIK Der/vn N	inst
-"katersor" Gram/TV VIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
+"katersor" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
 "katersueqat" GIIP Der/nv Gram/IV NIQ Der/vn N	act
 "katersugaasivik" N	inst
 "katersugaasivik" QAR Der/nv Gram/IV VIK Der/vn N	inst
@@ -17861,7 +17902,6 @@
 "katsungaap" Gram/IV NIQ Der/vn N	f-psych
 "kattaku" N	anzo
 "kattariu" Gram/IV NNGIT Der/vv Gram/IV V	be_copula
-"kætter" Err/Sub N	Hideo
 "kattuffik" N	HH
 "kattup" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "kattup" Gram/TV HTR Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	HH
@@ -18403,8 +18443,8 @@
 "killor" Gram/TV UTIGE Der/vv Gram/TV V	reveal
 "killor" Gram/TV V	prune
 "killor" Gram/TV V	reveal
-"killor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	activity
-"killor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV V	prune
+"killor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	activity
+"killor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	prune
 "killormoor" Gram/IV NIQ Der/vn N	f-psych
 "killormoor" Gram/IV TUQ Der/vn N	Hattr
 "killormoor" Gram/TV NIQ Der/vn N	f-psych
@@ -18765,7 +18805,7 @@
 "kingunertu" Gram/IV SSUSIQ Der/vn N	ac
 "kingunerut" N	cm-liq-h
 "kingup" Gram/IV QQIP Der/vv Gram/IV VIK Der/vn N	HH
-"kingup" Gram/TV QQIP Der/vv VIK Der/vn N	HH
+"kingup" Gram/TV QQIP Der/vv Gram/IV VIK Der/vn N	HH
 "kingup" Gram/TV RAR Der/vv Gram/TV V	fail
 "kinguporsor" Gram/IV V	run
 "kinguppak" N	Aich
@@ -18935,8 +18975,8 @@
 "kisip" Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	event
 "kisip" Gram/IV SAAR Der/vv NNGIT Der/vv Gram/IV TUQ Der/vn N	amount
 "kisip" Gram/IV TIP Der/vv Gram/TV LLAQQIP Der/vv SSUSIQ Der/vn N	am
+"kisip" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	sem-r
 "kisip" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	sem-r
-"kisip" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv NIQ Der/vn N	sem-r
 "kisip" Gram/IV TIP Der/vv Gram/TV QQISSAAR Der/vv Gram/TV NIQ Der/vn N	act
 "kisip" Gram/IV TIP Der/vv Gram/TV QQISSAAR Der/vv NIQ Der/vn N	act
 "kisip" Gram/IV TIP Der/vv Gram/TV RIAR Der/vv USIQ Der/vn N	ac
@@ -18960,8 +19000,8 @@
 "kisip" Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	event
 "kisip" Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	event
 "kisip" Gram/TV TAQ Der/vn SSAQ Der/nn N	ac
+"kisip" Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	sem-r
 "kisip" Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	sem-r
-"kisip" Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	sem-r
 "kisip" Gram/TV TIP Der/vv RIAR Der/vv Gram/IV USIQ Der/vn N	ac
 "kisip" Gram/TV TIP Der/vv RIAR Der/vv USIQ Der/vn N	ac
 "kisip" Gram/TV V	assess
@@ -18983,11 +19023,12 @@
 "kissaap" Gram/TV HTR Der/vv Gram/IV LLUAR Der/vv Gram/IV NIQ Der/vn N	act
 "kissaap" Gram/TV HTR Der/vv Gram/IV LLUAR Der/vv Gram/IV TUQ Der/vn N	Hprof
 "kissagaq" U Der/nv Gram/IV NIQ Der/vn N	act
-"kissalaar" Gram/IV TUQ Der/vn N	f-h
 "kissap" Gram/IV GIARTUR Der/vv Gram/IV NIQ Der/vn N	process
 "kissap" Gram/IV LAAR Der/vv Gram/IV TUQ Der/vn N	f-h
 "kissap" Gram/IV SSUSIQ Der/vn N	percep-f
 "kissap" Gram/IV TAR Der/vv Gram/IV UTE Der/vn N	cc-h
+"kissap" Gram/IV TIP Der/vv Gram/TV GIARTUR Der/vv Gram/TV NIQ Der/vn N	event rise
+"kissap" Gram/IV TIP Der/vv Gram/TV GIARTUR Der/vv NIQ Der/vn N	event rise
 "kissap" Gram/IV TUUR Der/vv Gram/IV NIQ Der/vn N	wea
 "kissap" Gram/IV UMMIR Der/vv Gram/IV NIQ Der/vn N	state-h
 "kissaq" N	cc-h
@@ -19018,7 +19059,11 @@
 "kissar" Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	sick-m
 "kissar" Gram/IV NIQ Der/vn QAR Der/nv Gram/IV V	pain
 "kissar" Gram/IV NIQ Der/vn SIUT Der/nn N	cc-h
+"kissar" Gram/IV NIQ Der/vn U Der/nv Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	event rise
+"kissar" Gram/IV NIQ Der/vn U Der/nv Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	wea-c
 "kissar" Gram/IV NIQ Der/vn UTE Der/nn N	ac-cat
+"kissar" Gram/IV NIRU Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	event rise
+"kissar" Gram/IV NIRU Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	wea-c
 "kissar" Gram/IV NIUTE Der/vn N	ac-cat
 "kissar" Gram/IV SSUSIQ Der/vn N	percep-f
 "kissar" Gram/IV TUQ Der/vn N	food-c-h
@@ -19039,9 +19084,17 @@
 "kissar" Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	sick-m
 "kissar" Gram/TV NIQ Der/vn QAR Der/nv Gram/IV V	pain
 "kissar" Gram/TV NIQ Der/vn SIUT Der/nn N	cc-h
+"kissar" Gram/TV NIQ Der/vn U Der/nv Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	event rise
+"kissar" Gram/TV NIQ Der/vn U Der/nv Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	wea-c
 "kissar" Gram/TV NIQ Der/vn UTE Der/nn N	ac-cat
 "kissar" Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	sick-m
 "kissar" Gram/TV NIQAR Der/vv Gram/IV V	pain
+"kissar" Gram/TV NIRU Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	event rise
+"kissar" Gram/TV NIRU Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	wea-c
+"kissar" Gram/TV NIRU Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	event rise
+"kissar" Gram/TV NIRU Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	wea-c
+"kissar" Gram/TV NIRU Der/vv LIR Der/vv NIQ Der/vn N	event rise
+"kissar" Gram/TV NIRU Der/vv LIR Der/vv NIQ Der/vn N	wea-c
 "kissar" Gram/TV NIUTE Der/vn N	ac-cat
 "kissar" Gram/TV SSUSIQ Der/vn N	percep-f
 "kissar" Gram/TV TAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	act
@@ -19076,6 +19129,9 @@
 "kissasser" Gram/IV V	heat
 "kissasser" Gram/TV V	heat
 "kissatseriar" UTE Der/vn N	Lsurf
+"kissatsip" Gram/IV GIARTUR Der/vv Gram/IV NIQ Der/vn N	event rise
+"kissatsip" Gram/TV GIARTUR Der/vv Gram/TV NIQ Der/vn N	event rise
+"kissatsip" Gram/TV GIARTUR Der/vv NIQ Der/vn N	event rise
 "kissattaat" N	cc-h
 "kissattar" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "kissattar" Gram/TV TIP Der/vv Gram/IV NIQ Der/vn N	act
@@ -19178,8 +19234,6 @@
 "koorpu" N	Hprof
 "koral" N	cc-org
 "kr." N	cur
-"kræft" N	sick-m
-"kræft" QAR Der/nv Gram/IV NIQ Der/vn N	sick
 "kran" N	Vground
 "kran" SUAQ Der/nn N	cc-h
 "kridt" N	cc-h
@@ -19226,8 +19280,10 @@
 "kryds" LIR Der/nv Gram/TV V	mark
 "kryds" LIRSUR Der/nv Gram/IV VIP Der/vv Gram/IV VIK Der/vn N	sem
 "kryds" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV VIK Der/vn N	sem
-"kryds" LIRSUR Der/nv Gram/TV VIP Der/vv VIK Der/vn N	sem
+"kryds" LIRSUR Der/nv Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	sem
 "kryds&tværs" N	ac
+"kræft" N	sick-m
+"kræft" QAR Der/nv Gram/IV NIQ Der/vn N	sick
 "kuanneq" N	Bflo
 "kuanneq" USAQ Der/nn ARAQ Der/nn N	B
 "kuanneq" USAQ Der/nn N	B
@@ -19526,23 +19582,23 @@
 "kuntorooq" N	Aorn
 "kuppeq" LIR Der/nv Gram/IV TIP Der/vv Gram/IV NIQ Der/vn N	cm-liq-h
 "kuppeq" LIR Der/nv Gram/IV TIP Der/vv Gram/TV NIQ Der/vn N	cm-liq-h
+"kuppeq" LIR Der/nv Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "kuppeq" LIR Der/nv Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"kuppeq" LIR Der/nv Gram/IV TIP Der/vv Gram/TV QQIP Der/vv NIQ Der/vn N	act
 "kuppeq" LIR Der/nv Gram/IV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "kuppeq" LIR Der/nv Gram/TV QQIP Der/vv Gram/TV V	therapy
 "kuppeq" LIR Der/nv Gram/TV TIP Der/vv Gram/TV NIQ Der/vn N	cm-liq-h
 "kuppeq" LIR Der/nv Gram/TV TIP Der/vv NIQ Der/vn N	cm-liq-h
+"kuppeq" LIR Der/nv Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "kuppeq" LIR Der/nv Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"kuppeq" LIR Der/nv Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	act
 "kuppeq" LIR Der/nv Gram/TV V	defend_phys
 "kuppeq" N	sick
 "kupper" Gram/IV LIR Der/vv TIP Der/vv Gram/TV NIQ Der/vn N	cm-liq-h
+"kupper" Gram/IV LIR Der/vv TIP Der/vv Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "kupper" Gram/IV LIR Der/vv TIP Der/vv Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"kupper" Gram/IV LIR Der/vv TIP Der/vv Gram/TV QQIP Der/vv NIQ Der/vn N	act
 "kuppiler" Gram/IV TIP Der/vv Gram/IV NIQ Der/vn N	cm-liq-h
 "kuppiler" Gram/IV TIP Der/vv Gram/TV NIQ Der/vn N	cm-liq-h
+"kuppiler" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "kuppiler" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"kuppiler" Gram/IV TIP Der/vv Gram/TV QQIP Der/vv NIQ Der/vn N	act
 "kuppiler" Gram/IV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "kuppiler" Gram/TV QQIP Der/vv Gram/TV V	therapy
 "kuppiler" Gram/TV V	defend_phys
@@ -19702,11 +19758,14 @@
 "kuutsik" IAR Der/nv UTE Der/vn N	cloH-shoe
 "kuutsip" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "kvadratkilometer" Sem/Unit N	unit
-"kvæker" N	Hideo
 "kvart" Sem/Unit N	unit
 "kviksølv" N	cm-chem
 "kviksølv" N	cm-liq cm-chem
+"kvæker" N	Hideo
 "kystskipper" N	Hprof
+"kæmner" QAR Der/nv Gram/IV VIK Der/vn N	Lh
+"kærnemælk" N	drink-h
+"kætter" Err/Sub N	Hideo
 "laboratorietekniker" N	Hprof
 "labrador" N	Adom
 "lagkage" N	food-h
@@ -19720,7 +19779,6 @@
 "landsråd" N	HH
 "langrend" N	sport
 "lapis" N	cc-stone
-"lærling" N	Hprof
 "last" N	Lh
 "lastbiili" N	Vground
 "latiner" Err/Sub N	Hnat
@@ -19731,13 +19789,14 @@
 "liiveq" N	Azo
 "lim" Err/Sub N	cm-h
 "lotto" R Der/nv Gram/IV TAR Der/vv Gram/IV TUQ Der/vn N	H
-"løveq" N	Azo
-"løveq" N	Lstar
 "lutetium" N	mat
 "lutherikkut" U Der/nv Gram/IV SSUSIQ Der/vn N	ism
 "lutherikkut" U Der/nv Gram/IV TUQ Der/vn N	Hideo
 "lutherikkuusoq" N	Hideo
 "lutherikkuussuseq" N	ism
+"lærling" N	Hprof
+"løveq" N	Azo
+"løveq" N	Lstar
 "m" N	ac-sign
 "m" N	unit
 "ma" iAdv iTrm R Der/nv Gram/IV INNAR Der/vv Gram/IV NIQ Der/vn N	event
@@ -19837,7 +19896,7 @@
 "makip" Gram/IV V	change_body_pos
 "makip" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "makip" Gram/TV HTR Der/vv Gram/IV V	choose
-"makip" Gram/TV QQIP Der/vv V	become_be
+"makip" Gram/TV QQIP Der/vv Gram/IV V	become_be
 "makip" Gram/TV SIMA Der/vv Gram/IV TUQ Der/vn N	state
 "makip" Gram/TV TAR Der/vv Gram/TV NIQ Der/vn N	game
 "makip" Gram/TV TAR Der/vv Gram/TV UTE Der/vn N	cloH
@@ -20324,7 +20383,6 @@
 "maraton" N	sport occ
 "marcipan" N	food-m-h
 "marihuana" N	cm-rem
-"mærke" N	cc-h
 "marloqiusaq" NNGUR Der/nv Gram/IV NIQ Der/vn N	sick
 "marloqiusaq" NNGUR Der/nv Gram/TV NIQ Der/vn N	sick
 "marloraq" N	Azo
@@ -20437,7 +20495,6 @@
 "maskinmester" N	Hprof
 "maskinmester" U Der/nv Gram/IV NIQ Der/vn N	Hprof
 "maskinmesteriuneq" N	Hprof
-"mæsling" N	Hsick
 "massak" N	anorg
 "massakkorpiaq" Adv	temp
 "massalaannguaq" N	Lwater
@@ -20748,6 +20805,8 @@
 "meter" Sem/Unit N	unit
 "metodist" N	Hideo
 "mia" Gram/IV NIQ Der/vn GE Der/nv Gram/TV TARIAQ Der/vn LIK Der/nn N	f
+"mia" Gram/IV NIQ Der/vn SUAQ Der/nn U Der/nv Gram/IV LLIUR Der/vv Gram/IV NIQ Der/vn N	f-psych
+"mia" Gram/IV NIQ Der/vn SUAQ Der/nn U Der/nv Gram/IV SSUSIQ Der/vn N	f-psych
 "miaat" N	cc-cord
 "miaggoor" Gram/IV NIQ Der/vn N	act
 "miaggoor" Gram/IV V	speak_mnr
@@ -21040,6 +21099,8 @@
 "minut" Sem/Unit N	dur
 "mip" Gram/IV GIARTUR Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	park
 "mip" Gram/IV JA Der/vv Gram/IV NIQ Der/vn GE Der/nv Gram/TV TARIAQ Der/vn LIK Der/nn N	f
+"mip" Gram/IV JA Der/vv Gram/IV NIQ Der/vn SUAQ Der/nn U Der/nv Gram/IV LLIUR Der/vv Gram/IV NIQ Der/vn N	f-psych
+"mip" Gram/IV JA Der/vv Gram/IV NIQ Der/vn SUAQ Der/nn U Der/nv Gram/IV SSUSIQ Der/vn N	f-psych
 "mip" Gram/IV JAAR Der/vv Gram/IV V	sound_biocom
 "mip" Gram/IV LLUAR Der/vv Gram/IV TAR Der/vv Gram/IV UTE Der/vn N	cc-h
 "mip" Gram/IV LLUAR Der/vv Gram/IV TUQ Der/vn N	cc-h
@@ -21244,14 +21305,14 @@
 "misissor" Gram/TV TUU Der/vv Gram/IV NIQ Der/vn N	f-psych
 "misissor" Gram/TV TUU Der/vv Gram/TV NIQ Der/vn N	f-psych
 "misissor" Gram/TV V	investigate
-"misissor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
-"misissor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
-"misissor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
-"misissor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	act
-"misissor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV TIP Der/vv Gram/TV NIQ Der/vn N	act
-"misissor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV TIP Der/vv NIQ Der/vn N	act
-"misissor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV V	investigate
-"misissor" Gram/TV VIP Der/vv VIK Der/vn N	inst
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	act
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV NIQAR Der/vv Gram/IV NIQ Der/vn N	act
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV TIP Der/vv Gram/TV NIQ Der/vn N	act
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV TIP Der/vv NIQ Der/vn N	act
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	investigate
+"misissor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	inst
 "misissor" QQIP Der/vv Gram/TV SSAAR Der/vv Gram/TV TAQ Der/vn N	cc
 "misissor" QQIP Der/vv Gram/TV SSAAR Der/vv Gram/TV V	investigate
 "misissortittarfik" N	Lh
@@ -21385,8 +21446,6 @@
 "motoori" LIRI Der/nv Gram/IV TUQ Der/vn N	Hprof
 "motoori" N	cc-h
 "motoori" QAR Der/nv Gram/IV VIK Der/vn N	Lh
-"møtrik" Err/Sub N	cc-h
-"møtrik" N	cc-h
 "muleq" N	cc-h
 "muleq" N	f-an
 "mulequt" N	cc-org
@@ -21422,6 +21481,10 @@
 "muteq" U Der/nv Gram/IV TUQ Der/vn N	ac
 "muuamaakkuusoq" N	Hideo
 "muukulooq" N	Azo
+"mærke" N	cc-h
+"mæsling" N	Hsick
+"møtrik" Err/Sub N	cc-h
+"møtrik" N	cc-h
 "na'aartor" Gram/IV V	show_emot
 "naa" Gram/IV GIARTUR Der/vv Gram/IV NIQ Der/vn N	process
 "naa" Gram/IV GIARTUR Der/vv Gram/IV VIK Der/vn N	per
@@ -21481,6 +21544,7 @@
 "naa" Gram/IV TUQ Der/vn N	f
 "naa" Gram/IV TUQ Der/vn PILUK Der/nn N	B
 "naa" Gram/IV TUQ Der/vn PILUK Der/nn NIP Der/nv Gram/IV SIMA Der/vv Gram/IV TUQ Der/vn N	event
+"naa" Gram/IV TUQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV SSUSIQ Der/vn N	ac B
 "naa" Gram/IV TUQ Der/vn QAR Der/nv Gram/IV SSUSIQ Der/vn N	BB
 "naa" Gram/IV TUQ Der/vn QAR Der/nv Gram/IV VIK Der/vn N	BB
 "naa" Gram/IV TUQ Der/vn SUNNI Der/nn N	percep-o
@@ -21492,8 +21556,8 @@
 "naa" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV GIARTUR Der/vv NIQ Der/vn N	act
 "naa" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/IV NIQ Der/vn N	act
 "naa" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	act
+"naa" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	act
 "naa" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	act
-"naa" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv NIQ Der/vn N	act
 "naa" Gram/IV TUQ Der/vn TAQ Der/nn N	cc-h
 "naa" Gram/IV TUQ Der/vn USAQ Der/nn N	Aich
 "naa" Gram/IV TUQ Der/vn UTE Der/nn LIVIK Der/nn LIRI Der/nv Gram/IV NIQ Der/vn N	Lh
@@ -21536,6 +21600,7 @@
 "naa" Gram/TV Gram/IV TUQ Der/vn N	f
 "naa" Gram/TV Gram/IV TUQ Der/vn PILUK Der/nn N	B
 "naa" Gram/TV Gram/IV TUQ Der/vn PILUK Der/nn NIP Der/nv Gram/IV SIMA Der/vv Gram/IV TUQ Der/vn N	event
+"naa" Gram/TV Gram/IV TUQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV SSUSIQ Der/vn N	ac B
 "naa" Gram/TV Gram/IV TUQ Der/vn QAR Der/nv Gram/IV SSUSIQ Der/vn N	BB
 "naa" Gram/TV Gram/IV TUQ Der/vn QAR Der/nv Gram/IV VIK Der/vn N	BB
 "naa" Gram/TV Gram/IV TUQ Der/vn SUNNI Der/nn N	percep-o
@@ -21547,8 +21612,8 @@
 "naa" Gram/TV Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV GIARTUR Der/vv NIQ Der/vn N	act
 "naa" Gram/TV Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/IV NIQ Der/vn N	act
 "naa" Gram/TV Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	act
+"naa" Gram/TV Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	act
 "naa" Gram/TV Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	act
-"naa" Gram/TV Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv NIQ Der/vn N	act
 "naa" Gram/TV Gram/IV TUQ Der/vn TAQ Der/nn N	cc-h
 "naa" Gram/TV Gram/IV TUQ Der/vn USAQ Der/nn N	Aich
 "naa" Gram/TV Gram/IV TUQ Der/vn UTE Der/nn LIVIK Der/nn LIRI Der/nv Gram/IV NIQ Der/vn N	Lh
@@ -21780,7 +21845,7 @@
 "naalagaq" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV VIK Der/vn N	per
 "naalagaq" LIRSUR Der/nv Gram/TV TAQ Der/vn U Der/nv Gram/IV TUQ Der/vn N	f
 "naalagaq" LIRSUR Der/nv Gram/TV V	run_obj
-"naalagaq" LIRSUR Der/nv Gram/TV VIP Der/vv VIK Der/vn N	per
+"naalagaq" LIRSUR Der/nv Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	per
 "naalagaq" N	Hmyth
 "naalagaq" N	Hprof
 "naalagaq" N	Htit
@@ -22332,6 +22397,7 @@
 "naasoq" N	f
 "naasoq" PILUK Der/nn N	B
 "naasoq" PILUK Der/nn NIP Der/nv Gram/IV SIMA Der/vv Gram/IV TUQ Der/vn N	event
+"naasoq" QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV SSUSIQ Der/vn N	ac B
 "naasoq" QAR Der/nv Gram/IV SSUSIQ Der/vn N	BB
 "naasoq" QAR Der/nv Gram/IV VIK Der/vn N	BB
 "naasoq" SUNNI Der/nn N	percep-o
@@ -22343,8 +22409,8 @@
 "naasoq" TAQ Der/nn IRUTE Der/nv Gram/TV GIARTUR Der/vv NIQ Der/vn N	act
 "naasoq" TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/IV NIQ Der/vn N	act
 "naasoq" TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	act
+"naasoq" TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	act
 "naasoq" TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	act
-"naasoq" TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv NIQ Der/vn N	act
 "naasoq" TAQ Der/nn N	cc-h
 "naasoq" USAQ Der/nn N	Aich
 "naasoq" UTE Der/nn LIVIK Der/nn LIRI Der/nv Gram/IV NIQ Der/vn N	Lh
@@ -22421,10 +22487,10 @@
 "naatsorsor" Gram/TV UTIGE Der/vv Gram/TV V	assume
 "naatsorsor" Gram/TV UTIGE Der/vv Gram/TV V	rely have
 "naatsorsor" Gram/TV V	assess
-"naatsorsor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
-"naatsorsor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV QATIGIIP Der/vv Gram/IV NIQ Der/vn N	act
-"naatsorsor" Gram/TV VIP Der/vv VIK Der/vn GIP Der/nv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
-"naatsorsor" Gram/TV VIP Der/vv VIK Der/vn GIP Der/nv Gram/IV QATIGIIP Der/vv Gram/IV NIQ Der/vn N	act
+"naatsorsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
+"naatsorsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV QATIGIIP Der/vv Gram/IV NIQ Der/vn N	act
+"naatsorsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GIP Der/nv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
+"naatsorsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GIP Der/nv Gram/IV QATIGIIP Der/vv Gram/IV NIQ Der/vn N	act
 "naatsorsor" UTE Der/vn GE Der/nv Gram/TV GUMINAR Der/vv Gram/IV TUQ Der/vn N	f
 "naatsorsor" UTE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	ac
 "naatsorsor" UTE Der/vn GE Der/nv Gram/TV V	assume
@@ -22893,7 +22959,7 @@
 "naku" Gram/TV TIP Der/vv HTR Der/vv Gram/IV RIAR Der/vv SINNAA Der/vv Gram/IV SSUSIQ Der/vn N	ac
 "naku" Gram/TV TIP Der/vv HTR Der/vv Gram/IV TUQ Der/vn N	H
 "naku" Gram/TV TIP Der/vv HTR Der/vv Gram/IV V	cheat
-"naku" Gram/TV VIP Der/vv V	be_attribute
+"naku" Gram/TV VIP Der/vv Gram/IV V	be_attribute
 "nakuaq" N	f-phys-h
 "nakuip" Gram/IV TUQ Der/vn N	f-phys
 "nakuip" Gram/IV TUQ Der/vn N	f-phys-h
@@ -23416,9 +23482,9 @@
 "nalunaarsor" Gram/TV SIMA Der/vv Gram/IV VIK Der/vn N	sem-r
 "nalunaarsor" Gram/TV TAQ Der/vn N	sem-r
 "nalunaarsor" Gram/TV V	assess
-"nalunaarsor" Gram/TV VIP Der/vv VIK Der/vn N	ac
-"nalunaarsor" Gram/TV VIP Der/vv VIK Der/vn N	sem-r
-"nalunaarsor" Gram/TV VIP Der/vv VIK Der/vn N	sem-r ac
+"nalunaarsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	ac
+"nalunaarsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	sem-r
+"nalunaarsor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	sem-r ac
 "nalunaarsuut" N	sem-r
 "nalunaartoq" N	Hprof
 "nalunaartoq" SSAQ Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn U Der/nv Gram/IV NIQ Der/vn N	f-right
@@ -23887,10 +23953,10 @@
 "naqip" Gram/TV NIRLUP Der/vv Gram/TV NIQ Der/vn N	sem-r
 "naqip" Gram/TV NIRLUP Der/vv Gram/TV TAQ Der/vn N	sem-r
 "naqip" Gram/TV QQA Der/vv Gram/TV V	push
+"naqip" Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn QAR Der/nv Gram/IV TUQ Der/vn N	act
 "naqip" Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn QAR Der/nv Gram/IV TUQ Der/vn N	act
 "naqip" Gram/TV QQIP Der/vv Gram/TV TAQ Der/vn N	act
 "naqip" Gram/TV QQIP Der/vv Gram/TV TAQ Der/vn N	sem
-"naqip" Gram/TV QQIP Der/vv NIQ Der/vn QAR Der/nv Gram/IV TUQ Der/vn N	act
 "naqip" Gram/TV QQIP Der/vv NIQAR Der/vv Gram/IV TUQ Der/vn N	act
 "naqip" Gram/TV SIMA Der/vv Gram/IV NIQ Der/vn QAR Der/nv Gram/IV NIQ Der/vn N	activity
 "naqip" Gram/TV SIMA Der/vv Gram/IV VIK Der/vn N	act
@@ -25100,9 +25166,16 @@
 "niller" Gram/IV JA Der/vv VALLAAR Der/vv Gram/IV NIQ Der/vn N	act
 "niller" Gram/IV NIQ Der/vn N	act
 "niller" Gram/IV NIQ Der/vn SUAQ Der/nn N	act
+"niller" Gram/IV NIQ Der/vn U Der/nv Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	event decrease
+"niller" Gram/IV NIQ Der/vn U Der/nv Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	wea-c
 "niller" Gram/IV NIQ Der/vn UTE Der/nn N	ac-cat
+"niller" Gram/IV NIRU Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	event decrease
+"niller" Gram/IV NIRU Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	wea-c
 "niller" Gram/IV NIUTE Der/vn N	ac-cat
 "niller" Gram/IV SSUSIQ Der/vn N	wea
+"niller" Gram/IV TIP Der/vv GIARTUR Der/vv Gram/IV NIQ Der/vn N	event decrease
+"niller" Gram/IV TIP Der/vv Gram/TV GIARTUR Der/vv Gram/TV NIQ Der/vn N	event decrease
+"niller" Gram/IV TIP Der/vv Gram/TV GIARTUR Der/vv NIQ Der/vn N	event decrease
 "niller" Gram/IV UMMIR Der/vv Gram/IV V	speak_mnr
 "niller" Gram/IV V	be_attribute
 "niller" Gram/IV V	speak_mnr
@@ -25217,12 +25290,12 @@
 "nior" Gram/TV TIP Der/vv Gram/TV V	shape
 "nior" Gram/TV TIP Der/vv V	shape
 "nior" Gram/TV V	shape
-"nior" Gram/TV VIP Der/vv QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	H
-"nior" Gram/TV VIP Der/vv QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	Hprof
-"nior" Gram/TV VIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
-"nior" Gram/TV VIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV TAR Der/vv Gram/IV VIK Der/vn N	Lh
-"nior" Gram/TV VIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
-"nior" Gram/TV VIP Der/vv QATE Der/vn N	H
+"nior" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	H
+"nior" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	Hprof
+"nior" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
+"nior" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV TAR Der/vv Gram/IV VIK Der/vn N	Lh
+"nior" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
+"nior" Gram/TV VIP Der/vv Gram/IV QATE Der/vn N	H
 "niorpalik" N	Aent
 "niorpiligaq" N	Aich
 "niortip" Gram/IV V	shape
@@ -25519,7 +25592,7 @@
 "nittar" Gram/TV USAR Der/vv NIQ Der/vn N	sick
 "nittar" Gram/TV USAR Der/vv TUQ Der/vn N	H
 "nittar" Gram/TV V	weather
-"nittar" Gram/TV VIP Der/vv V	weather
+"nittar" Gram/TV VIP Der/vv Gram/IV V	weather
 "nittarsaap" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "nittarsaap" Gram/TV HTR Der/vv Gram/IV V	show
 "nittarsaap" Gram/TV V	show
@@ -25556,12 +25629,12 @@
 "niu" Gram/TV NIQ Der/vn N	act
 "niu" Gram/TV TIP Der/vv Gram/TV V	unhire
 "niu" Gram/TV V	remove
-"niu" Gram/TV VIP Der/vv QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	H
-"niu" Gram/TV VIP Der/vv QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	Hprof
-"niu" Gram/TV VIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
-"niu" Gram/TV VIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV TAR Der/vv Gram/IV VIK Der/vn N	Lh
-"niu" Gram/TV VIP Der/vv QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
-"niu" Gram/TV VIP Der/vv QATE Der/vn N	H
+"niu" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	H
+"niu" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GE Der/nv Gram/TV TAQ Der/vn N	Hprof
+"niu" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV NIQ Der/vn N	act
+"niu" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV TAR Der/vv Gram/IV VIK Der/vn N	Lh
+"niu" Gram/TV VIP Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
+"niu" Gram/TV VIP Der/vv Gram/IV QATE Der/vn N	H
 "niu" IAR Der/nv Gram/TV NIQ Der/vn N	sick-c
 "niu" IAR Der/nv Gram/TV V	change_bodystate
 "niu" IRNIAR Der/nv Gram/IV NIQ Der/vn N	act
@@ -26117,6 +26190,7 @@
 "nukik" IRUTE Der/nv Gram/TV GIARTUR Der/vv NIQ Der/vn N	sick
 "nukik" IRUTE Der/nv Gram/TV LIR Der/vv Gram/IV TUQ Der/vn N	state
 "nukik" IRUTE Der/nv Gram/TV SIMA Der/vv Gram/IV TUQ Der/vn N	f
+"nukik" IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/IV TUQ Der/vn N	state
 "nukik" IRUTE Der/nv Gram/TV TUUR Der/vv Gram/TV NIQ Der/vn N	sick
 "nukik" IRUTE Der/nv Gram/TV TUUR Der/vv NIQ Der/vn N	sick
 "nukik" IRUTE Der/nv Gram/TV TUUR Der/vv V	decrease
@@ -26685,7 +26759,6 @@
 "nuutsip" Gram/TV V	moveO
 "nylon" N	mat-h
 "o" N	ac-sign
-"ø" N	ac-sign
 "oase" N	Ltop
 "oberst" N	Htit
 "oktobari" N	month
@@ -27961,7 +28034,6 @@
 "paaviaasoq" N	Hprof
 "paaviar" Gram/TV HTR Der/vv Gram/IV TUQ Der/vn N	Hprof
 "paavooq" N	Aorn
-"pædagogik" N	domain
 "paffik" MIU Der/nn N	cloH-beauty
 "paffik" N	an
 "paffimmiu" N	cloH-beauty
@@ -28113,10 +28185,6 @@
 "paqumisup" Gram/IV V	renounce
 "paragraf" Err/Sub N	sem-r
 "paratiisi" N	Lmyth
-"pære" LIR Der/nv Gram/IV VIK Der/vn N	cc-h
-"pære" LIR Der/nv Gram/TV Gram/IV VIK Der/vn N	cc-h
-"pære" N	cc-h
-"pære" R Der/nv Gram/IV LIR Der/vv Gram/IV VIK Der/vn N	cc-h
 "park" N	BB
 "parlament" N	inst
 "parnaar" Gram/IV SI Der/vv Gram/IV NIQ Der/vn N	act
@@ -28164,7 +28232,6 @@
 "pasitsap" Gram/IV GALUTTUAR Der/vv INNAR Der/vv Gram/IV V	accuse
 "pasitsap" Gram/IV NIQ Der/vn N	sem-c
 "pasitsap" Gram/IV V	accuse
-"påske" Err/Sub SIUR Der/nv Gram/IV V	do_leisure
 "passap" Gram/IV V	be_attribute
 "passik" MIU Der/nn N	cloH-beauty
 "passik" N	an
@@ -28858,6 +28925,8 @@
 "pi" Gram/TV TARIAQAR Der/vv Gram/TV TUQ Der/vn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV V	require
 "pi" Gram/TV TARIAQAR Der/vv Gram/TV TUQ Der/vn NNGUR Der/nv Gram/TV TIP Der/vv Gram/TV V	require
 "pi" Gram/TV TARIAQAR Der/vv Gram/TV V	require
+"pi" Gram/TV TARIAQAR Der/vv Gram/TV VIP Der/vv Gram/IV TUQ Der/vn N	act
+"pi" Gram/TV TARIAQAR Der/vv Gram/TV VIP Der/vv Gram/IV TUQ Der/vn U Der/nv Gram/IV NNGIT Der/vv Gram/IV V	require
 "pi" Gram/TV TUQ Der/vn INNAQ Der/nn N	Hprof
 "pi" Gram/TV TUQ Der/vn N	event
 "pi" Gram/TV TUQ Der/vn PAK Der/nn LUP Der/nv Gram/IV NIQ Der/vn N	percep-l
@@ -28961,8 +29030,8 @@
 "pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV QQIP Der/vv Gram/TV V	establish
 "pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn N	cc-h
 "pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QATE Der/vn U Der/nv Gram/IV TUQ Der/vn N	H
+"pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	act
 "pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV TIR Der/vv QATE Der/vn U Der/nv Gram/IV TUQ Der/vn N	H
 "pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV V	cause
 "pi" LIR Der/vv Gram/IV TIP Der/vv Gram/TV V	establish
@@ -29595,7 +29664,7 @@
 "pilersor" Gram/TV TAQ Der/vn N	am
 "pilersor" Gram/TV V	add
 "pilersor" Gram/TV V	supply
-"pilersor" Gram/TV VIP Der/vv VIK Der/vn N	inst
+"pilersor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn N	inst
 "pilersuiffik" N	inst
 "pilersuineq" N	act
 "pilersuisoq" N	Hfam
@@ -29924,8 +29993,8 @@
 "pinner" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV GIARTUR Der/vv NIQ Der/vn N	act
 "pinner" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/IV NIQ Der/vn N	act
 "pinner" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	act
+"pinner" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	act
 "pinner" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	act
-"pinner" Gram/IV TUQ Der/vn TAQ Der/nn IRUTE Der/nv Gram/TV TIP Der/vv LIR Der/vv NIQ Der/vn N	act
 "pinner" Gram/IV V	be_attribute
 "pinnerneqqisaanneq" N	occ
 "pinnerneqqisaap" Gram/IV NIQ Der/vn N	occ
@@ -30020,7 +30089,7 @@
 "pisaaq" N	act
 "pisaar" Gram/IV NIQ Der/vn N	act
 "pisaaseq" N	ac
-"pisaq" SSIP Der/nv HTR Der/vv UTE Der/vn N	ac
+"pisaq" SSIP Der/nv Gram/TV HTR Der/vv UTE Der/vn N	ac
 "pisar" Gram/TV GIAQAR Der/vv Gram/TV TAQ Der/vn N	ac
 "pisar" Gram/TV GIAQAR Der/vv Gram/TV TUQ Der/vn N	ac
 "pisar" Gram/TV GIAQAR Der/vv Gram/TV TUQ Der/vn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV V	require
@@ -30608,7 +30677,6 @@
 "politik" N	domain
 "politimester" N	Hprof
 "politimester" QAR Der/nv Gram/IV VIK Der/vn N	inst
-"pølse" N	food-h
 "polyester" N	mat-h
 "pooq" IAR Der/nv Gram/TV V	uncover
 "pooq" KULLAK Der/nn N	Aich
@@ -30663,19 +30731,17 @@
 "poqissuseq" N	f-psych
 "porno" N	sem
 "porpip" Gram/IV V	pain
-"portør" N	Hprof
 "portu" Gram/IV NIQ Der/vn N	ac
 "portu" Gram/IV SSUSIQ Der/vn N	f-phys
 "portu" Gram/IV TUUQ Der/vn N	Ltop
 "portusooq" N	Ltop
+"portør" N	Hprof
 "postboks" N	cc
 "postkort" N	sem-r
 "praktik" Err/Sub R Der/nv Gram/IV NIQ Der/vn N	per
 "praktik" R Der/nv Gram/IV VIK Der/vn N	Lh
 "praktik" R Der/nv Gram/IV VIK Der/vn SSAQ Der/nn N	Lh
 "pram" Err/Sub N	Vwater
-"præsident" N	Hprof
-"præsident" QAR Der/nv Gram/IV VIK Der/vn N	Lciv
 "primus" N	cc-h
 "prins" N	Hprof
 "prisme" N	cc-h
@@ -30695,6 +30761,8 @@
 "provst" QAR Der/nv Gram/IV VIK Der/vn N	Lh
 "provsteqarfik" N	Lh
 "pruffiitioqquser" Gram/IV TUQ Der/vn N	Hideo
+"præsident" N	Hprof
+"præsident" QAR Der/nv Gram/IV VIK Der/vn N	Lciv
 "psykolog" N	Hprof
 "psykolog" N	domain
 "psykolog" QAR Der/nv Gram/IV VIK Der/vn N	inst
@@ -31132,6 +31200,13 @@
 "puup" Gram/IV NIQ Der/vn N	sem-c
 "puupap" Gram/IV V	affect_exp
 "pyramide" N	build
+"påske" Err/Sub SIUR Der/nv Gram/IV V	do_leisure
+"pædagogik" N	domain
+"pære" LIR Der/nv Gram/IV VIK Der/vn N	cc-h
+"pære" LIR Der/nv Gram/TV Gram/IV VIK Der/vn N	cc-h
+"pære" N	cc-h
+"pære" R Der/nv Gram/IV LIR Der/vv Gram/IV VIK Der/vn N	cc-h
+"pølse" N	food-h
 "qaa" Gram/IV JA Der/vv Gram/IV TUQ Der/vn N	cc-h
 "qaa" Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	f-phys-h
 "qaa" Gram/IV LIR Der/vv Gram/IV NIQ Der/vn N	temp
@@ -32043,6 +32118,7 @@
 "qarlor" Gram/IV TAR Der/vv Gram/IV UTE Der/vn N	tool-mus
 "qarlor" Gram/IV TAR Der/vv Gram/IV UTE Der/vn SUAQ Der/nn N	tool-mus
 "qarlor" Gram/IV USIQ Der/vn N	percep-l
+"qarlor" Gram/IV V	sound_biocom
 "qarlormiu" N	ac-cat
 "qarlortaassuaq" N	tool-mus
 "qarlortaat" ARAQ Der/nn N	tool-mus
@@ -32167,9 +32243,10 @@
 "qasup" Gram/IV VIP Der/vv Gram/IV TUQ Der/vn N	state
 "qasup" Gram/TV NGA Der/vv Gram/IV TUQ Der/vn N	cc-cord
 "qasup" Gram/TV NGA Der/vv Gram/IV TUQ Der/vn N	f
+"qasup" Gram/TV QQA Der/vv PASIP Der/vv Gram/IV NIQ Der/vn N	f-phys-h
 "qasup" Gram/TV QQA Der/vv PASIP Der/vv Gram/TV NIQ Der/vn N	f-phys-h
-"qasup" Gram/TV QQA Der/vv PASIP Der/vv NIQ Der/vn N	f-phys-h
 "qasup" Gram/TV V	loosen
+"qasup" Gram/TV VIP Der/vv Gram/IV TUQ Der/vn N	state
 "qasusuip" Gram/IV SSUSIQ Der/vn N	f-psych
 "qasutap" Gram/IV V	suffer
 "qatanngut" N	Hfam
@@ -32948,11 +33025,15 @@
 "qisuttor" Gram/TV V	heat
 "qisuttuisoq" N	Hprof
 "qitaasar" Gram/IV V	dance
-"qiteq" GE Der/nv Gram/TV TIP Der/vv TAQ Der/vn N	ac
-"qiteq" N	L
-"qiteq" N	ac-sign
-"qiteq" N	an
-"qiteq" PIAQ Der/nn N	Lh
+"qiteq" Sem/Location GE Der/nv Gram/TV TIP Der/vv TAQ Der/vn N	ac
+"qiteq" Sem/Location N	L
+"qiteq" Sem/Location N	ac-sign
+"qiteq" Sem/Location N	an
+"qiteq" Sem/Location PIAQ Der/nn N	Lh
+"qiteq" Sem/Location U Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn N	ac
+"qiteq" Sem/Location U Der/nv Gram/IV TUQ Der/vn N	Lh
+"qiteq" Sem/Location U Der/nv Gram/IV TUQ Der/vn N	food-c
+"qiteq" Sem/Location U Der/nv Gram/IV TUQ Der/vn TAQ Der/nn N	ac-cat
 "qiteq" Sem/an GE Der/nv Gram/TV TIP Der/vv TAQ Der/vn N	ac
 "qiteq" Sem/an LUP Der/nv Gram/IV V	pain
 "qiteq" Sem/an N	L
@@ -32963,10 +33044,6 @@
 "qiteq" Sem/an U Der/nv Gram/IV TUQ Der/vn N	Lh
 "qiteq" Sem/an U Der/nv Gram/IV TUQ Der/vn N	food-c
 "qiteq" Sem/an U Der/nv Gram/IV TUQ Der/vn TAQ Der/nn N	ac-cat
-"qiteq" U Der/nv Gram/IV TIP Der/vv Gram/TV TAQ Der/vn N	ac
-"qiteq" U Der/nv Gram/IV TUQ Der/vn N	Lh
-"qiteq" U Der/nv Gram/IV TUQ Der/vn N	food-c
-"qiteq" U Der/nv Gram/IV TUQ Der/vn TAQ Der/nn N	ac-cat
 "qiteqqup" Gram/IV NIQ Der/vn N	amount
 "qiteqqup" Gram/IV V	reach
 "qiteqqup" Gram/TV NIQ Der/vn N	amount
@@ -33392,6 +33469,7 @@
 "qullili" Gram/IV LIR Der/vv Gram/IV V	start
 "qullili" Gram/IV V	show_emot
 "qullugiaq" N	Aent
+"qulluk" N	an
 "qullunneq" N	f-phys
 "qullup" Gram/IV NIQ Der/vn N	f-phys
 "qullup" Gram/IV TIP Der/vv Gram/TV TIR Der/vv Gram/TV V	shape
@@ -33480,6 +33558,23 @@
 "qup" Gram/IV TIP Der/vv Gram/TV SSUSIQ Der/vn N	ac
 "qup" Gram/IV TIR Der/vv Gram/IV SSUSIQ Der/vn N	ac
 "qup" Gram/IV V	decrease
+"qup" Gram/TV LAAR Der/vv Gram/TV V	uncover
+"qup" Gram/TV LIR Der/vv Gram/IV VIK Der/vn N	part-clo
+"qup" Gram/TV LLAR Der/vv NIRPAAQ Der/vn U Der/nv Gram/IV VIK Der/vn N	Lstar
+"qup" Gram/TV LLAR Der/vv TAR Der/vv Gram/TV TUQ Der/vn LIAQ Der/nn N	cc-play
+"qup" Gram/TV LLAR Der/vv TAR Der/vv Gram/TV UTE Der/vn LIAQ Der/nn N	Vair
+"qup" Gram/TV LLAR Der/vv TAR Der/vv Gram/TV UTE Der/vn LIAQ Der/nn N	cc-play
+"qup" Gram/TV LLAR Der/vv TAR Der/vv TUQ Der/vn LIAQ Der/nn N	cc-play
+"qup" Gram/TV SAR Der/vv INNAQ Der/vn N	Aich
+"qup" Gram/TV TIP Der/vv Gram/IV NIQ Der/vn N	f-phys
+"qup" Gram/TV TIP Der/vv Gram/IV SSUSIQ Der/vn N	ac
+"qup" Gram/TV TIP Der/vv Gram/IV TUQ Der/vn MIU Der/nn TAQ Der/nn N	Aorn
+"qup" Gram/TV TIP Der/vv Gram/IV TUQ Der/vn N	Ltop
+"qup" Gram/TV TIP Der/vv Gram/TV NIQ Der/vn N	f-phys
+"qup" Gram/TV TIP Der/vv NIQ Der/vn N	f-phys
+"qup" Gram/TV TIP Der/vv SSUSIQ Der/vn N	ac
+"qup" Gram/TV TIR Der/vv SSUSIQ Der/vn N	ac
+"qup" Gram/TV V	decrease
 "qupaloraarsuk" N	Aorn
 "qupanavarsuk" N	Aorn
 "qupannaaq" N	Aorn
@@ -33556,7 +33651,6 @@
 "raajarniartoq" N	Hprof
 "rabarber" N	fruit-c
 "radar" N	cc-h
-"rådhus" N	build
 "radio" IRNIAQ Der/nn N	Hprof
 "radio" N	cc-h
 "radio" QAR Der/nv Gram/IV VIK Der/vn N	inst
@@ -33565,7 +33659,6 @@
 "radioteater" N	sem-l
 "radius" N	ac
 "raket" Err/Sub N	cc-h
-"rækkehus" N	build
 "realist" N	Hideo
 "regulator" N	cc-h
 "reklame" N	sem-r
@@ -33592,6 +33685,8 @@
 "ruusa" N	Bflo
 "ruusar" Gram/IV NIQ Der/vn N	sick
 "ruusarneq" N	sick
+"rådhus" N	build
+"rækkehus" N	build
 "s" N	HH
 "s" N	dir
 "saa" Gram/IV INNAQ Der/vn N	cloH
@@ -33642,6 +33737,9 @@
 "saagoq" SUAQ Der/nn N	Lcover sem-w
 "saagorsuaq" N	Lcover sem-w
 "saagu" Gram/IV LIR Der/vv Gram/IV VIK Der/vn N	cc-h
+"saagu" Gram/TV LIR Der/vv Gram/IV VIK Der/vn N	cc-h
+"saagu" Gram/TV LIR Der/vv VIK Der/vn N	cc-h
+"saagu" Gram/TV V	cover_ize
 "saaguaq" SSAQ Der/nn LIAQ Der/nn N	mat-h
 "saagulerfik" N	cc-h
 "saakoq" N	food-c
@@ -33982,7 +34080,7 @@
 "sammi" Gram/TV TARE Der/vv Gram/TV V	discuss
 "sammi" Gram/TV V	do
 "sammi" Gram/TV V	work
-"sammi" Gram/TV VIP Der/vv QATE Der/vn U Der/nv Gram/IV TUQ Der/vn N	ac
+"sammi" Gram/TV VIP Der/vv Gram/IV QATE Der/vn U Der/nv Gram/IV TUQ Der/vn N	ac
 "sammiveqataasoq" N	ac
 "sammivik" LIR Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	sem-c
 "sammivik" LIR Der/nv Gram/TV HTR Der/vv Gram/IV SINNAA Der/vv Gram/IV TUQ Der/vn N	ac
@@ -34184,8 +34282,8 @@
 "sapiup" Gram/IV TIP Der/vv Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	sick
 "sapiup" Gram/TV LIR Der/vv Gram/IV NIQ Der/vn N	sick
 "sapiup" Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	sick
+"sapiup" Gram/TV TIP Der/vv LIR Der/vv Gram/IV NIQ Der/vn N	sick
 "sapiup" Gram/TV TIP Der/vv LIR Der/vv Gram/TV NIQ Der/vn N	sick
-"sapiup" Gram/TV TIP Der/vv LIR Der/vv NIQ Der/vn N	sick
 "sapusiaq" N	Lh
 "sapussuaq" LIAQ Der/nn N	cc-h
 "saput" LIAQ Der/nn N	Lh
@@ -34294,7 +34392,7 @@
 "saqqummer" Gram/TV LIR Der/vv Gram/TV NIQ Der/vn N	event
 "saqqummer" Gram/TV NIQ Der/vn N	event
 "saqqummer" Gram/TV NIQ Der/vn N	meta-hypo
-"saqqummer" Gram/TV QQIP Der/vv V	appear
+"saqqummer" Gram/TV QQIP Der/vv Gram/IV V	appear
 "saqqummer" Gram/TV TIP Der/vv Gram/TV V	create advertise
 "saqqummer" Gram/TV TIP Der/vv HTR Der/vv Gram/IV NIQ Der/vn N	occ
 "saqqummer" Gram/TV TIP Der/vv HTR Der/vv Gram/IV NIQ Der/vn SUAQ Der/nn N	occ
@@ -34367,7 +34465,6 @@
 "satsiut" N	anent
 "sattaat" N	mat-cloth
 "sattap" Gram/IV V	play
-"sætteskipper" N	Hprof
 "sava" ARAQ Der/nn N	Azo
 "sava" N	Adom
 "sava" N	Azo
@@ -34609,12 +34706,14 @@
 "siap" Gram/IV NAAR Der/vv Gram/TV PALUP Der/vv V	sound_emission
 "siap" Gram/IV TUQ Der/vn N	Lstar
 "siap" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
+"siap" Gram/TV HTR Der/vv Gram/IV V	prepare_food
 "siap" Gram/TV HTR Der/vv VIK Der/vn N	con
 "siap" Gram/TV NAAR Der/vv Gram/TV PALUK Der/vn N	percep-l
 "siap" Gram/TV NAAR Der/vv PALUK Der/vn N	percep-l
 "siap" Gram/TV TAQ Der/vn N	f-phys
 "siap" Gram/TV TAQ Der/vn SSAQ Der/nn N	food-h
 "siap" Gram/TV TUQ Der/vn N	Lstar
+"siap" Gram/TV V	prepare_food
 "siarngup" Gram/TV HTR Der/vv Gram/IV V	beg
 "siarngup" Gram/TV V	beg
 "siarngussi" Gram/IV V	beg
@@ -35051,7 +35150,6 @@
 "sinnerup" Gram/TV TUQ Der/vn U Der/nv Gram/IV V	be_copula
 "sinnerup" Gram/TV TUU Der/vv Gram/IV V	be_copula
 "sinnerup" Gram/TV V	persist
-"sinneruttoq" U Der/nv Gram/IV V	be_copula
 "sinnga" Gram/IV NIQ Der/vn N	f-psych
 "sinnga" Gram/IV V	be_attribute
 "sinngage" Gram/TV V	emote_obj
@@ -35148,8 +35246,6 @@
 "sisagaq" U Der/nv Gram/IV NIQ Der/vn N	act
 "sisak" N	Hattr
 "sisak" U Der/nv Gram/IV TUQ Der/vn N	f
-"sisamaq" NNGUR Der/nv Gram/IV NIQ Der/vn N	temp
-"sisamaq" NNGUR Der/nv Gram/TV NIQ Der/vn N	temp
 "sisamararterut" N	unit
 "sisamat" NNGUR Der/nv Gram/IV NIQ Der/vn N	temp
 "sisamat" NNGUR Der/nv Gram/TV NIQ Der/vn N	temp
@@ -35461,10 +35557,6 @@
 "socialmedhjælper" N	Hprof
 "socialrådgiver" N	Hprof
 "sodavand" N	drink-h
-"sølv" N	mat
-"sølv" NNAP Der/nv Gram/IV V	get
-"sølv" QAR Der/nv Gram/IV VIK Der/vn N	Ltop
-"sømil" Sem/Unit N	unit
 "soqqalik" N	Aich
 "soqqalik" U Der/nv Gram/IV NNGIT Der/vv Gram/IV TUQ Der/vn N	Aich
 "soqqaq" LIK Der/nn N	Aich
@@ -36000,8 +36092,8 @@
 "suliaq" SSAQ Der/nn N	ac
 "suliaq" SSAQ Der/nn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "suliaq" SSAQ Der/nn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV HTR Der/vv Gram/IV UTE Der/vn N	sem-r
+"suliaq" SSAQ Der/nn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/IV NIQ Der/vn N	act
 "suliaq" SSAQ Der/nn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv Gram/TV NIQ Der/vn N	act
-"suliaq" SSAQ Der/nn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV TIP Der/vv QQIP Der/vv NIQ Der/vn N	act
 "suliaq" SSAQ Der/nn NNGUR Der/nv Gram/IV TIP Der/vv Gram/TV V	accuse
 "suliaq" SSAQ Der/nn NNGUR Der/nv Gram/TV TIP Der/vv Gram/TV V	accuse
 "suliaq" SSAQ Der/nn NNGUR Der/nv Gram/TV TIP Der/vv HTR Der/vv Gram/IV QQIP Der/vv Gram/IV NIQ Der/vn N	act
@@ -36143,6 +36235,7 @@
 "sunger" Gram/IV USAR Der/vv Gram/IV V	rehearse
 "sunger" Gram/IV USAR Der/vv Gram/IV VIK Der/vn N	Lh
 "sunger" Gram/IV USAR Der/vv Gram/IV VIK Der/vn N	inst
+"sunger" Gram/IV USIQ Der/vn N	ac
 "sungiup" Gram/TV HTR Der/vv Gram/IV LLUAR Der/vv SIMA Der/vv Gram/IV TUQ Der/vn N	Hprof
 "sungiup" Gram/TV HTR Der/vv Gram/IV NIAR Der/vv Gram/IV NIQ Der/vn N	process
 "sungiup" Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	state
@@ -36320,7 +36413,7 @@
 "sup" Gram/IV RIAR Der/vv SINNAA Der/vv NNGIT Der/vv Gram/IV NIQ Der/vn N	f-psych
 "sup" Gram/IV TIP Der/vv Gram/TV JAAR Der/vv V	lack
 "sup" Gram/IV V	capture
-"sup" Gram/TV KANNIR Der/vv V	behave
+"sup" Gram/TV KANNIR Der/vv Gram/IV V	behave
 "sup" Gram/TV KUJUP Der/vv USIQ Der/vn VIK Der/nn N	con
 "sup" Gram/TV LIR Der/vv GUSUP Der/vv Gram/IV SSUSIQ Der/vn N	state-h
 "sup" Gram/TV LIR Der/vv GUSUP Der/vv NNGIT Der/vv Gram/IV SSUSIQ Der/vn N	act
@@ -36471,6 +36564,11 @@
 "syfilis" N	sick
 "synagoge" N	build
 "system" N	ac
+"sætteskipper" N	Hprof
+"sølv" N	mat
+"sølv" NNAP Der/nv Gram/IV V	get
+"sølv" QAR Der/nv Gram/IV VIK Der/vn N	Ltop
+"sømil" Sem/Unit N	unit
 "taa" Gram/IV LLIUR Der/vv Gram/IV NIQ Der/vn N	act
 "taa" Gram/IV LLIUR Der/vv Gram/IV TUQ Der/vn N	Hprof
 "taa" Gram/IV LLIUR Der/vv Gram/IV V	create_semantic
@@ -36788,6 +36886,7 @@
 "takt" N	ac
 "taku" GUMINAR Der/vv IT Der/vv Gram/IV V	f
 "taku" Gram/IV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV V	appear
+"taku" Gram/IV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV V	see
 "taku" Gram/IV SINNAA Der/vv Gram/IV NIQ Der/vn N	f-phys-h
 "taku" Gram/IV SSAAR Der/vv NNGIT Der/vv Gram/IV TUQ Der/vn N	f-phys
 "taku" Gram/IV UTE Der/vn SSAQ Der/nn LIAQ Der/nn N	sem-r ac
@@ -36798,6 +36897,7 @@
 "taku" Gram/IV V	see
 "taku" Gram/TV GUMINAR Der/vv IT Der/vv Gram/IV V	f
 "taku" Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV V	appear
+"taku" Gram/TV Gram/IV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV V	see
 "taku" Gram/TV Gram/IV UTE Der/vn SSAQ Der/nn LIAQ Der/nn N	sem-r ac
 "taku" Gram/TV Gram/IV UTE Der/vn SSAQ Der/nn LIAQ Der/nn N	sem-r sem-w
 "taku" Gram/TV Gram/IV UTE Der/vn SSAQ Der/nn LIAQ Der/nn N	sem-w
@@ -36808,7 +36908,9 @@
 "taku" Gram/TV HTR Der/vv Gram/IV SIMA Der/vv SINNAA Der/vv Gram/IV TUQ Der/vn N	H
 "taku" Gram/TV HTR Der/vv Gram/IV TUQ Der/vn N	H
 "taku" Gram/TV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV V	appear
+"taku" Gram/TV NIQ Der/vn QAR Der/nv Gram/IV SINNAA Der/vv Gram/IV V	see
 "taku" Gram/TV NIQAR Der/vv Gram/IV SINNAA Der/vv Gram/IV V	appear
+"taku" Gram/TV NIQAR Der/vv Gram/IV SINNAA Der/vv Gram/IV V	see
 "taku" Gram/TV QQU Der/vv SAAR Der/vv Gram/TV V	behave
 "taku" Gram/TV QQUSAAR Der/vv Gram/IV V	behave
 "taku" Gram/TV QQUSAAR Der/vv V	behave
@@ -36821,7 +36923,8 @@
 "taku" Gram/TV TIP Der/vv HTR Der/vv Gram/IV NIQ Der/vn N	act-s
 "taku" Gram/TV TIP Der/vv HTR Der/vv Gram/IV NIQ Der/vn N	occ
 "taku" Gram/TV TIP Der/vv HTR Der/vv Gram/IV V	conspire
-"taku" Gram/TV V	notice
+"taku" Gram/TV V	see
+"taku" LIRTUR Der/vv NAR Der/vv Gram/IV TUQ Der/vn N	f-surf
 "taku" QQU Der/vv Gram/TV SAAR Der/vv Gram/TV V	behave
 "taku" QQU Der/vv Gram/TV TAAR Der/vv V	behave
 "taku" SAR Der/vv Gram/TV V	investigate
@@ -36983,10 +37086,10 @@
 "tammar" Gram/TV TUQ Der/vn N	f
 "tammar" Gram/TV V	disappear
 "tammar" Gram/TV V	lose
+"tammar" Gram/TV VIP Der/vv Gram/IV V	lose
 "tammar" Gram/TV VIP Der/vv SIMA Der/vv Gram/IV V	lose
 "tammar" Gram/TV VIP Der/vv SINNAA Der/vv Gram/IV V	lose
 "tammar" Gram/TV VIP Der/vv SINNAA Der/vv NNGIT Der/vv Gram/IV V	can
-"tammar" Gram/TV VIP Der/vv V	lose
 "tammarnaveeqqut" N	mon-m
 "tammartajaar" Gram/IV V	run
 "tammartakajaar" Gram/IV V	fail
@@ -37300,6 +37403,7 @@
 "tatsiaq" N	Lwater
 "tattaasaq" N	Aich
 "tattak" N	f-an
+"tattak" TUUQ Der/nn SUAQ Der/nn N	Aich
 "tattak" USAQ Der/nn N	Aich
 "tattattooq" SUAQ Der/nn N	Aich
 "tattoqut" N	cc-h
@@ -37709,7 +37813,7 @@
 "timmisartor" Gram/IV TIP Der/vv Gram/TV TIR Der/vv QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
 "timmisartor" Gram/IV UTE Der/vv Gram/TV LIR Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
 "timmisartor" Gram/IV UTE Der/vv Gram/TV SAAR Der/vv Gram/TV NIQ Der/vn N	sport
-"timmisartor" Gram/IV UTE Der/vv Gram/TV TIP Der/vv LIR Der/vv QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
+"timmisartor" Gram/IV UTE Der/vv Gram/TV TIP Der/vv LIR Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	HH
 "timmisartor" Gram/IV V	vehicle
 "timmisartor" Gram/IV VIK Der/vn GE Der/nv Gram/TV V	reach
 "timmisartortartoq" N	Hprof
@@ -38662,6 +38766,7 @@
 "tusangiatsap" Gram/IV JA Der/vv Gram/IV TUQ Der/vn N	f-psych
 "tusaqqoor" Gram/IV NAR Der/vv Gram/IV TUQ Der/vn N	sem-l
 "tusaqqoor" Gram/TV NAR Der/vv Gram/IV TUQ Der/vn N	sem-l
+"tusaqqoor" Gram/TV V	hear
 "tusaqqoornar" Gram/IV TUQ Der/vn N	sem-l
 "tusaqqoornartoq" N	sem-l
 "tusar" Gram/IV NAR Der/vv GE Der/vv Gram/TV V	like
@@ -39220,7 +39325,7 @@
 "ulloq" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
 "ulloq" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV SAR Der/vv Gram/TV NIQ Der/vn N	act
 "ulloq" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV TAR Der/vv Gram/IV NIQ Der/vn N	act
-"ulloq" N	Labs
+"ulloq" N	La
 "ulloq" N	dur
 "ulloq" N	temp
 "ulloq" SIUR Der/nv Gram/IV NIQ Der/vn N	occ
@@ -39256,6 +39361,15 @@
 "ullortuneq" SIUR Der/nv Gram/IV NIQ Der/vn N	event
 "ullortunersior" Gram/IV NIQ Der/vn N	event
 "ullortunersiorneq" N	event
+"ullu" KILLI Der/nv Gram/IV TAR Der/vv Gram/IV UTE Der/vn N	activity
+"ullu" KIP Der/nv Gram/IV NIQ Der/vn N	temp
+"ullu" KIP Der/nv Gram/IV NIQ Der/vn SIUR Der/nv Gram/IV NIQ Der/vn N	event
+"ullu" LIR Der/nv Gram/IV NIQ Der/vn N	temp
+"ullu" LIR Der/nv Gram/TV Gram/IV NIQ Der/vn N	temp
+"ullu" LIR Der/nv Gram/TV NIQ Der/vn N	temp
+"ullu" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV NIQ Der/vn N	act
+"ullu" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV SAR Der/vv Gram/TV NIQ Der/vn N	act
+"ullu" LIRSUR Der/nv Gram/TV HTR Der/vv Gram/IV TAR Der/vv Gram/IV NIQ Der/vn N	act
 "ullukilli" Gram/IV TAR Der/vv Gram/IV UTE Der/vn N	activity
 "ullukillisaar" Gram/IV UTE Der/vn N	activity
 "ullukillisaarut" N	activity
@@ -39321,6 +39435,8 @@
 "umiaq" SUAQ Der/nn LIAR Der/nv Gram/IV V	adjust
 "umiaq" SUAQ Der/nn LIUR Der/nv Gram/IV VIK Der/vn N	inst
 "umiaq" SUAQ Der/nn N	Vwater
+"umiaq" SUAQ Der/nn U Der/nv Gram/IV TIP Der/vv Gram/TV LIR Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	inst
+"umiaq" SUAQ Der/nn U Der/nv Gram/IV TIR Der/vv LIR Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	inst
 "umiaq" SUAQ Der/nn UTE Der/nn LIR Der/nv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	inst
 "umiaq" SUAQ Der/nn UTE Der/nn LIR Der/nv Gram/IV QATIGIIP Der/vv Gram/IV VIK Der/vn N	inst
 "umiaq" SUAQ Der/nn UTE Der/nn LIR Der/nv Gram/TV Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	inst
@@ -39350,6 +39466,8 @@
 "umiarsuaq" LIUR Der/nv Gram/IV VIK Der/vn N	inst
 "umiarsuaq" MIUQ Der/nn N	Hprof
 "umiarsuaq" N	Vwater
+"umiarsuaq" U Der/nv Gram/IV TIP Der/vv Gram/TV LIR Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	inst
+"umiarsuaq" U Der/nv Gram/IV TIR Der/vv LIR Der/vv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	inst
 "umiarsuaq" UTE Der/nn LIK Der/nn N	Hprof
 "umiarsuaq" UTE Der/nn LIK Der/nn QATIGIIP Der/nv Gram/IV VIK Der/vn N	inst
 "umiarsuaq" UTE Der/nn LIR Der/nv Gram/IV QATE Der/vn GIIP Der/nv Gram/IV VIK Der/vn N	inst
@@ -39379,6 +39497,7 @@
 "umimmaaraq" N	Azo
 "umimmak" ARAQ Der/nn N	Azo
 "umimmak" N	Azo
+"umimmak" QAR Der/nv Gram/IV SSUSIQ Der/vn N	AA
 "umimmak" TAQ Der/nn SSIP Der/nv Gram/TV HTR Der/vv Gram/IV UTE Der/vn N	part
 "umimmattassaq" N	part
 "umip" Gram/TV HTR Der/vv VIK Der/vn N	Lh
@@ -39702,7 +39821,7 @@
 "unnup" Gram/IV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	lodge
 "unnup" Gram/TV HTR Der/vv Gram/IV TIP Der/vv Gram/TV V	give
 "unnup" Gram/TV HTR Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	lodge
-"unnup" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV V	lodge
+"unnup" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	lodge
 "unnussiut" N	sem-l
 "upalor" Gram/IV NGAAR Der/vv Gram/IV V	prepare
 "upalor" Gram/IV NGAAR Der/vv SIMA Der/vv Gram/IV NIQ Der/vn N	ac
@@ -40058,9 +40177,9 @@
 "utip" Gram/TV NIKUU Der/vv Gram/TV TAQ Der/vn N	mat-h
 "utip" Gram/TV NIKUU Der/vv Gram/TV TAQ Der/vn USAQ Der/nn N	mat-h
 "utip" Gram/TV QATTAAR Der/vv TAR Der/vv Gram/TV TAQ Der/vn N	sem
+"utip" Gram/TV QQIP Der/vv Gram/IV NIQ Der/vn N	activity
 "utip" Gram/TV QQIP Der/vv Gram/TV NIQ Der/vn N	activity
 "utip" Gram/TV QQIP Der/vv Gram/TV V	start
-"utip" Gram/TV QQIP Der/vv NIQ Der/vn N	activity
 "utip" Gram/TV QQU Der/vv Gram/TV V	order
 "utip" Gram/TV RIAR Der/vv Gram/TV NIQ Der/vn N	act
 "utip" Gram/TV RIAR Der/vv NIQ Der/vn N	act
@@ -40308,7 +40427,7 @@
 "uuttor" Gram/TV UTIGE Der/vv Gram/TV V	measure_tr
 "uuttor" Gram/TV V	measure_tr
 "uuttor" Gram/TV V	percep
-"uuttor" Gram/TV VIP Der/vv VIK Der/vn GE Der/nv Gram/TV V	measure_itr
+"uuttor" Gram/TV VIP Der/vv Gram/IV VIK Der/vn GE Der/nv Gram/TV V	measure_itr
 "uuttortaa" Gram/IV NIQ Der/vn N	act
 "uuttortaa" Gram/IV RIAR Der/vv Gram/IV USIQ Der/vn N	ac
 "uuttortaa" Gram/IV TAR Der/vv Gram/IV VIK Der/vn N	Lh
@@ -40335,3 +40454,21 @@
 "workshop" N	occ
 "yoghurt" N	food-h
 "zink" N	cm
+"Å" N	unit
+"Åbenrå" Sem/Geo iProp MIU Der/nn N	Hnat
+"Åland" Sem/Geo iProp MIU Der/nn N	Hnat
+"Århus" Sem/Geo iProp MIU Der/nn N	f Hnat
+"Århus" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"Ægypten" Sem/Geo iProp MIU Der/nn N	Hnat
+"Østrig" Sem/Geo iProp MIU Der/nn N	f Hnat
+"Østrig" Sem/Geo iProp iAbl iSg IR Gram/IV TUQ Der/vn N	f am
+"å" N	ac-sign
+"å" N	unit
+"æ" N	ac-sign
+"æblejuice" N	drink-h
+"æbleskive" N	food-c-h
+"æggehvidestof" Err/Sub N	cm
+"æggesnaps" N	drink-h
+"ærkebiskop" N	Hideo
+"æter" N	cm-liq-h
+"ø" N	ac-sign

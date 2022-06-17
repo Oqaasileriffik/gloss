@@ -40,8 +40,8 @@ while (<STDIN>) {
    s~^\t(.+?) (TUQ Der/vn N Lok Sg)~\t$2 $1~g; #Lok på verbalnomen
    s~TUQ Der/vn N Lok Sg~"in/on what"~g;
 
-   s~^\t(.+?) (Sem/Geo Prop Lok Sg)~\t$2 $1~g; #Lok på Geo/Prop
-   s~Sem/Geo Prop Lok Sg~"in"~g;
+   s~^\t(.+?) (i?Sem/Geo Prop Lok Sg)~\t$2 $1~g; #Lok på Geo/Prop
+   s~i?Sem/Geo Prop Lok Sg~"in"~g;
 
 	s~^\t(.+?) (Lok)~\t$2 $1~g; #Lok
    s~Lok~"in"~g;
@@ -66,12 +66,7 @@ while (<STDIN>) {
    s~LU~"and"~g;
 
 
-	s~ Der/.. ~ ~g; # Slet tilbageblevne sekundære tags1
-	s~ Der/.. ~ ~g; # Slet tilbageblevne sekundære tags1 anden gennemløb
-	s~ Gram/.. ~ ~g; # Slet tilbageblevne sekundære tags2
-	s~ Hyb/... ~ ~g; # Slet tilbageblevne sekundære tags3
-	s~ Sem/....? ~ ~g; # Slet tilbageblevne sekundære tags4
-	s~ Orth/....? ~ ~g; # Slet tilbageblevne sekundære tags5
+	s~\s(Der|Gram|Hyb|Orth)/\S+~~g; # Slet tilbageblevne sekundære tags
 	s~ %ContHypotagme ~ ~g; # Slet tilbageblevne sekundære tags6
 
 
