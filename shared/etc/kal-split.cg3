@@ -40,22 +40,23 @@ DELIMIT (§inserted) ;
 
 SECTION
 # Insert a full stop after initial interjections
-ADDCOHORT ("<.>" "." CLB §inserted) AFTER (Interj) (-1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§inserted) OR (<<<)) ;
-ADDCOHORT ("<.>" "." CLB §inserted) AFTER (Interj) (-1 (PUNCT) OR (DIRSTALESTART) LINK -1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§inserted) OR (<<<))
+ADDCOHORT ("<.>" "." CLB §ins-intj) AFTER (Interj) (-1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§ins-intj) OR (<<<)) ;
+ADDCOHORT ("<.>" "." CLB §ins-intj) AFTER (Interj) (-1 (PUNCT) OR (DIRSTALESTART) LINK -1 (>>>)) (NOT 0 (<<<)) (NOT 1 (§ins-intj) OR (<<<))
 (NEGATE 0 ("qujanaq") LINK *1 Trm BARRIER V)
 (NEGATE 0 ("qujanaq") LINK *1 Cau BARRIER V - CONT)
 ;
-DELIMIT (§inserted) ;
+DELIMIT (§ins-intj) ;
 
 # Insert a full stop before trailing interjections
-ADDCOHORT ("<.>" "." CLB §inserted) BEFORE (Interj) (1 (<<<)) (NOT -1 (§inserted) OR (>>>) OR (PUNCT) OR (DIRTALESTART))
+ADDCOHORT ("<.>" "." CLB §ins-intj) BEFORE (Interj) (1 (<<<)) (NOT -1 (§ins-intj) OR (>>>) OR (PUNCT) OR (DIRTALESTART))
 (NEGATE 0 (NNGUARSI) LINK -*1 ("qangali") BARRIER V)
 ;
-ADDCOHORT ("<.>" "." CLB §inserted) BEFORE (Interj) (0 (<<<)) (NOT -1 (§inserted) OR (>>>) OR (PUNCT) OR (DIRTALESTART)) ;
-DELIMIT (§inserted) ;
+ADDCOHORT ("<.>" "." CLB §ins-intj) BEFORE (Interj) (0 (<<<)) (NOT -1 (§ins-intj) OR (>>>) OR (PUNCT) OR (DIRTALESTART)) ;
+DELIMIT (§ins-intj) ;
 
 
 AFTER-SECTIONS
 # Remove all the temporary tags used above
 SUBSTITUTE (§inserted) (*) (§inserted) ;
+SUBSTITUTE (§ins-intj) (*) (§ins-intj) ;
 SUBSTITUTE REPEAT (<§.+>r) (*) (<§.+>r) ;
