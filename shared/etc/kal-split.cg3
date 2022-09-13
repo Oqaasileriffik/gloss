@@ -27,7 +27,7 @@ REMCOHORT (§inserted) (2 (<<<)) ;
 DELIMIT (§inserted) ;
 
 # Insert a full stop between two distinct @PRED trees
-ADDCOHORT ("<.>" "." CLB §inserted) BEFORE WITHCHILD (*) (@PRED) (-1* (@PRED)) ;
+ADDCOHORT ("<.>" "." CLB §inserted) BEFORE WITHCHILD (*) (@PRED) (-1* (@PRED) BARRIER ("(")) ;
 # Undo if any intermediate cohort has a different @PRED parent
 REMCOHORT (§inserted) (*1 ("([^<].*)"r @PRED) LINK -1** (*) BARRIER (§inserted) LINK *p (@PRED) LINK NOT 0 ("$1"v)) ;
 # However, if it was inserted near the edges of the tree, it was probably not two distinct trees, so undo
