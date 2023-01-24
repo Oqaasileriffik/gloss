@@ -26,7 +26,7 @@ while (<STDIN>) {
    s@ (N|V|Num|Adv|Interj|Pron|Prop)( .*)$@ $1@;
 
    # Strip secondary tags except transitivity and semantics
-   s@ Gram/([IT]V) @ gram/$1 @g;
+   s@ Gram/([HIT]V) @ gram/$1 @g;
    s@ (Gram|Dial|Orth|O[lL]ang|Heur)/(\S+)@@g;
    s@ gram/@ Gram/@g;
 
@@ -70,7 +70,7 @@ while (<STDIN>) {
          last;
       }
 
-      if (!($_ =~ s@^(.+?) \p{Lu}+ Der/([vn])[vn](?: Gram/[IT]V)? (?:N|V|Prop|Num|Adv|Interj|Pron)$@$1 \U$2@)) {
+      if (!($_ =~ s@^(.+?) \p{Lu}+ Der/([vn])[vn](?: Gram/[HIT]V)? (?:N|V|Prop|Num|Adv|Interj|Pron)$@$1 \U$2@)) {
          last;
       }
    }
