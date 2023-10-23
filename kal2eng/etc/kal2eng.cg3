@@ -1,0 +1,32 @@
+INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
+
+#SUBSTITUTE:S0100 ("avannaq") ("north") TARGET (N) IF (p SPATIAL); #Dette virker i GCG, men er det også OK for glosseringen? Og hvordan flytter jeg samtidig de tags, der overflødiggøres efter substitueringen? Spurgt Tino 20200913
+SUBSTITUTE:S0100 ("avannaq") ("north" <tr-done>) TARGET (N) IF (p SPATIAL); #Dette virker i GCG, men er det også OK for glosseringen? Og hvordan flytter jeg samtidig de tags, der overflødiggøres efter substitueringen? Spurgt Tino 20200913 <tr-done> altid med for at adskille engelske ord fra mulige grønlandske låneord
+SUBSTITUTE:S0101 (N Trm Sg @>N) (*) TARGET ("north" <tr-done>) IF (p SPATIAL);
+#SUBSTITUTE:S0110 ("akunneq") ("week" <tr-done>) TARGET (N) IF (c ("sapaat" @POSS>)) ;
+#SUBSTITUTE:S0111 ("sapaat" N Rel Sg @POSS>) (nil) TARGET ("sapaat") IF (p ("week" <tr-done>));
+
+#S0120 forkert. Sætter target = -1
+#SUBSTITUTE:S0120 ("sinneq" QAR TUQ)("more than" "$1"v <tr-done>) TARGET (N) IF (-1 Num + ("(.*)"r));
+SUBSTITUTE:S0121 (".*" Num Abs Pl @N<) (nil) TARGET (Num) IF (s ("more than" <tr-done>));
+
+
+#Strukturer af typen OTHERTIME=Num=manna=siorna/kingorna
+#SUBSTITUTE:S0130 ("siuneq" N Abs Sg 3SgPoss)("ago" <tr-done>) TARGET (@CL-ADVL>) IF (c ("manna" Rel));
+#SUBSTITUTE:S0131 ("manna" Gram/Dem Pron Rel Sg @POSS>) (nil) TARGET (Gram/Dem Pron Rel Sg @POSS>) IF (s OTHERTIME);
+
+#udkommenterer S0140 og S0141. Glossering for upræcis
+#SUBSTITUTE:S0140 ("pi" Gram/TV V Cont 3SgO)("concerning_him/her/it" <tr-done>) TARGET (@ADVL>) IF (c Abs)
+#(NEGATE 0 INTRANSVERB)
+#;
+#SUBSTITUTE:S0141 ("pi" Gram/TV V Cont 3SgO)("concerning_him/her/it" <tr-done>) TARGET (@i-ADVL>) IF (c Abs)
+#(NEGATE 0 INTRANSVERB)
+#;
+
+#SUBSTITUTE:S0150 ("IR" Gram/IV TUQ Der/vn)("one who be" <tr-done>) TARGET (Hyb/2-2) IF (c Abl);
+#SUBSTITUTE:S0151 ("IP" Gram/IV TUQ Der/vn)("one who be" <tr-done>) TARGET (Hyb/2-2) IF (c Lok);
+
+
+
+#Følgende virker ikke idet bl.a. blokerer for akuersissuteqarpoq = give approval
+#SUBSTITUTE:S0130 (TUQ Der/vn QAR Der/nv) ("there be -ing" <tr-done>) TARGET (V) ;
