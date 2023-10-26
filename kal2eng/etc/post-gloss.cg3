@@ -1,0 +1,5 @@
+INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
+
+# Remove tags corresponding to context-fulfilled dependents
+Substitute (3Sg) (*) (3Sg) (c @SUBJ> OR @<SUBJ) ;
+Substitute (3SgO) (*) (3SgO) (c @OBJ> OR @<OBJ) ;

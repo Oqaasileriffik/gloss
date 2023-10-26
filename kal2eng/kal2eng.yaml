@@ -15,7 +15,6 @@
   test: '| REGTEST_AUTO'
 - cmd: cg3-autobin.pl -g ETC/disambiguator.cg3
   opt: morf
-  trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
 - cmd: BIN/kal-lu-prefix LEX/generator-gt-desc.hfstol
   opt: lu
   test: '| REGTEST_AUTO'
@@ -27,7 +26,7 @@
   trace: --trace | BIN/hilite 34 '(MAP|ADD)[^ ]+' | BIN/hilite 31 'SUBSTITUTE[^ ]+'
 - cmd: cg3-autobin.pl -g ETC/dependency.cg3
   opt: dep
-  trace: --trace | BIN/hilite 34 'SETPARENT[^ ]+' | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+  trace: --trace | BIN/hilite 34 'SETPARENT[^ ]+'
 - cmd: cg3-autobin.pl -g ETC/kal2eng.cg3
   opt: k2e-cg
   trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
@@ -36,6 +35,9 @@
 - cmd: curl -s -X POST --data-binary @- 'https://oqaasileriffik.gl/gloss/?raw=1'
   opt: gloss
   test: '| REGTEST_AUTO'
-- cmd: BIN/post-gloss.pl | cg-sort
+- cmd: cg3-autobin.pl -g ETC/post-gloss.cg3
+  opt: post-cg
+  trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+- cmd: BIN/post-gloss.py | cg-sort
   opt: post
   test: '| REGTEST_AUTO'
