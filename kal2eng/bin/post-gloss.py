@@ -51,8 +51,15 @@ for line in sys.stdin:
 	line = re.sub(r'Abl', r'"from"', line)
 
 
-	line = re.sub(r'^\t(.+?) (V (Ind|Par) 3Sg)', r'\t\2 \1', line) #Subjekt Sg og modus
-	line = re.sub(r'V (Ind|Par) 3Sg', r'3Sg', line)
+	line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl))', r'\t\2 \1', line) #Subjekt Sg og modus
+	line = re.sub(r'V (Ind|Par|Cau|Con) 3Sg', r'"he/she/it"', line)
+	line = re.sub(r'V (Ind|Par|Cau|Con|Cont|ContNeg) 1Sg', r'"I" \1', line)
+
+	line = re.sub(r'Cont (".+?)_V', r'\1ing', line)
+	
+	line = re.sub(r'^\t(.+?) (@CAU.?)', r'\t\2 \1', line) #
+	line = re.sub(r'@CAU.?', r'"when"', line)
+	
 
 	line = re.sub(r'^\t(.+?) (V (Ind|Par) 3Pl)', r'\t\2 \1', line) #Subjekt Pl og modus
 	line = re.sub(r'V (Ind|Par) 3Pl', r'"they"', line)
