@@ -2,6 +2,8 @@
 import sys
 import re
 
+# https://docs.python.org/3/tutorial/
+
 for line in sys.stdin:
 	line = line.rstrip()
 
@@ -56,10 +58,10 @@ for line in sys.stdin:
 	line = re.sub(r'V (Ind|Par|Cau|Con|Cont|ContNeg) 1Sg', r'"I" \1', line)
 
 	line = re.sub(r'Cont (".+?)_V', r'\1ing', line)
-	
+
 	line = re.sub(r'^\t(.+?) (@CAU.?)', r'\t\2 \1', line) #
 	line = re.sub(r'@CAU.?', r'"when"', line)
-	
+
 
 	line = re.sub(r'^\t(.+?) (V (Ind|Par) 3Pl)', r'\t\2 \1', line) #Subjekt Pl og modus
 	line = re.sub(r'V (Ind|Par) 3Pl', r'"they"', line)
