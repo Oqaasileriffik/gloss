@@ -3,6 +3,8 @@ import sys
 import re
 
 # https://docs.python.org/3/tutorial/
+# https://docs.python.org/3/library/re.html
+# https://docs.python.org/3/library/re.html#re.sub
 
 for line in sys.stdin:
 	line = line.rstrip()
