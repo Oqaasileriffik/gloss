@@ -10,7 +10,7 @@
 - cmd: cg3-autobin.pl -g ETC/kal-pre2.cg3
   opt: kal-pre2
   trace: --trace
-- cmd: BIN/long2sem.pl | cg-sort
+- cmd: ~/langtech/katersat/apply-sems.py | cg-sort
   opt: sems
   test: '| REGTEST_AUTO'
 - cmd: cg3-autobin.pl -g ETC/disambiguator.cg3
@@ -32,7 +32,7 @@
   trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
 - cmd: cg3-autobin.pl -g ETC/kal-split.cg3
   opt: ssplit
-- cmd: curl -s -X POST --data-binary @- 'https://oqaasileriffik.gl/gloss/?raw=1'
+- cmd: ~/langtech/katersat/gloss.py eng | cg-sort
   opt: gloss
   test: '| REGTEST_AUTO'
 - cmd: cg3-autobin.pl -g ETC/post-gloss.cg3
