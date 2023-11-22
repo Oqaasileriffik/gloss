@@ -71,8 +71,8 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) U Der/nv ', r'\t\1 "be" ', line) #simpel substitution af U
 
 
-	line = re.sub(r'^\t(.+?) (LU)', r'\t\2 \1', line) #LU flyttes allerforrest
-	line = re.sub(r'LU', r'"and"', line)
+	line = re.sub(r'^\t(.+?) (LU)\b', r'\t\2 \1', line) #LU flyttes allerforrest
+	line = re.sub(r'\bLU\b', r'"and"', line)
 
 
 	line = re.sub(r'\s(Der|Gram|Hyb|Orth)/\S+', r'', line) # Slet tilbageblevne sekundære tags
