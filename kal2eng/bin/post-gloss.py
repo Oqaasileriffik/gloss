@@ -67,6 +67,9 @@ for line in sys.stdin:
 
 	line = re.sub(r'^\t(.+?) (V (Ind|Par) 3Pl)', r'\t\2 \1', line) #Subjekt Pl og modus
 	line = re.sub(r'V (Ind|Par) 3Pl', r'"they"', line)
+    
+    line = re.sub(r'^\t(.+?) (V (Ind|Par) 2Sg)', r'\t\2 \1', line)
+    line = re.sub(r'V (Ind|Par) 2Sg', r'"you"', line)
 
 	line = re.sub(r'^\t(.+?) U Der/nv ', r'\t\1 "be" ', line) #simpel substitution af U
 
