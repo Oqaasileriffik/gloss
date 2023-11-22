@@ -55,7 +55,7 @@ for line in sys.stdin:
 	line = re.sub(r'Abl', r'"from"', line)
 
 
-	line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl))', r'\t\2 \1', line) #Subjekt Sg og modus
+	line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl)\b)', r'\t\2 \1', line) #Subjekt Sg og modus
 	line = re.sub(r'V (Ind|Par|Cau|Con) 3Sg', r'"he/she/it"', line)
 	line = re.sub(r'V (Ind|Par|Cau|Con|Cont|ContNeg) 1Sg', r'"I" \1', line)
 
@@ -74,8 +74,8 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) U Der/nv ', r'\t\1 "be" ', line) #simpel substitution af U
 
 
-	line = re.sub(r'^\t(.+?) (LU)\b', r'\t\2 \1', line) #LU flyttes allerforrest
-	line = re.sub(r'\bLU\b', r'"and"', line)
+	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line) #LU flyttes allerforrest
+	line = re.sub(r'\bCONJ-LU\b', r'"and"', line)
 
 
 	line = re.sub(r'\s(Der|Gram|Hyb|Orth)/\S+', r'', line) # Slet tilbageblevne sekundære tags

@@ -3,3 +3,7 @@ INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
 # Remove tags corresponding to context-fulfilled dependents
 Substitute (3Sg) (*) TARGET (3Sg) IF (c @SUBJ> OR @<SUBJ) ;
 Substitute (3SgO) (*) TARGET (3SgO) IF (c @OBJ> OR @<OBJ) ;
+Substitute (3PlO) (*) TARGET (3PlO) IF (c @OBJ> OR @<OBJ) ;
+
+#test. Remove Aeq if parent is "like"
+Substitute (Aeq) (*) TARGET (Aeq) IF (p* ("like")) ;
