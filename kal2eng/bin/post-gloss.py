@@ -53,6 +53,12 @@ for line in sys.stdin:
 
 	line = re.sub(r'^\t(.+?) (Abl)', r'\t\2 \1', line) #Abl
 	line = re.sub(r'Abl', r'"from"', line)
+	
+	line = re.sub(r'^\t(.+?) (Via)', r'\t\2 \1', line) #Via
+	line = re.sub(r'Via', r'"like"', line)
+	
+	line = re.sub(r'^\t(.+?) (Aeq)', r'\t\2 \1', line) #Aeq
+	line = re.sub(r'Aeq', r'"like"', line)
 
 
 	line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl)\b)', r'\t\2 \1', line) #Subjekt Sg og modus
@@ -64,6 +70,8 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) (@CAU.?)', r'\t\2 \1', line) #
 	line = re.sub(r'@CAU.?', r'"when"', line)
 
+	#præposition fra @POSS>
+	line = re.sub(r'^\t(.+?) ("of")', r'\t\2 \1', line)
 
 	#Subjekter ved Ind og Par
 	line = re.sub(r'^\t(.+?) (V (Ind|Par) 1Sg)', r'\t\2 \1', line)
@@ -115,6 +123,7 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) ("that")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("if")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("when")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("while")', r'\t\2 \1', line)
 
 	#ENKLITIKA
 	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line)
