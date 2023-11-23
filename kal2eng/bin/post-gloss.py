@@ -57,25 +57,68 @@ for line in sys.stdin:
 
 	line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl)\b)', r'\t\2 \1', line) #Subjekt Sg og modus
 	line = re.sub(r'V (Ind|Par|Cau|Con) 3Sg', r'"he/she/it"', line)
-	line = re.sub(r'V (Ind|Par|Cau|Con|Cont|ContNeg) 1Sg', r'"I" \1', line)
+	line = re.sub(r'V (Ind|Par|Cau|Con|Cont|ContNeg) 1Sg\b', r'"I" \1', line)
 
 	line = re.sub(r'Cont (".+?)_V', r'\1ing', line)
 
 	line = re.sub(r'^\t(.+?) (@CAU.?)', r'\t\2 \1', line) #
 	line = re.sub(r'@CAU.?', r'"when"', line)
 
-
+	#Subjekter ved Ind og Par
+	line = re.sub(r'^\t(.+?) (V (Ind|Par) 1Sg)', r'\t\2 \1', line)
+	line = re.sub(r'V (Ind|Par) 1Sg', r'"I"', line)
+	
+	line = re.sub(r'^\t(.+?) (V (Ind|Par) 2Sg)', r'\t\2 \1', line)
+	line = re.sub(r'V (Ind|Par) 2Sg', r'"you"', line)
+	
+	line = re.sub(r'^\t(.+?) (V (Ind|Par) 3Sg)', r'\t\2 \1', line)
+	line = re.sub(r'V (Ind|Par) 3Sg', r'"he/she/it"', line)
+	
+	line = re.sub(r'^\t(.+?) (V (Ind|Par) 1Pl)', r'\t\2 \1', line)
+	line = re.sub(r'V (Ind|Par) 1Pl', r'"we"', line)
+	
+	line = re.sub(r'^\t(.+?) (V (Ind|Par) 2Pl)', r'\t\2 \1', line)
+	line = re.sub(r'V (Ind|Par) 2Pl', r'"you"', line)
+	
 	line = re.sub(r'^\t(.+?) (V (Ind|Par) 3Pl)', r'\t\2 \1', line) #Subjekt Pl og modus
 	line = re.sub(r'V (Ind|Par) 3Pl', r'"they"', line)
-    
-    line = re.sub(r'^\t(.+?) (V (Ind|Par) 2Sg)', r'\t\2 \1', line)
-    line = re.sub(r'V (Ind|Par) 2Sg', r'"you"', line)
+	
+	#Possessiver
+	line = re.sub(r'^\t(.+?) (1SgPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(1SgPoss)', r'"my"', line)
+	
+	line = re.sub(r'^\t(.+?) (2SgPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(2SgPoss)', r'"your"', line)
+	
+	line = re.sub(r'^\t(.+?) (3SgPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(3SgPoss)', r'"his/her/its"', line)
+	
+	line = re.sub(r'^\t(.+?) (4SgPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(4SgPoss)', r'"his/her/its"', line)
+	
+	line = re.sub(r'^\t(.+?) (1PlPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(1PlPoss)', r'"our"', line)
+	
+	line = re.sub(r'^\t(.+?) (2PlPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(2PlPoss)', r'"your"', line)
+	
+	line = re.sub(r'^\t(.+?) (3PlPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(3PlPoss)', r'"their"', line)
+	
+	line = re.sub(r'^\t(.+?) (4PlPoss)', r'\t\2 \1', line)
+	line = re.sub(r'(4PlPoss)', r'"their"', line)
 
 	line = re.sub(r'^\t(.+?) U Der/nv ', r'\t\1 "be" ', line) #simpel substitution af U
 
-
-	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line) #LU flyttes allerforrest
+	#ENKLITIKA
+	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line)
 	line = re.sub(r'\bCONJ-LU\b', r'"and"', line)
+	
+	line = re.sub(r'^\t(.+?) (CONJ-LI)\b', r'\t\2 \1', line)
+	line = re.sub(r'\bCONJ-LI\b', r'"but"', line)
+	
+	line = re.sub(r'^\t(.+?) (CONJ-LUUNNIIT)\b', r'\t\2 \1', line)
+	line = re.sub(r'\bCONJ-LUUNNIIT\b', r'"or"', line)
 
 
 	line = re.sub(r'\s(Der|Gram|Hyb|Orth)/\S+', r'', line) # Slet tilbageblevne sekundære tags
