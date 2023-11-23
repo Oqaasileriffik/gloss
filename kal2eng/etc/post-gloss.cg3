@@ -1,9 +1,24 @@
 INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
 
+#~/langtech/kal/tools/shellscripts/kal-tokenise ~/langtech/kal/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/kal-pre1.cg3 | ~/langtech/kal/tools/shellscripts/kal-hybrid-split | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/kal-pre2.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/disambiguator.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/functions.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/dependency.cg3 #det virker med det her?
+
 # Remove tags corresponding to context-fulfilled dependents
-Substitute (3Sg) (*) TARGET (3Sg) IF (c @SUBJ> OR @<SUBJ) ;
-Substitute (3SgO) (*) TARGET (3SgO) IF (c @OBJ> OR @<OBJ) ;
-Substitute (3PlO) (*) TARGET (3PlO) IF (c @OBJ> OR @<OBJ) ;
+SUBSTITUTE:0001 (3Sg) (*) TARGET (3Sg) IF (c @SUBJ> OR @<SUBJ) ;
+SUBSTITUTE:0002 (3SgO) (*) TARGET (3SgO) IF (c @OBJ> OR @<OBJ) ;
+SUBSTITUTE:0003 (3PlO) (*) TARGET (3PlO) IF (c @OBJ> OR @<OBJ) ;
 
 #test. Remove Aeq if parent is "like"
-Substitute (Aeq) (*) TARGET (Aeq) IF (p* ("like")) ;
+SUBSTITUTE:0010 (Aeq) (*) TARGET (Aeq) IF (p* ("like")) ; #Soorlu UUMASUTUT IKILERNEQARSIMASUTUT, piginnitsini malittariinnarlugu, qungatsini nakkartillugu, tamatigullu maleruutiinnartutut isikkoqarluni.
+
+#test. CL-<CIT to "that"
+SUBSTITUTE:0020A (@SUBJ>) (@SUBJ> "that") TARGET (@SUBJ>) IF (p (@CL-<CIT) - NIR) ; #Kingusiinnaq illoqarfimmi takuneqarsinnaavoq Louisap anaanani PISUTTUAQATIGISARAA.
+SUBSTITUTE:0020B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("that"))(NOT 0 NIR) ;
+
+#test. CL-<CIT to "if"
+SUBSTITUTE:0021A (@SUBJ>) (@SUBJ> "if") TARGET (@SUBJ>) IF (p (@CL-<CIT) + NIR) ;
+SUBSTITUTE:0021B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("if"))(0 NIR) ;
+
+#test. PRED2 to "when"
+SUBSTITUTE:0022A (@SUBJ>) (@SUBJ> "when") TARGET (@SUBJ>) IF (p (@PRED2) + Par) ; #Anaanani UNITTORLU unilluni, aallartorlu aallarlunilu.
+SUBSTITUTE:0022B (@PRED2) (*) TARGET (@PRED2) IF (c (@SUBJ>) + ("when")) ;
+SUBSTITUTE:0022C (@PRED2) ("when") TARGET (@PRED2) + Par IF (NEGATE c (@SUBJ>)) ; #Anaanani unittorlu unilluni, AALLARTORLU aallarlunilu.

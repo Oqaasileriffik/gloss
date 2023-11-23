@@ -64,6 +64,7 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) (@CAU.?)', r'\t\2 \1', line) #
 	line = re.sub(r'@CAU.?', r'"when"', line)
 
+
 	#Subjekter ved Ind og Par
 	line = re.sub(r'^\t(.+?) (V (Ind|Par) 1Sg)', r'\t\2 \1', line)
 	line = re.sub(r'V (Ind|Par) 1Sg', r'"I"', line)
@@ -109,6 +110,11 @@ for line in sys.stdin:
 	line = re.sub(r'(4PlPoss)', r'"their"', line)
 
 	line = re.sub(r'^\t(.+?) U Der/nv ', r'\t\1 "be" ', line) #simpel substitution af U
+	
+	#flytning af konjunktioner
+	line = re.sub(r'^\t(.+?) ("that")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("if")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("when")', r'\t\2 \1', line)
 
 	#ENKLITIKA
 	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line)
