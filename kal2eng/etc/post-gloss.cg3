@@ -2,30 +2,73 @@ INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
 
 #~/langtech/kal/tools/shellscripts/kal-tokenise ~/langtech/kal/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/kal-pre1.cg3 | ~/langtech/kal/tools/shellscripts/kal-hybrid-split | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/kal-pre2.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/disambiguator.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/functions.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/dependency.cg3 #det virker med det her?
 
-# Remove tags corresponding to context-fulfilled dependents
-SUBSTITUTE:0001 (3Sg) (*) TARGET (3Sg) IF (c @SUBJ> OR @<SUBJ);
-SUBSTITUTE:0002 (3SgO) (*) TARGET (3SgO) IF (c @OBJ> OR @<OBJ);
-SUBSTITUTE:0003 (3PlO) (*) TARGET (3PlO) IF (c @OBJ> OR @<OBJ);
+#FJERN PERSONTAGS
+#Remove tags corresponding to context-fulfilled dependents
+SUBSTITUTE:0001A (3Sg) (*) TARGET (3Sg) IF (c @SUBJ> OR @<SUBJ);
+SUBSTITUTE:0001B (3Pl) (*) TARGET (3Pl) IF (c @SUBJ> OR @<SUBJ);
+SUBSTITUTE:0002A (4Sg) (*) TARGET (4Sg) IF (c @SUBJ> OR @<SUBJ);
+SUBSTITUTE:0002B (4Pl) (*) TARGET (4Pl) IF (c @SUBJ> OR @<SUBJ);
+SUBSTITUTE:0003A (3SgO) (*) TARGET (3SgO) IF (c @OBJ> OR @<OBJ);
+SUBSTITUTE:0003B (3PlO) (*) TARGET (3PlO) IF (c @OBJ> OR @<OBJ);
+SUBSTITUTE:0004A (4Sg) (*) TARGET (4Sg) IF (0 Cont OR ContNeg)(p V);
+SUBSTITUTE:0004B (4Pl) (*) TARGET (4Pl) IF (0 Cont OR ContNeg)(p V);
+SUBSTITUTE:0005 $$PERSON (*) TARGET (V) IF (0 Cont OR ContNeg)(p $$PERSON);
 
-#test. Remove Aeq if parent is "like"
+#Fjern person ved pronominer
+SUBSTITUTE:0009A (1Sg) (*) TARGET (1Sg) IF (0 ("uanga"));
+SUBSTITUTE:0009B (2Sg) (*) TARGET (2Sg) IF (0 ("illit"));
+SUBSTITUTE:0009C (1Pl) (*) TARGET (1Pl) IF (0 ("uanga"));
+SUBSTITUTE:0009B (2Pl) (*) TARGET (2Pl) IF (0 ("illit"));
+
+#FJERN KASUSTAGS
+#Fjern Aeq hvis parent er "like"
 SUBSTITUTE:0010 (Aeq) (*) TARGET (Aeq) IF (p* ("like")); #Soorlu UUMASUTUT IKILERNEQARSIMASUTUT, piginnitsini malittariinnarlugu, qungatsini nakkartillugu, tamatigullu maleruutiinnartutut isikkoqarluni.
 
-#test. POSS til præposition
-SUBSTITUTE:0011 (@POSS> Rel) ("of") TARGET (@POSS> Rel);
+#Fjern Via hvis leksikaliseret Via
+SUBSTITUTE:0011A (Via) (*) TARGET (Via) IF (0 ("tamaq") + Via); #Soorlu uumasutut ikilerneqarsimasutut, piginnitsini malittariinnarlugu, qungatsini nakkartillugu, TAMATIGULLU maleruutiinnartutut isikkoqarluni.
 
-#test. CL-<CIT to "that"
+#FJERN SYNTAKSTAGS
+#POSS til præposition
+SUBSTITUTE:0015 (@POSS> Rel) ("of") TARGET (@POSS> Rel);
+
+#TILFØJ KONJUNKTIONER OG LIGNENDE
+#CL-<CIT til "that"
 SUBSTITUTE:0020A (@SUBJ>) (@SUBJ> "that") TARGET (@SUBJ>) IF (p (@CL-<CIT) - NIR); #Kingusiinnaq illoqarfimmi takuneqarsinnaavoq Louisap anaanani PISUTTUAQATIGISARAA.
 SUBSTITUTE:0020B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("that"))(NOT 0 NIR);
+SUBSTITUTE:0020C (@CL-<CIT) ("that") TARGET (@CL-<CIT) IF (0 Par - NIR); #uden subjekt
 
-#test. CL-<CIT to "if"
+#CL-<CIT til "if"
 SUBSTITUTE:0021A (@SUBJ>) (@SUBJ> "if") TARGET (@SUBJ>) IF (p (@CL-<CIT) + NIR);
 SUBSTITUTE:0021B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("if"))(0 NIR);
 
-#test. PRED2 to "when"
+#PRED2 til "when"
 SUBSTITUTE:0022A (@SUBJ>) (@SUBJ> "when") TARGET (@SUBJ>) IF (p (@PRED2) + Par); #Anaanani UNITTORLU unilluni, aallartorlu aallarlunilu.
 SUBSTITUTE:0022B (@PRED2) (*) TARGET (@PRED2) IF (c (@SUBJ>) + ("when"));
 SUBSTITUTE:0022C (@PRED2) ("when") TARGET (@PRED2) + Par IF (NEGATE c (@SUBJ>)); #Anaanani unittorlu unilluni, AALLARTORLU aallarlunilu.
 
-#test. UTIGE to "while"
-SUBSTITUTE:0023A (@ADVL>) (@ADVL> "while") TARGET (@ADVL>) IF (@1 _TARGET_)(p UTIGE); #Nunaannarmut NAKKUSSIUTIGALUNI, kavaajami paffequtaa kimmarlugu oqummiartuartarpaa, isigisani iluamik paaserpasissanagu.
+#UTIGE til "while"
+SUBSTITUTE:0023A (@ADVL>) (@ADVL> "while") TARGET (@ADVL>) IF (-1 BOS OR CLB)(p* UTIGE); #Nunaannarmut NAKKUSSIUTIGALUNI, kavaajami paffequtaa kimmarlugu oqummiartuartarpaa, isigisani iluamik paaserpasissanagu.
+SUBSTITUTE:0023B (@SUBJ>) (@SUBJ> "while") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(p* UTIGE);
+SUBSTITUTE:0023A (@OBJ>) (@OBJ> "while") TARGET (@OBJ>) IF (-1 BOS OR CLB)(p* UTIGE); #Anaanaga saannut pillunilu, sakissakkut tigullunga kiviutigalunga, KAVAAJARA nusoqattaajutigalugu issuttuullunga aallartippaanga.
 SUBSTITUTE:0023B (UTIGE Der/vv Gram/IV) (*) TARGET (UTIGE Der/vv Gram/IV) IF (c ("while"));
+
+#Cond til "when/if"
+SUBSTITUTE:0027A (@SUBJ>) (@SUBJ> "when/if") TARGET (@SUBJ>) IF (p Con);
+SUBSTITUTE:0027B (Con) (*) TARGET (Con) IF (c (@SUBJ>) + ("when/if"));
+SUBSTITUTE:0027C (Con) ("when/if") TARGET (Con); #uden subjekt
+
+#Cau til "when/because"
+SUBSTITUTE:0028A (@SUBJ>) (@SUBJ> "when/because") TARGET (@SUBJ>) IF (p Cau);
+SUBSTITUTE:0028B (Cau) (*) TARGET (Cau) IF (c (@SUBJ>) + ("when/because"));
+SUBSTITUTE:0028C (Cau) ("when/because") TARGET (Cau); #uden subjekt
+
+#IteCau til "everytime"
+SUBSTITUTE:0029A (@SUBJ>) (@SUBJ> "everytime") TARGET (@SUBJ>) IF (p IteCau);
+SUBSTITUTE:0029B (IteCau) (*) TARGET (IteCau) IF (c (@SUBJ>) + ("everytime"));
+SUBSTITUTE:0029C (IteCau) ("everytime") TARGET (IteCau); #uden subjekt
+
+#ContNeg til "not"
+SUBSTITUTE:0030 (ContNeg) (Cont "not") TARGET (ContNeg);
+
+#Cont til "doing" (midlertidig løsning)
+SUBSTITUTE:0031 (Cont) ("doing") TARGET (Cont);
