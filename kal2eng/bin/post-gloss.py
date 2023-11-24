@@ -43,7 +43,7 @@ for line in sys.stdin:
 	
 	#Flytning af Cont-reflekser
 	line = re.sub(r'^\t(.+?) ("doing")', r'\t\2 \1', line)
-	line = re.sub(r'^\t(.+?) ("not")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("not doing")', r'\t\2 \1', line)
 	
 	#Subjekt Sg og modus
 	###line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl)\b)', r'\t\2 \1', line) 
@@ -54,6 +54,11 @@ for line in sys.stdin:
 
 	###line = re.sub(r'^\t(.+?) (@CAU.?)', r'\t\2 \1', line) #
 	###line = re.sub(r'@CAU.?', r'"when"', line)
+	
+	#Gram-tags
+	line = re.sub(r'(Gram/Refl)', r'"oneself"', line)
+	line = re.sub(r'(Gram/Pass)', r'"become"', line)
+	line = re.sub(r'(Gram/Reci)', r'"each other"', line)
 	
 	#Possessiver
 	line = re.sub(r'^\t(.+?) (1SgPoss)', r'\t\2 \1', line)
@@ -132,8 +137,9 @@ for line in sys.stdin:
 
 	###line = re.sub(r'^\t(.+?) U Der/nv ', r'\t\1 "be" ', line) #simpel substitution af U
 	
-	#præposition fra @POSS>
+	#flytning af præpositioner>
 	line = re.sub(r'^\t(.+?) ("of")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("than")', r'\t\2 \1', line)
 	
 	#Oblikke kasus
 	line = re.sub(r'^\t(.+?) (Lok)', r'\t\2 \1', line) #Lok
@@ -159,6 +165,7 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) ("when/if")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("when/because")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("everytime")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("even though")', r'\t\2 \1', line)
 
 	#ENKLITIKA
 	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line)
@@ -170,7 +177,12 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) (CONJ-LUUNNIIT)\b', r'\t\2 \1', line)
 	line = re.sub(r'\bCONJ-LUUNNIIT\b', r'"or"', line)
 	
+	line = re.sub(r'\bADV-LUUNNIIT\b', r'"at all"', line)
+	
 	line = re.sub(r'AASIIT', r'"as usual"', line)
+	
+	line = re.sub(r'^\t(.+?) (MI)\b', r'\t\2 \1', line)
+	line = re.sub(r'\bMI\b', r'"as you know"', line)
 
 
 	line = re.sub(r'\s(Der|Gram|Hyb|Orth)/\S+', r'', line) # Slet tilbageblevne sekundære tags
