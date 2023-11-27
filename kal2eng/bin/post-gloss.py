@@ -55,6 +55,9 @@ for line in sys.stdin:
 	###line = re.sub(r'^\t(.+?) (@CAU.?)', r'\t\2 \1', line) #
 	###line = re.sub(r'@CAU.?', r'"when"', line)
 	
+	#Flytning af "own"
+	line = re.sub(r'^\t(.+?) ("own")', r'\t\2 \1', line)
+	
 	#Gram-tags
 	line = re.sub(r'(Gram/Refl)', r'"oneself"', line)
 	line = re.sub(r'(Gram/Pass)', r'"become"', line)
@@ -166,6 +169,7 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) ("when/because")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("everytime")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("even though")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("after")', r'\t\2 \1', line)
 
 	#ENKLITIKA
 	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line)
