@@ -143,6 +143,8 @@ for line in sys.stdin:
 	#flytning af præpositioner>
 	line = re.sub(r'^\t(.+?) ("of")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("than")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("because of")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("as")', r'\t\2 \1', line)
 	
 	#Oblikke kasus
 	line = re.sub(r'^\t(.+?) (Lok)', r'\t\2 \1', line) #Lok
@@ -170,6 +172,8 @@ for line in sys.stdin:
 	line = re.sub(r'^\t(.+?) ("everytime")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("even though")', r'\t\2 \1', line)
 	line = re.sub(r'^\t(.+?) ("after")', r'\t\2 \1', line)
+	line = re.sub(r'^\t(.+?) ("as soon as")', r'\t\2 \1', line)
+
 
 	#ENKLITIKA
 	line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line)

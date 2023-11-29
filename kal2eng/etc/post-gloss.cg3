@@ -36,9 +36,12 @@ SUBSTITUTE:0110D (2Pl) (*) TARGET (2Pl) IF (0 ("illit") OR ("you"));
 SUBSTITUTE:0120 PN (*) TARGET PN IF (0 ("kisi") OR Gram/Cong);
 SUBSTITUTE:0120 PN (*) TARGET $$PN IF (c ("kisi") OR Gram/Cong + $$PN);
 
+#Fjern person ved leksikaliseringer
+SUBSTITUTE:0130 (3Sg) (*) TARGET ("taama" IP GALUAR Par 3Sg) OR ("nevertheless");
+
 #FJERN KASUSTAGS
 #Fjern Aeq hvis parent er "like"
-SUBSTITUTE:0200 (Aeq) (*) TARGET (Aeq) IF (p* ("like")); #Soorlu UUMASUTUT IKILERNEQARSIMASUTUT, piginnitsini malittariinnarlugu, qungatsini nakkartillugu, tamatigullu maleruutiinnartutut isikkoqarluni.
+SUBSTITUTE:0201 (Aeq) (*) TARGET (Aeq) IF (p* ("like")); #Soorlu UUMASUTUT IKILERNEQARSIMASUTUT, piginnitsini malittariinnarlugu, qungatsini nakkartillugu, tamatigullu maleruutiinnartutut isikkoqarluni.
 
 #Fjern Via hvis leksikaliseret Via
 SUBSTITUTE:0205 (Via) (*) TARGET (Via) IF (0 ("tamaq" Via) OR ("always" Via)); #Soorlu uumasutut ikilerneqarsimasutut, piginnitsini malittariinnarlugu, qungatsini nakkartillugu, TAMATIGULLU maleruutiinnartutut isikkoqarluni.
@@ -60,79 +63,95 @@ SUBSTITUTE:0305 (@POSS> Rel) ("of") TARGET (@POSS> Rel);
 #TILFØJ KONJUNKTIONER OG LIGNENDE
 #Rækkefølge efter sandsynlighed: Først @ADVL>, så @SUBJ>, så @OBJ>, så selve verbum, så fjernelse af morfem
 
+#RIAR til "after"
+SUBSTITUTE:0400 (RIAR Cont) ("after") TARGET (RIAR Cont) #Eqqarsaatigereerparalu soraaruma aatsaat TORERSAARIARLUNGA meeqqakka aaniarlugit.
+(NEGATE 0 (UTIGE) OR ("while")); #Matu tikikkakku MAPPERIAATIGALUGU haloortungalu takussanganngisakka naammattoorakkit tupannermik nillerujussuarpunga.
+SUBSTITUTE:0401 (RIAR Cau) ("as soon as") TARGET (RIAR Cau); #TAAMAARIARMALLU eqqarsariaammerujussuarpunga. 
+
 #GALUAR til "even though"
-SUBSTITUTE:0400A (@ADVL>) (@ADVL> "even though") TARGET (@ADVL>) IF (-1 BOS OR CLB)(p* GALUAR); #Uanniit ANGAJULLIUNERUGALUAQISOQ nuannarigakku ukiui apeqqutaatinngilakka.
-SUBSTITUTE:0400B (@SUBJ>) (@SUBJ> "even though") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(*1 GALUAR BARRIER V); #Anaanaga UNGASILLILAALEREERSIMAGALUARLUNI tunginnut kamappasilluni allullattaalermat nalunngilara ajortoqalersoq.
-SUBSTITUTE:0400C (GALUAR Par) OR (GALUAR Cont) OR (GALUAR IteCau) ("even though") TARGET (GALUAR) IF (NOT *0 ("even though")); #uden subjekt
-SUBSTITUTE:0400C (GALUAR Par) (*) TARGET (GALUAR Par) IF (c ("even though"));
-SUBSTITUTE:0400D (GALUAR Cont) (*) TARGET (GALUAR Cont) IF (*-1 ("even though"));
-SUBSTITUTE:0400E (GALUAR IteCau) (*) TARGET (GALUAR IteCau) IF (*-1 ("even though"));
+SUBSTITUTE:0405A (@ADVL>) (@ADVL> "even though") TARGET (@ADVL>) IF (-1 BOS OR CLB)(p* GALUAR); #Uanniit ANGAJULLIUNERUGALUAQISOQ nuannarigakku ukiui apeqqutaatinngilakka.
+SUBSTITUTE:0405B (@SUBJ>) (@SUBJ> "even though") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(*1 GALUAR BARRIER V); #Anaanaga UNGASILLILAALEREERSIMAGALUARLUNI tunginnut kamappasilluni allullattaalermat nalunngilara ajortoqalersoq.
+SUBSTITUTE:0405C (GALUAR Par) OR (GALUAR Cont) OR (GALUAR IteCau) ("even though") TARGET (GALUAR) IF (NOT *0 ("even though")); #uden subjekt
+SUBSTITUTE:0405C (GALUAR Par) (*) TARGET (GALUAR Par) IF (c ("even though"));
+SUBSTITUTE:0405D (GALUAR Cont) (*) TARGET (GALUAR Cont) IF (*-1 ("even though"));
+SUBSTITUTE:0405E (GALUAR IteCau) (*) TARGET (GALUAR IteCau) IF (*-1 ("even though"));
 
 #CL-<CIT til "that"
-SUBSTITUTE:0405A (@SUBJ>) (@SUBJ> "that") TARGET (@SUBJ>) IF (p (@CL-<CIT) - NIR); #Kingusiinnaq illoqarfimmi takuneqarsinnaavoq Louisap anaanani PISUTTUAQATIGISARAA.
-SUBSTITUTE:0405B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("that"))(NOT 0 NIR);
-SUBSTITUTE:0405C (@CL-<CIT Par) OR (@CL-<CIT Cont) ("that") TARGET (@CL-<CIT) IF (0 Par - NIR OR Cont - NIR); #uden subjekt
+SUBSTITUTE:0410A (@SUBJ>) (@SUBJ> "that") TARGET (@SUBJ>) IF (p (@CL-<CIT) - NIR); #Kingusiinnaq illoqarfimmi takuneqarsinnaavoq Louisap anaanani PISUTTUAQATIGISARAA.
+SUBSTITUTE:0410B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("that"))(NOT 0 NIR);
+SUBSTITUTE:0410C (@CL-<CIT Par) OR (@CL-<CIT Cont) ("that") TARGET (@CL-<CIT) IF (0 Par - NIR OR Cont - NIR); #uden subjekt
 
 #CL-<CIT til "if"
-SUBSTITUTE:0410A (@SUBJ>) (@SUBJ> "if") TARGET (@SUBJ>) IF (p (@CL-<CIT) + NIR - ("su") - ("be what"));
-SUBSTITUTE:0410B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("if"))(0 NIR);
-SUBSTITUTE:0410C (NIR @CL-<CIT Cont) (*) TARGET (NIR @CL-<CIT Cont); ##Paasisinnaaneq ajorpara sooq meeqqannut TAAMAASIORTOORTARNERLUNGA.
-SUBSTITUTE:0410D (NIR) (*) TARGET (NIR);
+SUBSTITUTE:0415A (@SUBJ>) (@SUBJ> "if") TARGET (@SUBJ>) IF (p (@CL-<CIT) + NIR - ("su") - ("be what"));
+SUBSTITUTE:0415B (@CL-<CIT) (*) TARGET (@CL-<CIT) IF (c (@SUBJ>) + ("if"))(0 NIR);
+SUBSTITUTE:0415C (NIR @CL-<CIT Cont) (*) TARGET (NIR @CL-<CIT Cont); ##Paasisinnaaneq ajorpara sooq meeqqannut TAAMAASIORTOORTARNERLUNGA.
+SUBSTITUTE:0415D (NIR) (*) TARGET (NIR);
 
 #PRED2 til "when"
-SUBSTITUTE:0415A (@SUBJ>) (@SUBJ> "when") TARGET (@SUBJ>) IF (p (@PRED2) + Par); #Anaanani UNITTORLU unilluni, aallartorlu aallarlunilu.
-SUBSTITUTE:0415B (@PRED2) (*) TARGET (@PRED2) IF (c (@SUBJ>) + ("when"));
-SUBSTITUTE:0415C (@PRED2) ("when") TARGET (@PRED2) + Par IF (NEGATE c (@SUBJ>)); #Anaanani unittorlu unilluni, AALLARTORLU aallarlunilu.
+SUBSTITUTE:0420A (@SUBJ>) (@SUBJ> "when") TARGET (@SUBJ>) IF (p (@PRED2) + Par); #Anaanani UNITTORLU unilluni, aallartorlu aallarlunilu.
+SUBSTITUTE:0420B (@PRED2) (*) TARGET (@PRED2) IF (c (@SUBJ>) + ("when"));
+SUBSTITUTE:0420C (@PRED2) ("when") TARGET (@PRED2) + Par IF (NEGATE c (@SUBJ>)); #Anaanani unittorlu unilluni, AALLARTORLU aallarlunilu.
 
 #UTIGE til "while"
-SUBSTITUTE:0420A (@ADVL>) (@ADVL> "while") TARGET (@ADVL>) IF (-1 BOS OR CLB)(p* UTIGE); #Nunaannarmut NAKKUSSIUTIGALUNI, kavaajami paffequtaa kimmarlugu oqummiartuartarpaa, isigisani iluamik paaserpasissanagu.
-SUBSTITUTE:0420B (@SUBJ>) (@SUBJ> "while") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(p* UTIGE);
-SUBSTITUTE:0420C (@OBJ>) (@OBJ> "while") TARGET (@OBJ>) IF (-1 BOS OR CLB)(p* UTIGE); #Anaanaga saannut pillunilu, sakissakkut tigullunga kiviutigalunga, KAVAAJARA nusoqattaajutigalugu issuttuullunga aallartippaanga.
-SUBSTITUTE:0420D (UTIGE) (*) TARGET (UTIGE) IF (c* ("while"));
+SUBSTITUTE:0425A (@ADVL>) (@ADVL> "while") TARGET (@ADVL>) IF (-1 BOS OR CLB)(p* UTIGE BARRIER V); #Nunaannarmut NAKKUSSIUTIGALUNI, kavaajami paffequtaa kimmarlugu oqummiartuartarpaa, isigisani iluamik paaserpasissanagu.
+SUBSTITUTE:0425B (@SUBJ>) (@SUBJ> "while") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(p* UTIGE BARRIER V);
+SUBSTITUTE:0425C (@OBJ>) (@OBJ> "while") TARGET (@OBJ>) IF (-1 BOS OR CLB)(p* UTIGE BARRIER V); #Anaanaga saannut pillunilu, sakissakkut tigullunga kiviutigalunga, KAVAAJARA nusoqattaajutigalugu issuttuullunga aallartippaanga.
+SUBSTITUTE:0425D (UTIGE Cont) ("while") TARGET (UTIGE Cont); #uden subjekt
+SUBSTITUTE:0425D (UTIGE) (*) TARGET (UTIGE) IF (c* ("while"));
 
+#NIQ Ins og NIQ Abl til "because of"
+SUBSTITUTE:0430 (NIQ Ins) ("because of") TARGET (NIQ Ins);
+SUBSTITUTE:0431 (NIQ Abl) ("because of") TARGET (NIQ Abl);
+
+#TIGE til "as"
+SUBSTITUTE:0435 (TIGE) ("as") TARGET (TIGE);
+SUBSTITUTE:0436 (Aeq) ("as") TARGET (Aeq) IF (p* ("as")); #Kiinnakkut APORTINNERUJUSSUARTUT sakkortutigisumik annernertut, takulerpakka anaanaga uigalu tutittut.
+
+#OVERSÆT MODI
 #Cond til "when/if"
-SUBSTITUTE:0425A (@SUBJ>) (@SUBJ> "when/if") TARGET (@SUBJ>) IF (*1 Con BARRIER V);
-SUBSTITUTE:0425B (Con) (*) TARGET (Con) IF (*-1 (@SUBJ>) + ("when/if"));
-SUBSTITUTE:0425C (Con) ("when/if") TARGET (Con); #uden subjekt
+SUBSTITUTE:0450A (@SUBJ>) (@SUBJ> "when/if") TARGET (@SUBJ>) IF (*1 Con BARRIER V);
+SUBSTITUTE:0450B (Con) (*) TARGET (Con) IF (*-1 (@SUBJ>) + ("when/if"));
+SUBSTITUTE:0450C (Con) ("when/if") TARGET (Con); #uden subjekt
 
 #Cau til "when/because"
-SUBSTITUTE:0430A (@ADVL>) (@ADVL> "when/because") TARGET (@ADVL>) IF (-1 BOS OR CLB)(*1 Cau BARRIER V); #NAMMINEERLUTA angerlarsimaffeqaleratta meeqqiorluta aallartippugut.
-SUBSTITUTE:0430B (@SUBJ>) (@SUBJ> "when/because") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(*1 Cau BARRIER V);
-SUBSTITUTE:0430B (Cau) (*) TARGET (Cau) IF (*-1 ("when/because"));
-SUBSTITUTE:0430C (Cau) ("when/because") TARGET (Cau); #uden subjekt
+SUBSTITUTE:0455A (@ADVL>) (@ADVL> "when/because") TARGET (@ADVL>) IF (-1 BOS OR CLB)(*1 Cau BARRIER V); #NAMMINEERLUTA angerlarsimaffeqaleratta meeqqiorluta aallartippugut.
+SUBSTITUTE:0455B (@SUBJ>) (@SUBJ> "when/because") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(*1 Cau BARRIER V);
+SUBSTITUTE:0455B (Cau) (*) TARGET (Cau) IF (*-1 ("when/because") BARRIER V);
+SUBSTITUTE:0455C (Cau) ("when/because") TARGET (Cau); #uden subjekt
 
 #IteCau til "everytime"
-SUBSTITUTE:0435A (@SUBJ>) (@SUBJ> "everytime") TARGET (@SUBJ>) IF (*1 IteCau BARRIER V);
-SUBSTITUTE:0435B (IteCau) (*) TARGET (IteCau) IF (*-1 (@SUBJ>) + ("everytime"));
-SUBSTITUTE:0435C (IteCau) ("everytime") TARGET (IteCau); #uden subjekt
+SUBSTITUTE:0460A (@SUBJ>) (@SUBJ> "everytime") TARGET (@SUBJ>) IF (*1 IteCau BARRIER V);
+SUBSTITUTE:0460B (IteCau) (*) TARGET (IteCau) IF (*-1 (@SUBJ>) + ("everytime"));
+SUBSTITUTE:0460C (IteCau) ("everytime") TARGET (IteCau); #uden subjekt
 
 #ContNeg til "not doing"
-SUBSTITUTE:0440 (ContNeg) ("not doing") TARGET (ContNeg);
+SUBSTITUTE:0465 (ContNeg) ("not doing") TARGET (ContNeg);
 
 #Cont til "doing" (midlertidig løsning)
-SUBSTITUTE:0445 (Cont) ("doing") TARGET (Cont) IF (NEGATE 0 @CL-<CIT);
+SUBSTITUTE:0470 (Cont) ("doing") TARGET (Cont) IF (NEGATE 0 @CL-<CIT);
 
-#RIAR til "after"
-SUBSTITUTE:0450 (RIAR) ("after") TARGET (RIAR); #Eqqarsaatigereerparalu soraaruma aatsaat TORERSAARIARLUNGA meeqqakka aaniarlugit.
+#FJERN ENKLITIKA
+SUBSTITUTE:0500 (CONJ-LU) (*) TARGET ("asu") OR ("even"); #asulu er leksikaliseret
 
+#REFLEKSIVER
+#Oversættelse af Gram/Refl
+SUBSTITUTE:0600A (Gram/Refl) ("myself") TARGET (Gram/Refl) + 1Sg;
+SUBSTITUTE:0600B (Gram/Refl) ("yourself") TARGET (Gram/Refl) + 2Sg;
+SUBSTITUTE:0600C (Gram/Refl) ("himself/herself/itself") TARGET (Gram/Refl) + 3Sg OR (Gram/Refl) + 4Sg;
+SUBSTITUTE:0600D (Gram/Refl) ("ourselves") TARGET (Gram/Refl) + 1Pl;
+SUBSTITUTE:0600E (Gram/Refl) ("yourselves") TARGET (Gram/Refl) + 2Pl;
+SUBSTITUTE:0600F (Gram/Refl) ("themselves") TARGET (Gram/Refl) + 3Pl OR (Gram/Refl) + 4Pl;
 
 #ANDRE REGLER
 #Flytning af enklitika ved hybrider
-SUBSTITUTE:0500A (Hyb/1-2) (Hyb/1-2 CONJ-LU) TARGET (Hyb/1-2) IF (1 Hyb/2-2 + CONJ-LU);
-SUBSTITUTE:0500B (CONJ-LU) (*) TARGET (Hyb/2-2) IF (0 Hyb/2-2);
-SUBSTITUTE:0501A (Hyb/1-2) (Hyb/1-2 CONJ-LI) TARGET (Hyb/1-2) IF (1 Hyb/2-2 + CONJ-LI);
-SUBSTITUTE:0501B (CONJ-LI) (*) TARGET (Hyb/2-2) IF (0 Hyb/2-2);
-SUBSTITUTE:0502A (Hyb/1-2) (Hyb/1-2 CONJ-LUUNNIIT) TARGET (Hyb/1-2) IF (1 Hyb/2-2 + CONJ-LUUNNIIT);
-SUBSTITUTE:0502B (CONJ-LUUNNIIT) (*) TARGET (Hyb/2-2) IF (0 Hyb/2-2);
+SUBSTITUTE:0700A (Hyb/1-2) (Hyb/1-2 CONJ-LU) TARGET (Hyb/1-2) IF (1 Hyb/2-2 + CONJ-LU);
+SUBSTITUTE:0700B (CONJ-LU) (*) TARGET (Hyb/2-2) IF (0 Hyb/2-2);
+SUBSTITUTE:0701A (Hyb/1-2) (Hyb/1-2 CONJ-LI) TARGET (Hyb/1-2) IF (1 Hyb/2-2 + CONJ-LI);
+SUBSTITUTE:0701B (CONJ-LI) (*) TARGET (Hyb/2-2) IF (0 Hyb/2-2);
+SUBSTITUTE:0702A (Hyb/1-2) (Hyb/1-2 CONJ-LUUNNIIT) TARGET (Hyb/1-2) IF (1 Hyb/2-2 + CONJ-LUUNNIIT);
+SUBSTITUTE:0702B (CONJ-LUUNNIIT) (*) TARGET (Hyb/2-2) IF (0 Hyb/2-2);
 
 #Oversættelse af mådesadverbialer (midlertidig løsning)
-SUBSTITUTE:0505 (TUQ Ins Sg @ADVL>) OR (TUQ Ins Sg @i-ADVL>) ("-ly") TARGET (TUQ Ins Sg);
-SUBSTITUTE:0506A (Ins Sg @ADVL>) ("-ly") TARGET ("sakkortooq") OR ("strong");
+SUBSTITUTE:0705 (TUQ Ins Sg @ADVL>) OR (TUQ Ins Sg @i-ADVL>) OR ("one who" Ins Sg @ADVL>) OR ("one who" Ins Sg @i-ADVL>) OR ("that which" Ins Sg @ADVL>) OR ("that which" Ins Sg @i-ADVL>) ("-ly") TARGET (TUQ Ins Sg) OR ("one who" Ins Sg) OR ("that which" Ins Sg);
+SUBSTITUTE:0706A (Ins Sg @ADVL>) ("-ly") TARGET ("sakkortooq") OR ("strong");
 
-#Oversættelse af Gram/Refl
-SUBSTITUTE:0510A (Gram/Refl) ("myself") TARGET (Gram/Refl) + 1Sg;
-SUBSTITUTE:0510B (Gram/Refl) ("yourself") TARGET (Gram/Refl) + 2Sg;
-SUBSTITUTE:0510C (Gram/Refl) ("himself/herself/itself") TARGET (Gram/Refl) + 3Sg OR (Gram/Refl) + 4Sg;
-SUBSTITUTE:0510D (Gram/Refl) ("ourselves") TARGET (Gram/Refl) + 1Pl;
-SUBSTITUTE:0510E (Gram/Refl) ("yourselves") TARGET (Gram/Refl) + 2Pl;
-SUBSTITUTE:0510C (Gram/Refl) ("themselves") TARGET (Gram/Refl) + 3Pl OR (Gram/Refl) + 4Pl;
