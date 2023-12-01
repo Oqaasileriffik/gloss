@@ -1,8 +1,7 @@
+# Input-pipe, adjusted from '$ ./kal2eng.pl --gloss --cmd':
+# ~/langtech/kal/tools/shellscripts/kal-tokenise ~/langtech/kal/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | /usr/local/bin/cg-sort | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/kal-pre1.cg3 | ~/langtech/kal/tools/shellscripts/kal-hybrid-split ~/langtech/kal/src/generator-gt-desc.hfstol | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/kal-pre2.cg3 | ~/langtech/katersat/apply-sems.py | /usr/local/bin/cg-sort | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/disambiguator.cg3 | ~/langtech/kal/tools/shellscripts/kal-lu-prefix ~/langtech/kal/src/generator-gt-desc.hfstol | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/functions.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/kal-augment.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/dependency.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/nutserut/dev/kal2eng/etc/kal2eng.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/nutserut/dev/kal2dan/etc/kalcg.split | ~/langtech/katersat/gloss.py eng | /usr/local/bin/cg-sort
+
 INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
-
-#~/langtech/kal/tools/shellscripts/kal-tokenise ~/langtech/kal/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/kal-pre1.cg3 | ~/langtech/kal/tools/shellscripts/kal-hybrid-split | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/kal-pre2.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/disambiguator.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/functions.cg3 | /usr/local/bin/vislcg3 --grammar ~/langtech/kal/src/cg3/dependency.cg3 #det virker med det her?
-
-#HUSK AT BRUGE BÅDE GRØNLANDSKE OG ENGELSKE LEKSEMER FOR REGLER BASERENDE PÅ LEKSEMER FRA KATERSAT (de er ikke oversat her, men allerede i Inspect)
 
 #TILFØJ MIDLERTIDIGE PERSONTAGS
 #For at give oversættelse af person til ledsætninger med Cont
@@ -66,7 +65,7 @@ SUBSTITUTE:0305 (@POSS> Rel) ("of") TARGET (@POSS> Rel);
 #RIAR til "after"
 SUBSTITUTE:0400 (RIAR Cont) ("after") TARGET (RIAR Cont) #Eqqarsaatigereerparalu soraaruma aatsaat TORERSAARIARLUNGA meeqqakka aaniarlugit.
 (NEGATE 0 (UTIGE) OR ("while")); #Matu tikikkakku MAPPERIAATIGALUGU haloortungalu takussanganngisakka naammattoorakkit tupannermik nillerujussuarpunga.
-SUBSTITUTE:0401 (RIAR Cau) ("as soon as") TARGET (RIAR Cau); #TAAMAARIARMALLU eqqarsariaammerujussuarpunga. 
+SUBSTITUTE:0401 (RIAR Cau) ("as soon as") TARGET (RIAR Cau); #TAAMAARIARMALLU eqqarsariaammerujussuarpunga.
 
 #GALUAR til "even though"
 SUBSTITUTE:0405A (@SUBJ>) (@SUBJ> "even though") TARGET (@SUBJ>) IF (-1 BOS OR CLB)(*1 GALUAR - VFIN BARRIER V); #Anaanaga UNGASILLILAALEREERSIMAGALUARLUNI tunginnut kamappasilluni allullattaalermat nalunngilara ajortoqalersoq.
