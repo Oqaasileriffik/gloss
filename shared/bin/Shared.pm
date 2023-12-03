@@ -354,6 +354,7 @@ sub handle_cmdline_opts {
    my $cmdline = join(' | ', @cmdline);
    if (!$opts{'raw'}) {
       $cmdline =~ s@(BIN|ETC|LEX)/(\S+)@_find_newest_cb("$1", "$2")@eg;
+      $cmdline =~ s@\bPID\b@$$@g;
    }
    if (defined $opts{'regtest'} || defined $opts{'cmd'} || defined $opts{'raw'}) {
       print $cmdline."\n";
