@@ -38,6 +38,6 @@
 - cmd: cg3-autobin.pl -g ETC/post-gloss.cg3
   opt: post-cg
   trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
-- cmd: BIN/post-gloss.py | cg-sort
+- cmd: BIN/post-gloss.py | perl -wpne 's/ _x_\S+//g;' | cg-sort
   opt: post
   test: '| REGTEST_AUTO'
