@@ -23,3 +23,5 @@ for line in sys.stdin:
 
 	output.write(line + '\n')
 	print(line)
+
+output.close()

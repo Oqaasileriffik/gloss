@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+import os
 import regex as re
 import argparse
 import tempfile
@@ -9,7 +10,8 @@ parser.add_argument('id', nargs='?', default='0')
 args = parser.parse_args()
 
 tmpdir = tempfile.gettempdir()
-input = open(f'{tmpdir}/nutserut-readings.{args.id}', 'r', encoding='utf-8')
+tmpfile = f'{tmpdir}/nutserut-readings.{args.id}'
+input = open(tmpfile, 'r', encoding='utf-8')
 rs = {}
 
 for line in sys.stdin:
@@ -30,3 +32,9 @@ for line in sys.stdin:
 		print(rs[m].rstrip() + ' ¤MERGED')
 
 	print(line)
+
+input.close()
+try:
+	os.remove(tmpfile)
+except Exception:
+	pass
