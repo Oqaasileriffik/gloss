@@ -122,11 +122,12 @@ SUBSTITUTE:0460A (@SUBJ>) (@SUBJ> "everytime") TARGET (@SUBJ>) IF (*1 IteCau BAR
 SUBSTITUTE:0460B (IteCau) (_x_IteCau) TARGET (IteCau) IF (*-1 (@SUBJ>) + ("everytime"));
 SUBSTITUTE:0460C (IteCau) ("everytime") TARGET (IteCau); #uden subjekt
 
+#De to følgende skaber forvirrede glosseringer, som vurderes ikke at hjælpe nogen. Cont og ContNeg må i stedet promoveres til ing-former i post-processeringen
 #ContNeg til "not doing"
-SUBSTITUTE:0465 (ContNeg) ("not doing") TARGET (ContNeg);
+#SUBSTITUTE:0030 (ContNeg) ("not doing") TARGET (ContNeg);
 
 #Cont til "doing" (midlertidig løsning)
-SUBSTITUTE:0470 (Cont) ("doing") TARGET (Cont) IF (NEGATE 0 @CL-<CIT);
+#SUBSTITUTE:0031 (Cont) ("doing") TARGET (Cont) IF (NEGATE 0 @CL-<CIT);
 
 #FJERN ENKLITIKA
 SUBSTITUTE:0500 (CONJ-LU) (_x_CONJ-LU) TARGET ("asu") OR ("even"); #asulu er leksikaliseret
