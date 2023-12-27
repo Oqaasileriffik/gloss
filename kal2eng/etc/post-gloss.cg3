@@ -1,5 +1,4 @@
-# Input-pipe, adjusted from '$ ./kal2eng.pl --gloss --cmd':
-# ~/langtech/kal/tools/shellscripts/kal-tokenise ~/langtech/kal/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | /usr/local/bin/cg-sort | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/kal-pre1.cg3 | ~/langtech/kal/tools/shellscripts/kal-hybrid-split ~/langtech/kal/src/generator-gt-desc.hfstol | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/kal-pre2.cg3 | ~/langtech/katersat/apply-sems.py | /usr/local/bin/cg-sort | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/disambiguator.cg3 | ~/langtech/kal/tools/shellscripts/kal-lu-prefix ~/langtech/kal/src/generator-gt-desc.hfstol | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/functions.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/kal-augment.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/kal/src/cg3/dependency.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/nutserut/dev/kal2eng/etc/kal2eng.cg3 | /usr/local/bin/vislcg3 -g ~/langtech/nutserut/dev/kal2dan/etc/kalcg.split | ~/langtech/katersat/gloss.py eng | /usr/local/bin/cg-sort
+# pre-pipe: zsh -l -c '~/langtech/nutserut/dev/kal2eng/kal2eng.pl --gloss'
 
 INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
 

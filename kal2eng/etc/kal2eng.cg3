@@ -1,3 +1,5 @@
+# pre-pipe: zsh -l -c '~/langtech/nutserut/dev/kal2eng/kal2eng.pl --dep'
+
 INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
 
 #Samtlige ADD-regler udkommenteres af hensyn til dependenserne. Må genaktiveres, når kal2eng realiseres
