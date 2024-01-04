@@ -1,8 +1,8 @@
-# pre-pipe: zsh -l -c '~/langtech/gloss/kal2eng/kal2eng.pl --dep'
+# pre-pipe: zsh -l -c '~/langtech/gloss/kal2dan/kal2eng.pl --dep'
 
 INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
 
-#Samtlige ADD-regler udkommenteres af hensyn til dependenserne. Må genaktiveres, når kal2eng realiseres
+#Samtlige ADD-regler udkommenteres af hensyn til dependenserne. Må genaktiveres, når kal2dan realiseres
 #ADD Syn/Stop BEFORE (TUQ) TARGET (/__Gram/IV\ TUQ\ /l) IF (0 (/TUQ\ Der/vn\ QAR/l)) #misissui plus soqarnissaa
 #(NEGATE 0 (/"ilaa"\ Gram/IV\ TUQ/l))
 #;

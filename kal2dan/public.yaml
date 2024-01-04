@@ -1,0 +1,43 @@
+- cmd: BIN/kal-tokenise LEX/tokeniser-disamb-gt-desc.pmhfst | cg-sort
+  opt: fst
+  test: '| REGTEST_AUTO'
+- cmd: cg3-autobin.pl -g ETC/kal-pre1.cg3
+  opt: kal-pre1
+  trace: --trace
+- cmd: BIN/kal-hybrid-split LEX/generator-gt-desc.hfstol
+  opt: hsplit
+  test: '| REGTEST_AUTO'
+- cmd: cg3-autobin.pl -g ETC/kal-pre2.cg3
+  opt: kal-pre2
+  trace: --trace
+- cmd: ~/langtech/katersat/apply-sems.py
+  opt: sems
+  trace: --trace | BIN/hilite 31 'SEM-LEX[^ ]+'
+- cmd: cg3-autobin.pl -g ETC/disambiguator.cg3
+  opt: morf
+- cmd: BIN/kal-lu-prefix LEX/generator-gt-desc.hfstol
+  opt: lu
+  test: '| REGTEST_AUTO'
+- cmd: cg3-autobin.pl -g ETC/functions.cg3
+  opt: syn|synana
+  trace: --trace | BIN/hilite 34 '(MAP|ADD)[^ ]+' | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+- cmd: cg3-autobin.pl -g ETC/kal-augment.cg3
+  opt: augment
+  trace: --trace | BIN/hilite 34 '(MAP|ADD)[^ ]+' | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+- cmd: cg3-autobin.pl -g ETC/dependency.cg3
+  opt: dep
+  trace: --trace | BIN/hilite 34 'SETPARENT[^ ]+'
+- cmd: cg3-autobin.pl -g ETC/kal2dan.cg3
+  opt: k2e-cg
+  trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+- cmd: cg3-autobin.pl -g ETC/kal-split.cg3
+  opt: ssplit
+- cmd: BIN/readings-mark.py kal2dan.PID | ~/langtech/katersat/gloss.py -l dan
+  opt: gloss
+  trace: --trace | BIN/hilite 31 'TR-LEX[^ ]+'
+- cmd: cg3-autobin.pl -g ETC/post-gloss.cg3
+  opt: post-cg
+  trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
+- cmd: BIN/post-gloss.py | BIN/readings-merge.py kal2dan.PID | cg-sort -w '¤'
+  opt: post
+  test: '| REGTEST_AUTO'
