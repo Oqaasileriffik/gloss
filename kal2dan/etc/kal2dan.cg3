@@ -1,4 +1,4 @@
-# pre-pipe: zsh -l -c '~/langtech/gloss/kal2dan/kal2eng.pl --dep'
+# pre-pipe: zsh -l -c '~/langtech/gloss/kal2dan/kal2dan.pl --dep'
 
 INCLUDE STATIC ~/langtech/kal/src/cg3/disambiguator.cg3 ;
 
