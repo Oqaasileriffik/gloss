@@ -2,7 +2,7 @@
 package Shared;
 require Exporter;
 @ISA = qw(Exporter);
-@EXPORT = qw( trim explode_utf8 implode_utf8 create file_get_contents file_put_contents find_newest_bin find_newest_etc find_newest_lex first_file random_bytes random_name sqlite_writer sqlite_reader sqlite_write_hash sqlite_read_hash handle_cmdline_opts pipe_ignore );
+@EXPORT = qw( trim create file_get_contents file_put_contents find_newest_bin find_newest_etc find_newest_lex handle_cmdline_opts pipe_helper );
 
 use warnings;
 use warnings 'untie';
@@ -22,27 +22,6 @@ sub trim {
    $s =~ s/^\s+//g;
    $s =~ s/\s+$//g;
    return $s;
-}
-
-sub explode_utf8 {
-   my ($line) = @_;
-   while ($line =~ m@([^\x{00}-\x{7E}])@) {
-      my $code = $1;
-      my $ord = ord($1);
-      $line =~ s/\Q$code\E/\\u{$ord}/g;
-   }
-
-   return $line;
-}
-
-sub implode_utf8 {
-   my ($line) = @_;
-   while ($line =~ m@\\u\{(\d+)\}@) {
-      my $code = $1;
-      my $chr = chr($1);
-      $line =~ s/\\u\{$code\}/$chr/g;
-   }
-   return $line;
 }
 
 sub create {
@@ -149,7 +128,8 @@ sub find_newest_etc {
       "$Bin/../../kal2dan/etc",
       "$Bin/../../kal2eng/etc",
       "$home/langtech/kal/src/cg3",
-      "$home/kal/src/cg3", '/usr/share/giella/kal');
+      "$home/kal/src/cg3", '/usr/share/giella/kal',
+      '/usr/local/share/giella/kal');
 
    return return_newest(\@files, \@paths);
 }
@@ -166,7 +146,8 @@ sub find_newest_lex {
       "$home/langtech/kal/src",
       "$home/langtech/kal/tools/tokenisers",
       "$home/langtech/kal/tools/spellcheckers/3",
-      '/usr/share/giella/kal', '/usr/share/voikko/3');
+      '/usr/share/giella/kal', '/usr/share/voikko/3',
+      '/usr/local/share/giella/kal', '/usr/local/share/voikko/3');
 
    return return_newest(\@files, \@paths);
 }
@@ -180,94 +161,6 @@ sub _find_newest_cb {
       return find_newest_etc($file);
    }
    return find_newest_lex($file);
-}
-
-sub first_file {
-   foreach my $f (@_) {
-      if (-e $f && -s $f) {
-         return $f;
-      }
-   }
-   die("No such file!\n");
-}
-
-sub random_bytes {
-   no utf8;
-   use bytes;
-
-   my ($n) = @_;
-   open FILE, '<:raw :bytes', '/dev/urandom' or die "Could not open /dev/urandom: $!\n";
-   my $data = '';
-   read(FILE, $data, $n);
-   close FILE;
-   return $data;
-}
-
-sub random_name {
-   no utf8;
-   use bytes;
-
-   my ($s) = @_;
-   if (!$s) {
-      $s = '';
-   }
-   $s .= random_bytes(16);
-
-   use Digest::SHA qw(sha1_base64);
-   my $hash = sha1_base64($s);
-   $hash =~ s/[^a-zA-Z0-9]/x/g;
-   return $hash;
-}
-
-sub sqlite_writer {
-   use DBI;
-   my ($f) = @_;
-   my $dbh = DBI->connect('dbi:SQLite:dbname='.$f, '', '', { RaiseError => 1, sqlite_unicode => 1 });
-   return $dbh;
-}
-
-sub sqlite_reader {
-   use DBI;
-   use DBD::SQLite::Constants qw/:file_open/;
-   my ($f) = @_;
-   my $dbh = DBI->connect('dbi:SQLite:dbname='.$f, '', '', {
-      RaiseError => 1,
-      sqlite_unicode => 1,
-#      sqlite_open_flags => SQLITE_OPEN_READONLY,
-   });
-   return $dbh;
-}
-
-sub sqlite_write_hash {
-   my ($file, $data) = @_;
-
-   use File::Basename;
-   my $dir = dirname($file);
-   my $tmpnam = 'tmp-'.random_name($file).'.sqlite';
-
-   my $dbh = sqlite_writer("${dir}/${tmpnam}");
-   $dbh->begin_work();
-   $dbh->do('CREATE TABLE data (h_key TEXT NOT NULL, h_value TEXT);');
-   my $sth = $dbh->prepare('INSERT INTO data (h_key,h_value) VALUES (?, ?);');
-
-   while (my ($k,$v) = each(%$data)) {
-      $sth->execute($k,$v);
-   }
-
-   $dbh->do('CREATE UNIQUE INDEX data_key_unique ON data (h_key);');
-   $dbh->commit();
-   $dbh->disconnect();
-
-   if (-e $file) {
-      unlink($file);
-   }
-   rename("${dir}/${tmpnam}", $file);
-}
-
-sub sqlite_read_hash {
-   use Tie::Hash::DBD;
-   tie my %hash, 'Tie::Hash::DBD', sqlite_reader($_[0]), { 'tbl' => 'data' };
-   return \%hash;
 }
 
 sub handle_cmdline_opts {
@@ -370,7 +263,7 @@ sub handle_cmdline_opts {
    return (\%opts, $cmdline);
 }
 
-sub pipe_ignore {
+sub pipe_helper {
    my ($cmdline) = @_;
 
    use File::Spec;
@@ -385,7 +278,7 @@ sub pipe_ignore {
       chmod(0755, $sh);
    }
 
-   open my $pipe, "bash -c '$sh 2> >(egrep --line-buffered -v \"cleanup.*Tie.*Hash.*DBD.*during global destruction\" >&2)'|" or die $!;
+   open my $pipe, "$sh|" or die $!;
    return $pipe;
 }
 

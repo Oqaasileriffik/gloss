@@ -28,7 +28,7 @@ my ($opts, $cmdline) = handle_cmdline_opts("$Bin/kal2eng.yaml");
 if (defined $ENV{DEBUG_CMD}) {
    print STDERR $cmdline."\n";
 }
-my $pipe = pipe_ignore($cmdline);
+my $pipe = pipe_helper($cmdline);
 while (<$pipe>) {
 	print;
 }
