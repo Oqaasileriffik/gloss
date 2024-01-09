@@ -9,8 +9,7 @@ parser = argparse.ArgumentParser(prog='readings-merge.py', description='Merge in
 parser.add_argument('id', nargs='?', default='0')
 args = parser.parse_args()
 
-tmpdir = tempfile.gettempdir()
-tmpfile = f'{tmpdir}/nutserut-readings.{args.id}'
+tmpfile = f'/tmp/nutserut-readings.{args.id}'
 input = open(tmpfile, 'r', encoding='utf-8')
 rs = {}
 

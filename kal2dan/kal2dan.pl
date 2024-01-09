@@ -23,8 +23,6 @@ if (!defined $ENV{NUTSERUT_DEV}) {
    $ENV{NUTSERUT_DEV} = 1;
 }
 
-create("/tmp/nutserut-readings.kal2dan.$$");
-
 my ($opts, $cmdline) = handle_cmdline_opts("$Bin/kal2dan.yaml");
 
 if (defined $ENV{DEBUG_CMD}) {

@@ -7,8 +7,7 @@ parser = argparse.ArgumentParser(prog='readings-mark.py', description='Numbers a
 parser.add_argument('id', nargs='?', default='0')
 args = parser.parse_args()
 
-tmpdir = tempfile.gettempdir()
-output = open(f'{tmpdir}/nutserut-readings.{args.id}', 'w', encoding='utf-8')
+output = open(f'/tmp/nutserut-readings.{args.id}', 'w', encoding='utf-8')
 
 n = 0
 for line in sys.stdin:
