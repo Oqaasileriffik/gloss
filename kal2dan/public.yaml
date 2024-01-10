@@ -35,9 +35,9 @@
 - cmd: BIN/readings-mark.py kal2dan.PID | ~/langtech/katersat/gloss.py -l dan
   opt: gloss
   trace: --trace | BIN/hilite 31 'TR-LEX[^ ]+'
-- cmd: cg3-autobin.pl -g ETC/post-gloss.cg3
+- cmd: cg3-autobin.pl -g ETC/post-gloss-dan.cg3
   opt: post-cg
   trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
-- cmd: BIN/post-gloss.py | BIN/readings-merge.py kal2dan.PID | cg-sort -w '¤'
+- cmd: BIN/post-gloss-dan.py | BIN/readings-merge.py kal2dan.PID | cg-sort -w '¤'
   opt: post
   test: '| REGTEST_AUTO'

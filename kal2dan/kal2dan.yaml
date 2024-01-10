@@ -35,9 +35,9 @@
 - cmd: ~/langtech/katersat/gloss.py -l dan
   opt: gloss
   trace: --trace | BIN/hilite 31 'TR-LEX[^ ]+'
-- cmd: cg3-autobin.pl -g ETC/post-gloss.cg3
+- cmd: cg3-autobin.pl -g ETC/post-gloss-dan.cg3
   opt: post-cg
   trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
-- cmd: BIN/post-gloss.py | perl -wpne 's/ _x_\S+//g;' | cg-sort
+- cmd: BIN/post-gloss-dan.py | perl -wpne 's/ _x_\S+//g;' | cg-sort
   opt: post
   test: '| REGTEST_AUTO'
