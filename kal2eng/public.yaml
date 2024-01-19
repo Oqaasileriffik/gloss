@@ -32,7 +32,7 @@
   trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
 - cmd: cg3-autobin.pl -g ETC/kal-split.cg3
   opt: ssplit
-- cmd: BIN/readings-mark.py kal2eng.PID | ~/langtech/katersat/gloss.py -l eng
+- cmd: cg-sort -1 | BIN/readings-mark.py kal2eng.PID | ~/langtech/katersat/gloss.py -l eng
   opt: gloss
   trace: --trace | BIN/hilite 31 'TR-LEX[^ ]+'
 - cmd: cg3-autobin.pl -g ETC/post-gloss-eng.cg3
