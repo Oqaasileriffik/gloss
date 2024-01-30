@@ -13,6 +13,8 @@ for line in sys.stdin:
 		print(line)
 		continue
 
+	line += ' '
+
 	###line = re.sub(r'^\t(.+? NIQ Der/vn) (U Der/nv)', r'\t\2 \1', line) # U ved NIQ må flyttes før øvrige
 #	line = re.sub(r'^3Sg U Der/nv', r'3Sg "be"', line)
 
@@ -46,9 +48,9 @@ for line in sys.stdin:
 	#line = re.sub(r'^\t(.+?) ("not doing")', r'\t\2 \1', line)
 
 	#Subjekt Sg og modus
-	###line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl)\b)', r'\t\2 \1', line)
+	###line = re.sub(r'^\t(.+?) (V (Ind|Par|Cau|Con|Cont|ContNeg) \d(Sg|Pl)) ', r'\t\2 \1 ', line)
 	###line = re.sub(r'V (Ind|Par|Cau|Con) 3Sg', r'"he/she/it"', line)
-	###line = re.sub(r'V (Ind|Par|Cau|Con|Cont|ContNeg) 1Sg\b', r'"I" \1', line)
+	###line = re.sub(r'V (Ind|Par|Cau|Con|Cont|ContNeg) 1Sg ', r'"I" \1', line)
 
 	###line = re.sub(r'Cont (".+?)_V', r'\1ing', line)
 
@@ -59,84 +61,84 @@ for line in sys.stdin:
 	#line = re.sub(r'^\t(.+?) ("own")', r'\t\2 \1', line)
 
 	#Gram-tags
-	line = re.sub(r'\bGram/Refl\b', r'"oneself"', line)
-	line = re.sub(r'\bGram/Pass\b', r'"become"', line)
-	line = re.sub(r'\bGram/Reci\b', r'"each other"', line)
+	line = re.sub(r' Gram/Refl ', r' "oneself" ', line)
+	line = re.sub(r' Gram/Pass ', r' "become" ', line)
+	line = re.sub(r' Gram/Reci ', r' "each other" ', line)
 
 	#Possessiver
 	#line = re.sub(r'^\t(.+?) (1SgPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b1SgPoss\b', r'"my"', line)
+	line = re.sub(r' 1SgPoss ', r' "my" ', line)
 
 	#line = re.sub(r'^\t(.+?) (2SgPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b2SgPoss\b', r'"your"', line)
+	line = re.sub(r' 2SgPoss ', r' "your" ', line)
 
 	#line = re.sub(r'^\t(.+?) (3SgPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b3SgPoss\b', r'"his/her/its"', line)
+	line = re.sub(r' 3SgPoss ', r' "his/her/its" ', line)
 
 	#line = re.sub(r'^\t(.+?) (4SgPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b4SgPoss\b', r'"his/her/its"', line)
+	line = re.sub(r' 4SgPoss ', r' "his/her/its" ', line)
 
 	#line = re.sub(r'^\t(.+?) (1PlPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b1PlPoss\b', r'"our"', line)
+	line = re.sub(r' 1PlPoss ', r' "our" ', line)
 
 	#line = re.sub(r'^\t(.+?) (2PlPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b2PlPoss\b', r'"your"', line)
+	line = re.sub(r' 2PlPoss ', r' "your" ', line)
 
 	#line = re.sub(r'^\t(.+?) (3PlPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b3PlPoss\b', r'"their"', line)
+	line = re.sub(r' 3PlPoss ', r' "their" ', line)
 
 	#line = re.sub(r'^\t(.+?) (4PlPoss)', r'\t\2 \1', line)
-	line = re.sub(r'\b4PlPoss\b', r'"their"', line)
+	line = re.sub(r' 4PlPoss ', r' "their" ', line)
 
 	#Objekter
 	#line = re.sub(r'^\t(.+?) (1SgO)', r'\t\2 \1', line)
-	line = re.sub(r'\b1SgO\b', r'"me"', line)
+	line = re.sub(r' 1SgO ', r' "me" ', line)
 
 	#line = re.sub(r'^\t(.+?) (2SgO)', r'\t\2 \1', line)
-	line = re.sub(r'\b2SgO\b', r'"you"', line)
+	line = re.sub(r' 2SgO ', r' "you" ', line)
 
 	#line = re.sub(r'^\t(.+?) (3SgO)', r'\t\2 \1', line)
-	line = re.sub(r'\b3SgO\b', r'"him/her/it"', line)
+	line = re.sub(r' 3SgO ', r' "him/her/it" ', line)
 
 	#line = re.sub(r'^\t(.+?) (4SgO)', r'\t\2 \1', line)
-	line = re.sub(r'\b4SgO\b', r'"himself/herself/itself"', line)
+	line = re.sub(r' 4SgO ', r' "himself/herself/itself" ', line)
 
 	#line = re.sub(r'^\t(.+?) (1PlO)', r'\t\2 \1', line)
-	line = re.sub(r'\b1PlO\b', r'"us"', line)
+	line = re.sub(r' 1PlO ', r' "us" ', line)
 
 	#line = re.sub(r'^\t(.+?) (2PlO)', r'\t\2 \1', line)
-	line = re.sub(r'\b2PlO\b', r'"you"', line)
+	line = re.sub(r' 2PlO ', r' "you" ', line)
 
 	#line = re.sub(r'^\t(.+?) (3PlO)', r'\t\2 \1', line)
-	line = re.sub(r'\b3PlO\b', r'"them"', line)
+	line = re.sub(r' 3PlO ', r' "them" ', line)
 
 	#line = re.sub(r'^\t(.+?) (4PlO)', r'\t\2 \1', line)
-	line = re.sub(r'\b4PlO\b', r'"themselves"', line)
+	line = re.sub(r' 4PlO ', r' "themselves" ', line)
 
 	#Subjekter
 	#line = re.sub(r'^\t(.+?) (1Sg)', r'\t\2 \1', line)
-	line = re.sub(r'\b1Sg\b', r'"I"', line)
+	line = re.sub(r' 1Sg ', r' "I" ', line)
 
 	#line = re.sub(r'^\t(.+?) (2Sg)', r'\t\2 \1', line)
-	line = re.sub(r'\b2Sg\b', r'"you"', line)
+	line = re.sub(r' 2Sg ', r' "you" ', line)
 
 	#line = re.sub(r'^\t(.+?) (3Sg)', r'\t\2 \1', line)
-	line = re.sub(r'\b3Sg\b', r'"he/she/it"', line)
+	line = re.sub(r' 3Sg ', r' "he/she/it" ', line)
 
 	#line = re.sub(r'^\t(.+?) (4Sg)', r'\t\2 \1', line)
-	line = re.sub(r'\b4Sg\b', r'"he/she/it"', line)
+	line = re.sub(r' 4Sg ', r' "he/she/it" ', line)
 
 	#line = re.sub(r'^\t(.+?) (1Pl)', r'\t\2 \1', line)
-	line = re.sub(r'\b1Pl\b', r'"we"', line)
+	line = re.sub(r' 1Pl ', r' "we" ', line)
 
 	#line = re.sub(r'^\t(.+?) (2Pl)', r'\t\2 \1', line)
-	line = re.sub(r'\b2Pl\b', r'"you"', line)
+	line = re.sub(r' 2Pl ', r' "you" ', line)
 
 	#line = re.sub(r'^\t(.+?) (3Pl)', r'\t\2 \1', line)
-	line = re.sub(r'\b3Pl\b', r'"they"', line)
+	line = re.sub(r' 3Pl ', r' "they" ', line)
 
 	#line = re.sub(r'^\t(.+?) (4Pl)', r'\t\2 \1', line)
-	line = re.sub(r'\b4Pl\b', r'"they"', line)
+	line = re.sub(r' 4Pl ', r' "they" ', line)
 
 	###line = re.sub(r'^\t(.+?) U Der/nv ', r'\t\1 "be" ', line) #simpel substitution af U
 
@@ -148,19 +150,19 @@ for line in sys.stdin:
 
 	#Oblikke kasus
 	#line = re.sub(r'^\t(.+?) (Lok)', r'\t\2 \1', line) #Lok
-	line = re.sub(r'\bLok\b', r'"in"', line)
+	line = re.sub(r' Lok ', r' "in" ', line)
 
 	#line = re.sub(r'^\t(.+?) (Trm)', r'\t\2 \1', line) #Trm
-	line = re.sub(r'\bTrm\b', r'"to"', line)
+	line = re.sub(r' Trm ', r' "to" ', line)
 
 	#line = re.sub(r'^\t(.+?) (Abl)', r'\t\2 \1', line) #Abl
-	line = re.sub(r'\bAbl\b', r'"from"', line)
+	line = re.sub(r' Abl ', r' "from" ', line)
 
 	#line = re.sub(r'^\t(.+?) (Via)', r'\t\2 \1', line) #Via
-	line = re.sub(r'\bVia\b', r'"through"', line)
+	line = re.sub(r' Via ', r' "through" ', line)
 
 	#line = re.sub(r'^\t(.+?) (Aeq)', r'\t\2 \1', line) #Aeq
-	line = re.sub(r'\bAeq\b', r'"like"', line)
+	line = re.sub(r' Aeq ', r' "like" ', line)
 
 	#flytning af konjunktioner
 	#line = re.sub(r'^\t(.+?) ("that")', r'\t\2 \1', line)
@@ -176,21 +178,21 @@ for line in sys.stdin:
 
 
 	#ENKLITIKA
-	#line = re.sub(r'^\t(.+?) (CONJ-LU)\b', r'\t\2 \1', line)
-	line = re.sub(r'\bCONJ-LU\b', r'"and"', line)
+	#line = re.sub(r'^\t(.+?) (CONJ-LU) ', r'\t\2 \1', line)
+	line = re.sub(r' CONJ-LU ', r' "and" ', line)
 
-	#line = re.sub(r'^\t(.+?) (CONJ-LI)\b', r'\t\2 \1', line)
-	line = re.sub(r'\bCONJ-LI\b', r'"but"', line)
+	#line = re.sub(r'^\t(.+?) (CONJ-LI) ', r'\t\2 \1', line)
+	line = re.sub(r' CONJ-LI ', r' "but" ', line)
 
-	#line = re.sub(r'^\t(.+?) (CONJ-LUUNNIIT)\b', r'\t\2 \1', line)
-	line = re.sub(r'\bCONJ-LUUNNIIT\b', r'"or"', line)
+	#line = re.sub(r'^\t(.+?) (CONJ-LUUNNIIT) ', r'\t\2 \1', line)
+	line = re.sub(r' CONJ-LUUNNIIT ', r' "or" ', line)
 
-	line = re.sub(r'\bADV-LUUNNIIT\b', r'"at all"', line)
+	line = re.sub(r' ADV-LUUNNIIT ', r' "at all" ', line)
 
-	line = re.sub(r'\bAASIIT\b', r'"as usual"', line)
+	line = re.sub(r' AASIIT ', r' "as usual" ', line)
 
-	#line = re.sub(r'^\t(.+?) (MI)\b', r'\t\2 \1', line)
-	line = re.sub(r'\bMI\b', r'"as you know"', line)
+	#line = re.sub(r'^\t(.+?) (MI) ', r'\t\2 \1', line)
+	line = re.sub(r' MI ', r' "as you know" ', line)
 
 
 	line = re.sub(r'\s(Der|Gram|Hyb|Orth)/\S+', r'', line) # Slet tilbageblevne sekundære tags
@@ -204,4 +206,5 @@ for line in sys.stdin:
 	if not line.startswith('\t"'):
 		line = re.sub(r'^\t', r'\t"_" ', line)
 
+	line = line.rstrip()
 	print(line)
