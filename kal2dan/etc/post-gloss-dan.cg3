@@ -13,15 +13,17 @@ SUBSTITUTE:0000F (Cont) (Cont 3Pl) TARGET CONT IF (0 (/[123][SP][gl]O/r)) (p 3Pl
 
 #FJERN PERSONTAGS
 #Remove tags corresponding to context-fulfilled dependents
-SUBSTITUTE:0100A (3Sg) (_x_3Sg) TARGET (3Sg) IF (c @SUBJ> OR @<SUBJ);
-SUBSTITUTE:0100B (3Pl) (_x_3Pl) TARGET (3Pl) IF (c @SUBJ> OR @<SUBJ);
-SUBSTITUTE:0101A (4Sg) (_x_4Sg) TARGET (4Sg) IF (c @SUBJ> OR @<SUBJ);
-SUBSTITUTE:0101B (4Pl) (_x_4Pl) TARGET (4Pl) IF (c @SUBJ> OR @<SUBJ);
-SUBSTITUTE:0102A (3SgO) (_x_3SgO) TARGET (3SgO) IF (c @OBJ> OR @<OBJ);
-SUBSTITUTE:0102B (3PlO) (_x_3PlO) TARGET (3PlO) IF (c @OBJ> OR @<OBJ);
-SUBSTITUTE:0103A (4Sg) (_x_4Sg) TARGET (4Sg) IF (0 Cont OR ContNeg) (NEGATE 0 UTIGE OR RIAR OR GALUAR) (p V);
-SUBSTITUTE:0103B (4Pl) (_x_4Pl) TARGET (4Pl) IF (0 Cont OR ContNeg) (NEGATE 0 UTIGE OR RIAR OR GALUAR) (p V);
-SUBSTITUTE:0104 $$PERSON (VSTR:x{$$PERSON}) TARGET (V) IF (0 Cont OR ContNeg) (p $$PERSON) (NEGATE 0 UTIGE OR RIAR OR GALUAR) (NEGATE 0 @CL-<CIT);
+
+AddRelation:Subj (VSTR:{$$34IV}) $$34IV TO (c @SUBJ> OR @<SUBJ) ;
+Substitute:Subj (VSTR:{$$34IV}) (VSTR:_x_{$$34IV}) TARGET $$34IV IF (c @SUBJ> OR @<SUBJ);
+
+AddRelation:Obj (VSTR:{$$OBJEKT3}) $$OBJEKT3 TO (c @OBJ> OR @<OBJ) ;
+Substitute:Obj (VSTR:{$$OBJEKT3}) (VSTR:_x_{$$OBJEKT3}) TARGET $$OBJEKT3 IF (c @OBJ> OR @<OBJ);
+
+AddRelation:pPerson (VSTR:{$$PERSON}) (V) + $$PERSON (0 Cont OR ContNeg) (NEGATE 0 UTIGE OR RIAR OR GALUAR) (NEGATE 0 @CL-<CIT) TO (p $$PERSON) ;
+Substitute:pPerson $$PERSON (VSTR:_x_{$$PERSON}) TARGET (V) IF (0 Cont OR ContNeg) (p $$PERSON) (NEGATE 0 UTIGE OR RIAR OR GALUAR) (NEGATE 0 @CL-<CIT);
+
+AddRelation:CitObj (3SgO) (3SgO) TO (c @CL-<CIT OR @CL-CIT>) ;
 SUBSTITUTE:0105 (3SgO) (_x_3SgO) TARGET (3SgO) IF (c @CL-<CIT OR @CL-CIT>);
 
 #Fjern person ved pronominer
