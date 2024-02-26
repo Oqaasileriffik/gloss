@@ -143,7 +143,7 @@ sub find_newest_lex {
       "$Bin/../../shared/lex",
       "$Bin/../../kal2dan/lex",
       "$Bin/../../kal2eng/lex",
-      "$home/langtech/kal/src",
+      "$home/langtech/kal/src/fst",
       "$home/langtech/kal/tools/tokenisers",
       "$home/langtech/kal/tools/spellcheckers/3",
       '/usr/share/giella/kal', '/usr/share/voikko/3',
