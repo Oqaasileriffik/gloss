@@ -120,7 +120,7 @@ for line in sys.stdin:
 	line = re.sub(r' 1Sg ', r' "jeg" ', line)
 
 	#line = re.sub(r'^\t(.+?) (2Sg)', r'\t\2 \1', line)
-	line = re.sub(r' 2Sg ', r' "dig" ', line)
+	line = re.sub(r'\b2Sg\b', r'"du"', line)
 
 	#line = re.sub(r'^\t(.+?) (3Sg)', r'\t\2 \1', line)
 	line = re.sub(r' 3Sg ', r' "han/hun/den/det" ', line)

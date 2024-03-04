@@ -11,6 +11,10 @@ SUBSTITUTE:0000D (Cont) (Cont 1Pl) TARGET CONT IF (0 (/[123][SP][gl]O/r)) (p 1Pl
 SUBSTITUTE:0000E (Cont) (Cont 2Pl) TARGET CONT IF (0 (/[123][SP][gl]O/r)) (p 2Pl);
 SUBSTITUTE:0000F (Cont) (Cont 3Pl) TARGET CONT IF (0 (/[123][SP][gl]O/r)) (p 3Pl);
 
+#Når CONT vikarierer for (Cau 2Sg) i paratakse
+SUBSTITUTE:0000B (Cont) (Cont 2Sg) TARGET CONT IF (0 (/[123][SP][gl]O/r) + CONJ-LU) (s 2Sg);
+
+
 #FJERN PERSONTAGS
 #Remove tags corresponding to context-fulfilled dependents
 
