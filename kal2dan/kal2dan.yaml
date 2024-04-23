@@ -6,6 +6,7 @@
   trace: --trace | BIN/hilite 31 'SEM-LEX[^ ]+'
 - cmd: cg3-autobin.pl -g ETC/disambiguator.cg3
   opt: morf
+  trace: --trace | BIN/hilite 31 '(SELECT|REMOVE)[^ ]+'
 - cmd: BIN/kal-lu-prefix LEX/generator-gt-desc.hfstol
   opt: lu
   test: '| REGTEST_AUTO'
@@ -29,6 +30,6 @@
 - cmd: cg3-autobin.pl -g ETC/post-gloss-dan.cg3
   opt: post-cg
   trace: --trace | BIN/hilite 31 'SUBSTITUTE[^ ]+'
-- cmd: BIN/post-gloss-dan.py | perl -wpne 's/ _x_\S+//g;' | cg-sort
+- cmd: BIN/post-gloss-dan.py | perl -wpne 's/ _x_\S+//g; s/ (ID|R):\S+//g;' | cg-sort
   opt: post
   test: '| REGTEST_AUTO'
