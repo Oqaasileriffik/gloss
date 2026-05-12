@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:jammy as base
+FROM amd64/ubuntu:resolute as base
 ENV LANG=C.UTF-8 \
 	LC_ALL=C.UTF-8 \
 	DEBIAN_FRONTEND=noninteractive \
@@ -8,7 +8,7 @@ ENV LANG=C.UTF-8 \
 ADD https://apertium.projectjj.com/apt/apertium-packaging.public.gpg /etc/apt/trusted.gpg.d/apertium.gpg
 ADD https://apertium.projectjj.com/apt/apertium.pref /etc/apt/preferences.d/apertium.pref
 RUN chmod 644 /etc/apt/trusted.gpg.d/apertium.gpg /etc/apt/preferences.d/apertium.pref && \
-	echo "deb http://apertium.projectjj.com/apt/nightly jammy main" > /etc/apt/sources.list.d/apertium.list
+	echo "deb http://apertium.projectjj.com/apt/nightly resolute main" > /etc/apt/sources.list.d/apertium.list
 
 RUN apt-get -qy update && \
 	apt-get -qfy --no-install-recommends install apt-utils && \
@@ -34,7 +34,7 @@ RUN chown -R root:root /usr/local && \
 	find /gloss -type d -exec chmod a+rx "{}" \; && \
 	find /gloss -type f -exec chmod a+r "{}" \;
 
-FROM amd64/ubuntu:jammy
+FROM amd64/ubuntu:resolute
 COPY --from=base / /
 
 ENV LANG=C.UTF-8 \
