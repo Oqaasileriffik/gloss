@@ -1,4 +1,7 @@
 # -*- mode: cperl; indent-tabs-mode: nil; tab-width: 3; cperl-indent-level: 3; -*-
+# Copyright 2019 Oqaasileriffik <oqaasileriffik@oqaasileriffik.gl> at https://oqaasileriffik.gl/
+# Licensed under the GNU GPL v3 or later - https://www.gnu.org/licenses/gpl-3.0.en.html
+
 package Shared;
 require Exporter;
 @ISA = qw(Exporter);

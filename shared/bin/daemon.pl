@@ -1,5 +1,8 @@
 #!/usr/bin/env perl
 # -*- mode: cperl; indent-tabs-mode: nil; tab-width: 3; cperl-indent-level: 3; -*-
+# Copyright 2019 Oqaasileriffik <oqaasileriffik@oqaasileriffik.gl> at https://oqaasileriffik.gl/
+# Licensed under the GNU GPL v3 or later - https://www.gnu.org/licenses/gpl-3.0.en.html
+
 use utf8;
 BEGIN { $| = 1; }
 package Daemon;
